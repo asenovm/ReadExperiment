@@ -1,0 +1,10 @@
+bin\Debug\ChefosForm.exe
+bin\Debug\ChefosForm.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\ChefosForm.formReadExperiment.resources
+obj\Debug\ReadExperiment.csproj.GenerateResource.Cache
+obj\Debug\ChefosForm.exe
+obj\Debug\ChefosForm.pdb
+obj\Debug\ChefosForm.InstructionsForm.resources
+obj\Debug\ChefosForm.DSScaleChoice.resources
+obj\Debug\ChefosForm.Properties.Resources.resources
