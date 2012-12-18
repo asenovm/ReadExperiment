@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Data;
 using System.IO;
+using System.Collections.Generic;
 
 namespace ChefosForm
 {
@@ -20,14 +21,7 @@ namespace ChefosForm
 
         public formReadExperiment()
         {
-            //
-            // Required for Windows Form Designer support
-            //
             InitializeComponent();
-
-            //
-            // TODO: Add any constructor code after InitializeComponent call
-            //
         }
 
         public formReadExperiment(string offersFile, string outputFile)
@@ -83,56 +77,58 @@ namespace ChefosForm
             this.label3 = new System.Windows.Forms.Label();
             this.nextBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.firstSupplierOfferLabel = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.firstSupplierRealPanel = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.firstSuppliarRealLabel = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.firstSuppliarRealLabel = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
             this.thirdSupplierOfferLabel = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.secondSupplierOfferLabel = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.thirdSupplierRealPanel = new System.Windows.Forms.Panel();
-            this.thirdSupplierRealLabel = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.thirdSupplierRealLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.secondSuppliarRealPanel = new System.Windows.Forms.Panel();
-            this.secondSuppliarRealLabel = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.secondSuppliarRealLabel = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
             this.fourthSupplierOfferLabel = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.fourthSupplierRealPanel = new System.Windows.Forms.Panel();
-            this.fourthSuppliarRealLabel = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.fourthSuppliarRealLabel = new System.Windows.Forms.Label();
             this.offersPanel = new System.Windows.Forms.Panel();
-            this.manufacturingLevelsPanel = new System.Windows.Forms.Panel();
-            this.manufacturingLevelsTextLabel = new System.Windows.Forms.Label();
-            this.manufacturingLevelsValueLabel = new System.Windows.Forms.Label();
             this.manufacturingIncreasePanel = new System.Windows.Forms.Panel();
             this.manufacturingIncreaseValueLabel = new System.Windows.Forms.Label();
             this.manufacturingIncreaseTextLabel = new System.Windows.Forms.Label();
+            this.manufacturingLevelsPanel = new System.Windows.Forms.Panel();
+            this.manufacturingLevelUnitsLabel = new System.Windows.Forms.Label();
+            this.manufacturingLevelsValueLabel = new System.Windows.Forms.Label();
+            this.manufacturingLevelsTextLabel = new System.Windows.Forms.Label();
+            this.feedbackTextBox = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.firstSupplierRealPanel.SuspendLayout();
@@ -146,8 +142,8 @@ namespace ChefosForm
             this.panel5.SuspendLayout();
             this.fourthSupplierRealPanel.SuspendLayout();
             this.offersPanel.SuspendLayout();
-            this.manufacturingLevelsPanel.SuspendLayout();
             this.manufacturingIncreasePanel.SuspendLayout();
+            this.manufacturingLevelsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // firstSuppierBtn
@@ -220,30 +216,30 @@ namespace ChefosForm
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
-            // label1
+            // firstSupplierOfferLabel
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // label11
-            // 
-            resources.ApplyResources(this.label11, "label11");
-            this.label11.Name = "label11";
-            // 
-            // label13
-            // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.Name = "label13";
+            resources.ApplyResources(this.firstSupplierOfferLabel, "firstSupplierOfferLabel");
+            this.firstSupplierOfferLabel.Name = "firstSupplierOfferLabel";
             // 
             // label12
             // 
             resources.ApplyResources(this.label12, "label12");
             this.label12.Name = "label12";
             // 
-            // firstSupplierOfferLabel
+            // label13
             // 
-            resources.ApplyResources(this.firstSupplierOfferLabel, "firstSupplierOfferLabel");
-            this.firstSupplierOfferLabel.Name = "firstSupplierOfferLabel";
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.Name = "label13";
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // panel2
             // 
@@ -260,20 +256,20 @@ namespace ChefosForm
             resources.ApplyResources(this.firstSupplierRealPanel, "firstSupplierRealPanel");
             this.firstSupplierRealPanel.Name = "firstSupplierRealPanel";
             // 
-            // label14
+            // label16
             // 
-            resources.ApplyResources(this.label14, "label14");
-            this.label14.Name = "label14";
+            resources.ApplyResources(this.label16, "label16");
+            this.label16.Name = "label16";
             // 
             // firstSuppliarRealLabel
             // 
             resources.ApplyResources(this.firstSuppliarRealLabel, "firstSuppliarRealLabel");
             this.firstSuppliarRealLabel.Name = "firstSuppliarRealLabel";
             // 
-            // label16
+            // label14
             // 
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.Name = "label16";
+            resources.ApplyResources(this.label14, "label14");
+            this.label14.Name = "label14";
             // 
             // panel8
             // 
@@ -286,30 +282,30 @@ namespace ChefosForm
             resources.ApplyResources(this.panel8, "panel8");
             this.panel8.Name = "panel8";
             // 
-            // label39
+            // thirdSupplierOfferLabel
             // 
-            resources.ApplyResources(this.label39, "label39");
-            this.label39.Name = "label39";
-            // 
-            // label38
-            // 
-            resources.ApplyResources(this.label38, "label38");
-            this.label38.Name = "label38";
-            // 
-            // label37
-            // 
-            resources.ApplyResources(this.label37, "label37");
-            this.label37.Name = "label37";
+            resources.ApplyResources(this.thirdSupplierOfferLabel, "thirdSupplierOfferLabel");
+            this.thirdSupplierOfferLabel.Name = "thirdSupplierOfferLabel";
             // 
             // label36
             // 
             resources.ApplyResources(this.label36, "label36");
             this.label36.Name = "label36";
             // 
-            // thirdSupplierOfferLabel
+            // label37
             // 
-            resources.ApplyResources(this.thirdSupplierOfferLabel, "thirdSupplierOfferLabel");
-            this.thirdSupplierOfferLabel.Name = "thirdSupplierOfferLabel";
+            resources.ApplyResources(this.label37, "label37");
+            this.label37.Name = "label37";
+            // 
+            // label38
+            // 
+            resources.ApplyResources(this.label38, "label38");
+            this.label38.Name = "label38";
+            // 
+            // label39
+            // 
+            resources.ApplyResources(this.label39, "label39");
+            this.label39.Name = "label39";
             // 
             // panel4
             // 
@@ -322,30 +318,30 @@ namespace ChefosForm
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
-            // label24
+            // secondSupplierOfferLabel
             // 
-            resources.ApplyResources(this.label24, "label24");
-            this.label24.Name = "label24";
-            // 
-            // label23
-            // 
-            resources.ApplyResources(this.label23, "label23");
-            this.label23.Name = "label23";
-            // 
-            // label22
-            // 
-            resources.ApplyResources(this.label22, "label22");
-            this.label22.Name = "label22";
+            resources.ApplyResources(this.secondSupplierOfferLabel, "secondSupplierOfferLabel");
+            this.secondSupplierOfferLabel.Name = "secondSupplierOfferLabel";
             // 
             // label21
             // 
             resources.ApplyResources(this.label21, "label21");
             this.label21.Name = "label21";
             // 
-            // secondSupplierOfferLabel
+            // label22
             // 
-            resources.ApplyResources(this.secondSupplierOfferLabel, "secondSupplierOfferLabel");
-            this.secondSupplierOfferLabel.Name = "secondSupplierOfferLabel";
+            resources.ApplyResources(this.label22, "label22");
+            this.label22.Name = "label22";
+            // 
+            // label23
+            // 
+            resources.ApplyResources(this.label23, "label23");
+            this.label23.Name = "label23";
+            // 
+            // label24
+            // 
+            resources.ApplyResources(this.label24, "label24");
+            this.label24.Name = "label24";
             // 
             // panel7
             // 
@@ -362,20 +358,20 @@ namespace ChefosForm
             resources.ApplyResources(this.thirdSupplierRealPanel, "thirdSupplierRealPanel");
             this.thirdSupplierRealPanel.Name = "thirdSupplierRealPanel";
             // 
-            // thirdSupplierRealLabel
+            // label32
             // 
-            resources.ApplyResources(this.thirdSupplierRealLabel, "thirdSupplierRealLabel");
-            this.thirdSupplierRealLabel.Name = "thirdSupplierRealLabel";
+            resources.ApplyResources(this.label32, "label32");
+            this.label32.Name = "label32";
             // 
             // label34
             // 
             resources.ApplyResources(this.label34, "label34");
             this.label34.Name = "label34";
             // 
-            // label32
+            // thirdSupplierRealLabel
             // 
-            resources.ApplyResources(this.label32, "label32");
-            this.label32.Name = "label32";
+            resources.ApplyResources(this.thirdSupplierRealLabel, "thirdSupplierRealLabel");
+            this.thirdSupplierRealLabel.Name = "thirdSupplierRealLabel";
             // 
             // panel3
             // 
@@ -392,20 +388,20 @@ namespace ChefosForm
             resources.ApplyResources(this.secondSuppliarRealPanel, "secondSuppliarRealPanel");
             this.secondSuppliarRealPanel.Name = "secondSuppliarRealPanel";
             // 
-            // secondSuppliarRealLabel
+            // label17
             // 
-            resources.ApplyResources(this.secondSuppliarRealLabel, "secondSuppliarRealLabel");
-            this.secondSuppliarRealLabel.Name = "secondSuppliarRealLabel";
+            resources.ApplyResources(this.label17, "label17");
+            this.label17.Name = "label17";
             // 
             // label19
             // 
             resources.ApplyResources(this.label19, "label19");
             this.label19.Name = "label19";
             // 
-            // label17
+            // secondSuppliarRealLabel
             // 
-            resources.ApplyResources(this.label17, "label17");
-            this.label17.Name = "label17";
+            resources.ApplyResources(this.secondSuppliarRealLabel, "secondSuppliarRealLabel");
+            this.secondSuppliarRealLabel.Name = "secondSuppliarRealLabel";
             // 
             // panel6
             // 
@@ -418,30 +414,30 @@ namespace ChefosForm
             resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             // 
-            // label31
+            // fourthSupplierOfferLabel
             // 
-            resources.ApplyResources(this.label31, "label31");
-            this.label31.Name = "label31";
-            // 
-            // label30
-            // 
-            resources.ApplyResources(this.label30, "label30");
-            this.label30.Name = "label30";
-            // 
-            // label29
-            // 
-            resources.ApplyResources(this.label29, "label29");
-            this.label29.Name = "label29";
+            resources.ApplyResources(this.fourthSupplierOfferLabel, "fourthSupplierOfferLabel");
+            this.fourthSupplierOfferLabel.Name = "fourthSupplierOfferLabel";
             // 
             // label28
             // 
             resources.ApplyResources(this.label28, "label28");
             this.label28.Name = "label28";
             // 
-            // fourthSupplierOfferLabel
+            // label29
             // 
-            resources.ApplyResources(this.fourthSupplierOfferLabel, "fourthSupplierOfferLabel");
-            this.fourthSupplierOfferLabel.Name = "fourthSupplierOfferLabel";
+            resources.ApplyResources(this.label29, "label29");
+            this.label29.Name = "label29";
+            // 
+            // label30
+            // 
+            resources.ApplyResources(this.label30, "label30");
+            this.label30.Name = "label30";
+            // 
+            // label31
+            // 
+            resources.ApplyResources(this.label31, "label31");
+            this.label31.Name = "label31";
             // 
             // panel5
             // 
@@ -458,20 +454,20 @@ namespace ChefosForm
             resources.ApplyResources(this.fourthSupplierRealPanel, "fourthSupplierRealPanel");
             this.fourthSupplierRealPanel.Name = "fourthSupplierRealPanel";
             // 
-            // fourthSuppliarRealLabel
+            // label20
             // 
-            resources.ApplyResources(this.fourthSuppliarRealLabel, "fourthSuppliarRealLabel");
-            this.fourthSuppliarRealLabel.Name = "fourthSuppliarRealLabel";
+            resources.ApplyResources(this.label20, "label20");
+            this.label20.Name = "label20";
             // 
             // label26
             // 
             resources.ApplyResources(this.label26, "label26");
             this.label26.Name = "label26";
             // 
-            // label20
+            // fourthSuppliarRealLabel
             // 
-            resources.ApplyResources(this.label20, "label20");
-            this.label20.Name = "label20";
+            resources.ApplyResources(this.fourthSuppliarRealLabel, "fourthSuppliarRealLabel");
+            this.fourthSuppliarRealLabel.Name = "fourthSuppliarRealLabel";
             // 
             // offersPanel
             // 
@@ -487,24 +483,6 @@ namespace ChefosForm
             this.offersPanel.Controls.Add(this.panel1);
             resources.ApplyResources(this.offersPanel, "offersPanel");
             this.offersPanel.Name = "offersPanel";
-            // 
-            // manufacturingLevelsPanel
-            // 
-            this.manufacturingLevelsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.manufacturingLevelsPanel.Controls.Add(this.manufacturingLevelsValueLabel);
-            this.manufacturingLevelsPanel.Controls.Add(this.manufacturingLevelsTextLabel);
-            resources.ApplyResources(this.manufacturingLevelsPanel, "manufacturingLevelsPanel");
-            this.manufacturingLevelsPanel.Name = "manufacturingLevelsPanel";
-            // 
-            // manufacturingLevelsTextLabel
-            // 
-            resources.ApplyResources(this.manufacturingLevelsTextLabel, "manufacturingLevelsTextLabel");
-            this.manufacturingLevelsTextLabel.Name = "manufacturingLevelsTextLabel";
-            // 
-            // manufacturingLevelsValueLabel
-            // 
-            resources.ApplyResources(this.manufacturingLevelsValueLabel, "manufacturingLevelsValueLabel");
-            this.manufacturingLevelsValueLabel.Name = "manufacturingLevelsValueLabel";
             // 
             // manufacturingIncreasePanel
             // 
@@ -524,10 +502,43 @@ namespace ChefosForm
             resources.ApplyResources(this.manufacturingIncreaseTextLabel, "manufacturingIncreaseTextLabel");
             this.manufacturingIncreaseTextLabel.Name = "manufacturingIncreaseTextLabel";
             // 
+            // manufacturingLevelsPanel
+            // 
+            this.manufacturingLevelsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturingLevelsPanel.Controls.Add(this.manufacturingLevelUnitsLabel);
+            this.manufacturingLevelsPanel.Controls.Add(this.manufacturingLevelsValueLabel);
+            this.manufacturingLevelsPanel.Controls.Add(this.manufacturingLevelsTextLabel);
+            resources.ApplyResources(this.manufacturingLevelsPanel, "manufacturingLevelsPanel");
+            this.manufacturingLevelsPanel.Name = "manufacturingLevelsPanel";
+            // 
+            // manufacturingLevelUnitsLabel
+            // 
+            resources.ApplyResources(this.manufacturingLevelUnitsLabel, "manufacturingLevelUnitsLabel");
+            this.manufacturingLevelUnitsLabel.Name = "manufacturingLevelUnitsLabel";
+            this.manufacturingLevelUnitsLabel.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // manufacturingLevelsValueLabel
+            // 
+            resources.ApplyResources(this.manufacturingLevelsValueLabel, "manufacturingLevelsValueLabel");
+            this.manufacturingLevelsValueLabel.Name = "manufacturingLevelsValueLabel";
+            // 
+            // manufacturingLevelsTextLabel
+            // 
+            resources.ApplyResources(this.manufacturingLevelsTextLabel, "manufacturingLevelsTextLabel");
+            this.manufacturingLevelsTextLabel.Name = "manufacturingLevelsTextLabel";
+            // 
+            // feedbackTextBox
+            // 
+            this.feedbackTextBox.Cursor = System.Windows.Forms.Cursors.Default;
+            resources.ApplyResources(this.feedbackTextBox, "feedbackTextBox");
+            this.feedbackTextBox.Name = "feedbackTextBox";
+            this.feedbackTextBox.ReadOnly = true;
+            // 
             // formReadExperiment
             // 
             resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.feedbackTextBox);
             this.Controls.Add(this.nextBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.omniumQuontityLabel);
@@ -562,24 +573,18 @@ namespace ChefosForm
             this.fourthSupplierRealPanel.ResumeLayout(false);
             this.fourthSupplierRealPanel.PerformLayout();
             this.offersPanel.ResumeLayout(false);
-            this.manufacturingLevelsPanel.ResumeLayout(false);
-            this.manufacturingLevelsPanel.PerformLayout();
             this.manufacturingIncreasePanel.ResumeLayout(false);
             this.manufacturingIncreasePanel.PerformLayout();
+            this.manufacturingLevelsPanel.ResumeLayout(false);
+            this.manufacturingLevelsPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
         #endregion
 
-        private ArrayList experimentIterations = new ArrayList();
+        private List<ExperimentIteration> experimentIterations = new List<ExperimentIteration>();
         private int currentIteration;
-        /*
-        private ArrayList panelsToShow = new ArrayList();
-        private ArrayList timeToShowPanels =  new ArrayList();
-        private Timer timer;
-        private string currentSupplier = "A";
-         */
         private Button firstSuppierBtn;
         private Button secondSupplierBtn;
         private Button thirdSupplierBtn;
@@ -646,6 +651,8 @@ namespace ChefosForm
         private Panel manufacturingIncreasePanel;
         private Label manufacturingIncreaseValueLabel;
         private Label manufacturingIncreaseTextLabel;
+        private RichTextBox feedbackTextBox;
+        private Label manufacturingLevelUnitsLabel;
         private string outputFile;
 
         /// <summary>
@@ -671,7 +678,6 @@ namespace ChefosForm
                 allowClose = true;
                 Close();
             }
-            enableButtons();
             performIteration();
         }
 
@@ -680,8 +686,8 @@ namespace ChefosForm
             enableButtons();
             this.Visible = true;
 
-            ExperimentIteration it = (ExperimentIteration)experimentIterations[currentIteration];
-            setupMetaInfoPanels(it);
+            ExperimentIteration experimentIteration = experimentIterations[currentIteration];
+            setupEconomicDataPanels(experimentIteration);
 
             omniumQuontityLabel.Text = omniumQuantity.ToString();
 
@@ -691,38 +697,38 @@ namespace ChefosForm
             thirdSupplierRealPanel.Visible = false;
             fourthSupplierRealPanel.Visible = false;
 
-            firstSupplierOfferLabel.Text = it.Suppliers[0].AdPrice;
-            secondSupplierOfferLabel.Text = it.Suppliers[1].AdPrice;
-            thirdSupplierOfferLabel.Text = it.Suppliers[2].AdPrice;
-            fourthSupplierOfferLabel.Text = it.Suppliers[3].AdPrice;
+            firstSupplierOfferLabel.Text = experimentIteration.Suppliers[0].AdPrice;
+            secondSupplierOfferLabel.Text = experimentIteration.Suppliers[1].AdPrice;
+            thirdSupplierOfferLabel.Text = experimentIteration.Suppliers[2].AdPrice;
+            fourthSupplierOfferLabel.Text = experimentIteration.Suppliers[3].AdPrice;
 
-            firstSuppliarRealLabel.Text = it.Suppliers[0].RealPrice;
-            secondSuppliarRealLabel.Text = it.Suppliers[1].RealPrice;
-            thirdSupplierRealLabel.Text = it.Suppliers[2].RealPrice;
-            fourthSuppliarRealLabel.Text = it.Suppliers[3].RealPrice;
+            firstSuppliarRealLabel.Text = experimentIteration.Suppliers[0].RealPrice;
+            secondSuppliarRealLabel.Text = experimentIteration.Suppliers[1].RealPrice;
+            thirdSupplierRealLabel.Text = experimentIteration.Suppliers[2].RealPrice;
+            fourthSuppliarRealLabel.Text = experimentIteration.Suppliers[3].RealPrice;
 
             choiceStopwatch.start();
         }
 
-        private void setupMetaInfoPanels(ExperimentIteration experimentIteration) {
-            if (experimentIteration.hasMetaData())
+        private void setupEconomicDataPanels(ExperimentIteration experimentIteration) {
+            if (experimentIteration.hasEconomicData())
             {
-                showMetaDataPanels();
-                manufacturingLevelsValueLabel.Text = experimentIteration.manufacturingLevels.ToString();
-                manufacturingIncreaseValueLabel.Text = experimentIteration.manufacturingIncrease.ToString();
+                showEconomicDataPanels();
+                manufacturingLevelsValueLabel.Text = experimentIteration.getManufacturingLevels();
+                manufacturingIncreaseValueLabel.Text = experimentIteration.getManufacturingIncrease();
             }
             else {
-                hideMetaDataPanels();
+                hideEconomicDataPanels();
             }
         }
 
-        private void hideMetaDataPanels()
+        private void hideEconomicDataPanels()
         {
             manufacturingLevelsPanel.Visible = false;
             manufacturingIncreasePanel.Visible = false;
         }
 
-        private void showMetaDataPanels() {
+        private void showEconomicDataPanels() {
             manufacturingLevelsPanel.Visible = true;
             manufacturingIncreasePanel.Visible = true;
         }
@@ -739,7 +745,7 @@ namespace ChefosForm
             }
         }
 
-        private void desableButtons()
+        private void disableButtons()
         {
             firstSuppierBtn.Enabled = false;
             secondSupplierBtn.Enabled = false;
@@ -763,12 +769,12 @@ namespace ChefosForm
         {
             supplierIndx = 0;
 
-            ExperimentIteration it = (ExperimentIteration)experimentIterations[currentIteration];
+            ExperimentIteration it = experimentIterations[currentIteration];
 
             omniumQuantity += int.Parse(it.Suppliers[supplierIndx].RealPrice);
             omniumQuontityLabel.Text = omniumQuantity.ToString();
             firstSupplierRealPanel.Visible = true;
-            desableButtons();
+            disableButtons();
             nextSwtopwatch.start();
             choiceTime = choiceStopwatch.stop();
         }
@@ -777,12 +783,12 @@ namespace ChefosForm
         {
             supplierIndx = 1;
 
-            ExperimentIteration it = (ExperimentIteration)experimentIterations[currentIteration];
+            ExperimentIteration it = experimentIterations[currentIteration];
 
             omniumQuantity += int.Parse(it.Suppliers[supplierIndx].RealPrice);
             omniumQuontityLabel.Text = omniumQuantity.ToString();
             secondSuppliarRealPanel.Visible = true;
-            desableButtons();
+            disableButtons();
             nextSwtopwatch.start();
             choiceTime = choiceStopwatch.stop();
         }
@@ -791,12 +797,12 @@ namespace ChefosForm
         {
             supplierIndx = 2;
 
-            ExperimentIteration it = (ExperimentIteration)experimentIterations[currentIteration];
+            ExperimentIteration it = experimentIterations[currentIteration];
 
             omniumQuantity += int.Parse(it.Suppliers[supplierIndx].RealPrice);
             omniumQuontityLabel.Text = omniumQuantity.ToString();
             thirdSupplierRealPanel.Visible = true;
-            desableButtons();
+            disableButtons();
             nextSwtopwatch.start();
             choiceTime = choiceStopwatch.stop();
 
@@ -806,19 +812,19 @@ namespace ChefosForm
         {
             supplierIndx = 3;
 
-            ExperimentIteration it = (ExperimentIteration)experimentIterations[currentIteration];
+            ExperimentIteration it = experimentIterations[currentIteration];
 
             omniumQuantity += int.Parse(it.Suppliers[supplierIndx].RealPrice);
             omniumQuontityLabel.Text = omniumQuantity.ToString();
             fourthSupplierRealPanel.Visible = true;
-            desableButtons();
+            disableButtons();
             nextSwtopwatch.start();
             choiceTime = choiceStopwatch.stop();
         }
 
         private void nextBtn_Click(object sender, EventArgs e)
         {
-            ExperimentIteration it = (ExperimentIteration)experimentIterations[currentIteration];
+            ExperimentIteration it = experimentIterations[currentIteration];
             DSScaleChoice frm =
                 new DSScaleChoice(supplierNames[supplierIndx], 
                                   it.Suppliers[supplierIndx].AdPrice, 
@@ -830,6 +836,11 @@ namespace ChefosForm
                                   this);
             this.Visible = false;
             frm.ShowDialog();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

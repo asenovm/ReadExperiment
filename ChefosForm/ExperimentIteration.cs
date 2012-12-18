@@ -17,19 +17,27 @@ namespace ChefosForm
             Suppliers[2] = new SupplierOffer(items[4], items[5]);
             Suppliers[3] = new SupplierOffer(items[6], items[7]);
             if (items.Length > 8) {
-                manufacturingLevels = new ManufacturingLevels(int.Parse(items[8]));
-                manufacturingIncrease = new ManufacturingIncrease(double.Parse(items[9]));
+                manufacturingLevels = new ManufacturingLevels(double.Parse(items[8], System.Globalization.CultureInfo.CreateSpecificCulture("en-US")));
+                manufacturingIncrease = new ManufacturingIncrease(double.Parse(items[9], System.Globalization.CultureInfo.CreateSpecificCulture("en-US")));
             }
         }
 
         public SupplierOffer[] Suppliers;
 
-        public ManufacturingLevels manufacturingLevels;
+        private ManufacturingLevels manufacturingLevels;
 
-        public ManufacturingIncrease manufacturingIncrease;
+        private ManufacturingIncrease manufacturingIncrease;
 
-        public Boolean hasMetaData() {
+        public Boolean hasEconomicData() {
             return manufacturingLevels != null && manufacturingIncrease != null;
+        }
+
+        public string getManufacturingLevels() {
+            return manufacturingLevels.ToString();
+        }
+
+        public string getManufacturingIncrease() {
+            return manufacturingIncrease.ToString();
         }
 
 	}

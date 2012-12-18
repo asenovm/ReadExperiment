@@ -7,9 +7,9 @@ namespace ChefosForm
     public class ManufacturingLevels
     {
 
-        private int manufacturingLevels;
+        private double manufacturingLevels;
 
-        public ManufacturingLevels(int levels){
+        public ManufacturingLevels(double levels){
             manufacturingLevels = levels;
         }
 

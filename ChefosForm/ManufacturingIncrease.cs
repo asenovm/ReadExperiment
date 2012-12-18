@@ -15,7 +15,11 @@ namespace ChefosForm
 
         public override string ToString()
         {
-            return increase.ToString();
+            if (increase < 0)
+            {
+                return "- " + Math.Abs(increase).ToString() + "%";
+            }
+            return "+ " + increase.ToString() + "%";
         }
     }
 }
