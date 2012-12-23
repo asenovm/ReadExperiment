@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.ico" />
+    <Compile Include="Answer.cs" />
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -137,6 +138,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ServerConnection.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Stopwatch.cs" />
     <Compile Include="SupplierOffer.cs" />

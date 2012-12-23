@@ -41,6 +41,8 @@ namespace ChefosForm
             omniumQuantity = 0;
             nextBtn.Enabled = true;
             this.outputFile = outputFile;
+            serverConnection = new ServerConnection();
+            serverConnection.Daemonize();
 
             performIteration();
         }
@@ -515,7 +517,6 @@ namespace ChefosForm
             // 
             resources.ApplyResources(this.manufacturingLevelUnitsLabel, "manufacturingLevelUnitsLabel");
             this.manufacturingLevelUnitsLabel.Name = "manufacturingLevelUnitsLabel";
-            this.manufacturingLevelUnitsLabel.Click += new System.EventHandler(this.label4_Click);
             // 
             // manufacturingLevelsValueLabel
             // 
@@ -600,6 +601,7 @@ namespace ChefosForm
         private Stopwatch nextSwtopwatch = new Stopwatch();
         private Stopwatch choiceStopwatch = new Stopwatch();
         private int choiceTime;
+        private ServerConnection serverConnection;
         private Panel panel1;
         private Label firstSupplierOfferLabel;
         private Label label12;
@@ -825,6 +827,7 @@ namespace ChefosForm
         private void nextBtn_Click(object sender, EventArgs e)
         {
             ExperimentIteration it = experimentIterations[currentIteration];
+            serverConnection.SendAnswer(new Answer(supplierNames[supplierIndx]));
             DSScaleChoice frm =
                 new DSScaleChoice(supplierNames[supplierIndx], 
                                   it.Suppliers[supplierIndx].AdPrice, 
@@ -836,11 +839,6 @@ namespace ChefosForm
                                   this);
             this.Visible = false;
             frm.ShowDialog();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
 
     }

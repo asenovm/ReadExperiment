@@ -28,6 +28,9 @@ namespace ChefosForm
                 outputFileName = "resul" + fileSuffix + ".txt";
                 fi1 = new System.IO.FileInfo(outputFileName);
             }
+
+            ServerConnection connection = new ServerConnection();
+            connection.Register();
             
             formReadExperiment frm =
                 new formReadExperiment("SuppliersOffers.txt", outputFileName);
