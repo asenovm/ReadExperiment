@@ -12,7 +12,7 @@ namespace ChefosForm
 	/// <summary>
 	/// Summary description for Form1.
 	/// </summary>
-    public class formReadExperiment : System.Windows.Forms.Form
+    public class formReadExperiment : System.Windows.Forms.Form, INotificationsListener
     {
         /// <summary>
         /// Required designer variable.
@@ -41,7 +41,7 @@ namespace ChefosForm
             omniumQuantity = 0;
             nextBtn.Enabled = true;
             this.outputFile = outputFile;
-            serverConnection = new ServerConnection();
+            serverConnection = new ServerConnection(this);
             serverConnection.Daemonize();
 
             performIteration();
@@ -712,14 +712,16 @@ namespace ChefosForm
             choiceStopwatch.start();
         }
 
-        private void setupEconomicDataPanels(ExperimentIteration experimentIteration) {
+        private void setupEconomicDataPanels(ExperimentIteration experimentIteration)
+        {
             if (experimentIteration.hasEconomicData())
             {
                 showEconomicDataPanels();
                 manufacturingLevelsValueLabel.Text = experimentIteration.getManufacturingLevels();
                 manufacturingIncreaseValueLabel.Text = experimentIteration.getManufacturingIncrease();
             }
-            else {
+            else
+            {
                 hideEconomicDataPanels();
             }
         }
@@ -730,7 +732,8 @@ namespace ChefosForm
             manufacturingIncreasePanel.Visible = false;
         }
 
-        private void showEconomicDataPanels() {
+        private void showEconomicDataPanels()
+        {
             manufacturingLevelsPanel.Visible = true;
             manufacturingIncreasePanel.Visible = true;
         }
@@ -829,9 +832,9 @@ namespace ChefosForm
             ExperimentIteration it = experimentIterations[currentIteration];
             serverConnection.SendAnswer(new Answer(supplierNames[supplierIndx]));
             DSScaleChoice frm =
-                new DSScaleChoice(supplierNames[supplierIndx], 
-                                  it.Suppliers[supplierIndx].AdPrice, 
-                                  it.Suppliers[supplierIndx].RealPrice, 
+                new DSScaleChoice(supplierNames[supplierIndx],
+                                  it.Suppliers[supplierIndx].AdPrice,
+                                  it.Suppliers[supplierIndx].RealPrice,
                                   omniumQuantity.ToString(),
                                   choiceTime,
                                   nextSwtopwatch.stop(),
@@ -841,5 +844,25 @@ namespace ChefosForm
             frm.ShowDialog();
         }
 
+
+        public void onNotificationReceived(Notification notification)
+        {
+            feedbackTextBox.Invoke(new DisplayNotification(showNotification), 
+            new object[]{notification});
+        }
+
+        private void showNotification(Notification notification){
+            string textToAppend = notification.SenderId + " : " + notification.Message;
+            if (feedbackTextBox.Text.Length == 0)
+            {
+                feedbackTextBox.AppendText(textToAppend);
+            }
+            else {
+                feedbackTextBox.AppendText(Environment.NewLine + textToAppend);
+            }
+            
+        }
+
+        private delegate void DisplayNotification(Notification notification);
     }
 }
