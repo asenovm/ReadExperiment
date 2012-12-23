@@ -33,3 +33,8 @@ C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\GenerateResource-
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\bg\ChefosForm.resources.dll
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\bg-BG\ChefosForm.resources.dll
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\ChefosForm.exe
+C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\bin\Debug\ChefosForm.exe.config
+C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\bin\Debug\Newtonsoft.Json.dll
+C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\bin\Debug\Newtonsoft.Json.xml
