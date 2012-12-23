@@ -41,7 +41,7 @@ namespace ChefosForm
             omniumQuantity = 0;
             nextBtn.Enabled = true;
             this.outputFile = outputFile;
-            serverConnection = new ServerConnection(this);
+            serverConnection = new ServerConnection(this, new ClientConfiguration("client.dat"));
             serverConnection.Daemonize();
 
             performIteration();
@@ -848,7 +848,7 @@ namespace ChefosForm
         public void onNotificationReceived(Notification notification)
         {
             feedbackTextBox.Invoke(new DisplayNotification(showNotification), 
-            new object[]{notification});
+            new Notification[]{notification});
         }
 
         private void showNotification(Notification notification){

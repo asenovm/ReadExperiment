@@ -67,7 +67,7 @@ namespace ChefosForm
                     if (state.sb.Length > 1)
                     {
                         string content = state.sb.ToString();
-                        listener.onNotificationReceived(new Notification(content, "my id!"));
+                        listener.onNotificationReceived(new Notification(content, content.Split(new char[] { ' ' })[0]));
                     }
                     handler.Close();
                 }

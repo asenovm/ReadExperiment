@@ -113,6 +113,7 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ClientConfiguration.cs" />
     <Compile Include="DSScaleChoice.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -14,20 +14,23 @@ namespace ChefosForm
 
         private INotificationsListener notificationsListener;
 
+        private ClientConfiguration clientConfiguration;
+
         public class SimpleNotificationsListener : INotificationsListener {
             public void onNotificationReceived(Notification notification) { 
                 //blank
             }
         }
 
-        public ServerConnection() : this(new SimpleNotificationsListener()) {
+
+        public ServerConnection() : this(new SimpleNotificationsListener(), new ClientConfiguration()) {
             //blank
         }
 
-
-        public ServerConnection(INotificationsListener notificationsListener) {            
-            encoding= new ASCIIEncoding();
+        public ServerConnection(INotificationsListener notificationsListener, ClientConfiguration configuration){
+            encoding = new ASCIIEncoding();
             this.notificationsListener = notificationsListener;
+            this.clientConfiguration = configuration;
         }
 
         public void Register() {
@@ -48,7 +51,7 @@ namespace ChefosForm
 
         public void SendAnswer(Answer answer) {
             TcpClient client = new TcpClient("127.0.0.1", 65535);
-            byte[] encodedString = encoding.GetBytes("1 " + answer.ToString());
+            byte[] encodedString = encoding.GetBytes("1 " + clientConfiguration.GetClientId() + " " + answer.ToString());
             NetworkStream writeStream = client.GetStream();
             writeStream.Write(encodedString, 0, encodedString.Length);
             writeStream.Flush();

@@ -18,7 +18,6 @@ namespace ChefosForm
 
         private void beginButton_Click(object sender, EventArgs e)
         {
-
             Random random = new Random();
             int fileSuffix = random.Next(10000);
             string outputFileName = "result" + fileSuffix + ".txt";
