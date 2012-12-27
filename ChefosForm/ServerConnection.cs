@@ -48,7 +48,7 @@ namespace ChefosForm
             try
             {
                 TcpClient server = new TcpClient(clientConfiguration.GetServerIdAppress(), clientConfiguration.GetServerPort());
-                byte[] encodedString = encoding.GetBytes(converter.toJson(getRequestDictionary(Status.REGISTER, "register")));
+                byte[] encodedString = encoding.GetBytes(converter.ToJson(GetNotification(((int)Status.REGISTER).ToString(), "register")));
                 WriteToServer(server, encodedString);
             }
             catch (Exception ex)
@@ -56,16 +56,6 @@ namespace ChefosForm
                 LogUtil.LogException(ex);
             }
         }
-
-        private Dictionary<string, string> getRequestDictionary(Status status, string message) {
-            Dictionary<string, string> result = new Dictionary<string, string>();
-            result.Add(JsonConverter.KEY_STATUS_CODE, ((int)status).ToString());
-            result.Add(JsonConverter.KEY_ID, clientConfiguration.GetClientId());
-            result.Add(JsonConverter.KEY_MESSAGE, message);
-            return result;
-        }
-
-       
 
         public void Daemonize() {
             Thread daemonThread = new Thread(new NotificationsDaemon(this).Daemonize);
@@ -76,12 +66,16 @@ namespace ChefosForm
             try
             {
                 TcpClient server = new TcpClient(clientConfiguration.GetServerIdAppress(), clientConfiguration.GetServerPort());
-                byte[] encodedString = encoding.GetBytes(converter.toJson(getRequestDictionary(Status.ANSWER, answer.ToString())));
+                byte[] encodedString = encoding.GetBytes(converter.ToJson(GetNotification(((int)Status.ANSWER).ToString(), answer.ToString())));
                 WriteToServer(server, encodedString);
             }
             catch (Exception ex) {
                 LogUtil.LogException(ex);
             }
+        }
+
+        private Notification GetNotification(string status, string message) {
+            return new Notification(clientConfiguration.GetClientId(), status, message);
         }
 
         private void WriteToServer(TcpClient server, byte[] message) {
@@ -95,7 +89,7 @@ namespace ChefosForm
             try
             {
                 TcpClient server = new TcpClient(clientConfiguration.GetServerIdAppress(), clientConfiguration.GetServerPort());
-                byte[] encodedString = encoding.GetBytes(converter.toJson(getRequestDictionary(Status.UNREGISTER, "Unregister")));
+                byte[] encodedString = encoding.GetBytes(converter.ToJson(GetNotification(((int)Status.UNREGISTER).ToString(), "Unregister")));
                 WriteToServer(server, encodedString);
             }
             catch (Exception ex) {

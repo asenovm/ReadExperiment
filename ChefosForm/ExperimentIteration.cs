@@ -28,15 +28,15 @@ namespace ChefosForm
 
         private ManufacturingIncrease manufacturingIncrease;
 
-        public Boolean hasEconomicData() {
+        public Boolean HasEconomicData() {
             return manufacturingLevels != null && manufacturingIncrease != null;
         }
 
-        public string getManufacturingLevels() {
+        public string GetManufacturingLevels() {
             return manufacturingLevels.ToString();
         }
 
-        public string getManufacturingIncrease() {
+        public string GetManufacturingIncrease() {
             return manufacturingIncrease.ToString();
         }
 

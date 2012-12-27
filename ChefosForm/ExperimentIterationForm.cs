@@ -12,29 +12,21 @@ namespace ChefosForm
 	/// <summary>
 	/// Summary description for Form1.
 	/// </summary>
-    public class formReadExperiment : System.Windows.Forms.Form, INotificationsListener
+    public class FormReadExperiment : System.Windows.Forms.Form, INotificationsListener
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.Container components = null;
 
-        public formReadExperiment()
+        public FormReadExperiment()
         {
             InitializeComponent();
         }
 
-        public formReadExperiment(string offersFile, string outputFile)
+        public FormReadExperiment(string offersFile, string outputFile)
         {
-            System.IO.StreamReader streamReader = System.IO.File.OpenText(offersFile);
-            string experimentIterationAsString = streamReader.ReadLine();
-            while (experimentIterationAsString != null)
-            {
-                experimentIterations.Add(new ExperimentIteration(experimentIterationAsString));
-                experimentIterationAsString = streamReader.ReadLine();
-            }
-            streamReader.Close();
-
+            ReadExperimentData(offersFile);
             InitializeComponent();
 
             currentIteration = 0;
@@ -44,7 +36,18 @@ namespace ChefosForm
             serverConnection = new ServerConnection(this, new ClientConfiguration("client.dat"));
             serverConnection.Daemonize();
 
-            performIteration();
+            PerformIteration();
+        }
+
+        private void ReadExperimentData(string offersFile) {
+            System.IO.StreamReader streamReader = System.IO.File.OpenText(offersFile);
+            string experimentIterationAsString = streamReader.ReadLine();
+            while (experimentIterationAsString != null)
+            {
+                experimentIterations.Add(new ExperimentIteration(experimentIterationAsString));
+                experimentIterationAsString = streamReader.ReadLine();
+            }
+            streamReader.Close();
         }
 
         /// <summary>
@@ -69,7 +72,7 @@ namespace ChefosForm
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formReadExperiment));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReadExperiment));
             this.firstSuppierBtn = new System.Windows.Forms.Button();
             this.secondSupplierBtn = new System.Windows.Forms.Button();
             this.thirdSupplierBtn = new System.Windows.Forms.Button();
@@ -155,7 +158,7 @@ namespace ChefosForm
             this.firstSuppierBtn.Name = "firstSuppierBtn";
             this.firstSuppierBtn.TabStop = false;
             this.firstSuppierBtn.UseVisualStyleBackColor = false;
-            this.firstSuppierBtn.Click += new System.EventHandler(this.firstSuppierBtn_Click);
+            this.firstSuppierBtn.Click += new System.EventHandler(this.FirstSuppierBtn_Click);
             // 
             // secondSupplierBtn
             // 
@@ -164,7 +167,7 @@ namespace ChefosForm
             this.secondSupplierBtn.Name = "secondSupplierBtn";
             this.secondSupplierBtn.TabStop = false;
             this.secondSupplierBtn.UseVisualStyleBackColor = false;
-            this.secondSupplierBtn.Click += new System.EventHandler(this.secondSupplierBtn_Click);
+            this.secondSupplierBtn.Click += new System.EventHandler(this.SecondSupplierBtn_Click);
             // 
             // thirdSupplierBtn
             // 
@@ -173,7 +176,7 @@ namespace ChefosForm
             this.thirdSupplierBtn.Name = "thirdSupplierBtn";
             this.thirdSupplierBtn.TabStop = false;
             this.thirdSupplierBtn.UseVisualStyleBackColor = false;
-            this.thirdSupplierBtn.Click += new System.EventHandler(this.thirdSupplierBtn_Click);
+            this.thirdSupplierBtn.Click += new System.EventHandler(this.ThirdSupplierBtn_Click);
             // 
             // fourthSupplierBtn
             // 
@@ -182,7 +185,7 @@ namespace ChefosForm
             this.fourthSupplierBtn.Name = "fourthSupplierBtn";
             this.fourthSupplierBtn.TabStop = false;
             this.fourthSupplierBtn.UseVisualStyleBackColor = false;
-            this.fourthSupplierBtn.Click += new System.EventHandler(this.fourthSupplierBtn_Click);
+            this.fourthSupplierBtn.Click += new System.EventHandler(this.FourthSupplierBtn_Click);
             // 
             // label2
             // 
@@ -205,7 +208,7 @@ namespace ChefosForm
             resources.ApplyResources(this.nextBtn, "nextBtn");
             this.nextBtn.Name = "nextBtn";
             this.nextBtn.UseVisualStyleBackColor = false;
-            this.nextBtn.Click += new System.EventHandler(this.nextBtn_Click);
+            this.nextBtn.Click += new System.EventHandler(this.NextBtn_Click);
             // 
             // panel1
             // 
@@ -552,7 +555,7 @@ namespace ChefosForm
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "formReadExperiment";
-            this.Closing += new System.ComponentModel.CancelEventHandler(this.formReadExperiment_Closing);
+            this.Closing += new System.ComponentModel.CancelEventHandler(this.FormReadExperiment_Closing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -666,7 +669,7 @@ namespace ChefosForm
             Application.Run(new InstructionsForm());
         }
 
-        public void nextIteration()
+        public void NextIteration()
         {
             currentIteration++;
             if (currentIteration >= experimentIterations.Count)
@@ -680,16 +683,16 @@ namespace ChefosForm
                 allowClose = true;
                 Close();
             }
-            performIteration();
+            PerformIteration();
         }
 
-        private void performIteration()
+        private void PerformIteration()
         {
-            enableButtons();
+            EnableButtons();
             this.Visible = true;
 
             ExperimentIteration experimentIteration = experimentIterations[currentIteration];
-            setupEconomicDataPanels(experimentIteration);
+            SetupEconomicDataPanels(experimentIteration);
 
             omniumQuontityLabel.Text = omniumQuantity.ToString();
 
@@ -712,33 +715,33 @@ namespace ChefosForm
             choiceStopwatch.start();
         }
 
-        private void setupEconomicDataPanels(ExperimentIteration experimentIteration)
+        private void SetupEconomicDataPanels(ExperimentIteration experimentIteration)
         {
-            if (experimentIteration.hasEconomicData())
+            if (experimentIteration.HasEconomicData())
             {
-                showEconomicDataPanels();
-                manufacturingLevelsValueLabel.Text = experimentIteration.getManufacturingLevels();
-                manufacturingIncreaseValueLabel.Text = experimentIteration.getManufacturingIncrease();
+                ShowEconomicDataPanels();
+                manufacturingLevelsValueLabel.Text = experimentIteration.GetManufacturingLevels();
+                manufacturingIncreaseValueLabel.Text = experimentIteration.GetManufacturingIncrease();
             }
             else
             {
-                hideEconomicDataPanels();
+                HideEconomicDataPanels();
             }
         }
 
-        private void hideEconomicDataPanels()
+        private void HideEconomicDataPanels()
         {
             manufacturingLevelsPanel.Visible = false;
             manufacturingIncreasePanel.Visible = false;
         }
 
-        private void showEconomicDataPanels()
+        private void ShowEconomicDataPanels()
         {
             manufacturingLevelsPanel.Visible = true;
             manufacturingIncreasePanel.Visible = true;
         }
 
-        private void formReadExperiment_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void FormReadExperiment_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (!allowClose)
             {
@@ -750,7 +753,7 @@ namespace ChefosForm
             }
         }
 
-        private void disableButtons()
+        private void DisableButtons()
         {
             firstSuppierBtn.Enabled = false;
             secondSupplierBtn.Enabled = false;
@@ -760,7 +763,7 @@ namespace ChefosForm
             nextBtn.Enabled = true;
         }
 
-        private void enableButtons()
+        private void EnableButtons()
         {
             firstSuppierBtn.Enabled = true;
             secondSupplierBtn.Enabled = true;
@@ -770,7 +773,7 @@ namespace ChefosForm
             nextBtn.Enabled = false;
         }
 
-        private void firstSuppierBtn_Click(object sender, EventArgs e)
+        private void FirstSuppierBtn_Click(object sender, EventArgs e)
         {
             supplierIndx = 0;
 
@@ -779,12 +782,12 @@ namespace ChefosForm
             omniumQuantity += int.Parse(it.Suppliers[supplierIndx].RealPrice);
             omniumQuontityLabel.Text = omniumQuantity.ToString();
             firstSupplierRealPanel.Visible = true;
-            disableButtons();
+            DisableButtons();
             nextSwtopwatch.start();
             choiceTime = choiceStopwatch.stop();
         }
 
-        private void secondSupplierBtn_Click(object sender, EventArgs e)
+        private void SecondSupplierBtn_Click(object sender, EventArgs e)
         {
             supplierIndx = 1;
 
@@ -793,12 +796,12 @@ namespace ChefosForm
             omniumQuantity += int.Parse(it.Suppliers[supplierIndx].RealPrice);
             omniumQuontityLabel.Text = omniumQuantity.ToString();
             secondSuppliarRealPanel.Visible = true;
-            disableButtons();
+            DisableButtons();
             nextSwtopwatch.start();
             choiceTime = choiceStopwatch.stop();
         }
 
-        private void thirdSupplierBtn_Click(object sender, EventArgs e)
+        private void ThirdSupplierBtn_Click(object sender, EventArgs e)
         {
             supplierIndx = 2;
 
@@ -807,13 +810,13 @@ namespace ChefosForm
             omniumQuantity += int.Parse(it.Suppliers[supplierIndx].RealPrice);
             omniumQuontityLabel.Text = omniumQuantity.ToString();
             thirdSupplierRealPanel.Visible = true;
-            disableButtons();
+            DisableButtons();
             nextSwtopwatch.start();
             choiceTime = choiceStopwatch.stop();
 
         }
 
-        private void fourthSupplierBtn_Click(object sender, EventArgs e)
+        private void FourthSupplierBtn_Click(object sender, EventArgs e)
         {
             supplierIndx = 3;
 
@@ -822,12 +825,12 @@ namespace ChefosForm
             omniumQuantity += int.Parse(it.Suppliers[supplierIndx].RealPrice);
             omniumQuontityLabel.Text = omniumQuantity.ToString();
             fourthSupplierRealPanel.Visible = true;
-            disableButtons();
+            DisableButtons();
             nextSwtopwatch.start();
             choiceTime = choiceStopwatch.stop();
         }
 
-        private void nextBtn_Click(object sender, EventArgs e)
+        private void NextBtn_Click(object sender, EventArgs e)
         {
             ExperimentIteration it = experimentIterations[currentIteration];
             serverConnection.SendAnswer(new Answer(supplierNames[supplierIndx]));
@@ -847,11 +850,11 @@ namespace ChefosForm
 
         public void OnNotificationReceived(Notification notification)
         {
-            feedbackTextBox.Invoke(new DisplayNotification(showNotification), 
+            feedbackTextBox.Invoke(new DisplayNotification(ShowNotification), 
             new Notification[]{notification});
         }
 
-        private void showNotification(Notification notification){
+        private void ShowNotification(Notification notification){
             string notificationText = "\\b " + notification.GetSenderId() + "\\b0 " + " избра доставчик \\b " + notification.GetMessage() + "\\b0 ";
             if (feedbackTextBox.Text.Length == 0)
             {
@@ -860,7 +863,6 @@ namespace ChefosForm
             else {
                 feedbackTextBox.Rtf = RTFUtil.AppendRTF(feedbackTextBox.Rtf, notificationText);
             }
-            feedbackTextBox.ScrollToCaret();
         }
 
         private delegate void DisplayNotification(Notification notification);

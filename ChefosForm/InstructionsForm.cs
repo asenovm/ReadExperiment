@@ -16,7 +16,7 @@ namespace ChefosForm
             InitializeComponent();
         }
 
-        private void beginButton_Click(object sender, EventArgs e)
+        private void BeginButton_Click(object sender, EventArgs e)
         {
             Random random = new Random();
             int fileSuffix = random.Next(10000);
@@ -31,8 +31,8 @@ namespace ChefosForm
             ServerConnection connection = new ServerConnection(new ClientConfiguration("client.dat"));
             connection.Register();
             
-            formReadExperiment frm =
-                new formReadExperiment("SuppliersOffers.txt", outputFileName);
+            FormReadExperiment frm =
+                new FormReadExperiment("SuppliersOffers.txt", outputFileName);
             this.Hide();
             frm.Show();
         }

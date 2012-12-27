@@ -147,55 +147,55 @@ namespace ChefosForm
             // 
             resources.ApplyResources(this.radioPlus4, "radioPlus4");
             this.radioPlus4.Name = "radioPlus4";
-            this.radioPlus4.CheckedChanged += new System.EventHandler(this.radioPlus4_CheckedChanged);
+            this.radioPlus4.CheckedChanged += new System.EventHandler(this.RadioPlus4_CheckedChanged);
             // 
             // radioPlus2
             // 
             resources.ApplyResources(this.radioPlus2, "radioPlus2");
             this.radioPlus2.Name = "radioPlus2";
-            this.radioPlus2.CheckedChanged += new System.EventHandler(this.radioPlus2_CheckedChanged);
+            this.radioPlus2.CheckedChanged += new System.EventHandler(this.RadioPlus2_CheckedChanged);
             // 
             // radioPlus3
             // 
             resources.ApplyResources(this.radioPlus3, "radioPlus3");
             this.radioPlus3.Name = "radioPlus3";
-            this.radioPlus3.CheckedChanged += new System.EventHandler(this.radioPlus3_CheckedChanged);
+            this.radioPlus3.CheckedChanged += new System.EventHandler(this.RadioPlus3_CheckedChanged);
             // 
             // radioPlus1
             // 
             resources.ApplyResources(this.radioPlus1, "radioPlus1");
             this.radioPlus1.Name = "radioPlus1";
-            this.radioPlus1.CheckedChanged += new System.EventHandler(this.radioPlus1_CheckedChanged);
+            this.radioPlus1.CheckedChanged += new System.EventHandler(this.RadioPlus1_CheckedChanged);
             // 
             // radioZero
             // 
             resources.ApplyResources(this.radioZero, "radioZero");
             this.radioZero.Name = "radioZero";
-            this.radioZero.CheckedChanged += new System.EventHandler(this.radioZero_CheckedChanged);
+            this.radioZero.CheckedChanged += new System.EventHandler(this.RadioZero_CheckedChanged);
             // 
             // radioMinus1
             // 
             resources.ApplyResources(this.radioMinus1, "radioMinus1");
             this.radioMinus1.Name = "radioMinus1";
-            this.radioMinus1.CheckedChanged += new System.EventHandler(this.radioMinus1_CheckedChanged);
+            this.radioMinus1.CheckedChanged += new System.EventHandler(this.RadioMinus1_CheckedChanged);
             // 
             // radioMinus3
             // 
             resources.ApplyResources(this.radioMinus3, "radioMinus3");
             this.radioMinus3.Name = "radioMinus3";
-            this.radioMinus3.CheckedChanged += new System.EventHandler(this.radioMinus3_CheckedChanged);
+            this.radioMinus3.CheckedChanged += new System.EventHandler(this.RadioMinus3_CheckedChanged);
             // 
             // radioMinus2
             // 
             resources.ApplyResources(this.radioMinus2, "radioMinus2");
             this.radioMinus2.Name = "radioMinus2";
-            this.radioMinus2.CheckedChanged += new System.EventHandler(this.radioMinus2_CheckedChanged);
+            this.radioMinus2.CheckedChanged += new System.EventHandler(this.RadioMinus2_CheckedChanged);
             // 
             // radioMinus4
             // 
             resources.ApplyResources(this.radioMinus4, "radioMinus4");
             this.radioMinus4.Name = "radioMinus4";
-            this.radioMinus4.CheckedChanged += new System.EventHandler(this.radioMinus4_CheckedChanged);
+            this.radioMinus4.CheckedChanged += new System.EventHandler(this.RadioMinus4_CheckedChanged);
             // 
             // panel2
             // 
@@ -284,7 +284,7 @@ namespace ChefosForm
             resources.ApplyResources(this.nextBtn, "nextBtn");
             this.nextBtn.Name = "nextBtn";
             this.nextBtn.UseVisualStyleBackColor = false;
-            this.nextBtn.Click += new System.EventHandler(this.button1_Click);
+            this.nextBtn.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label18
             // 
@@ -316,7 +316,7 @@ namespace ChefosForm
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DSScaleChoice";
-            this.Closing += new System.ComponentModel.CancelEventHandler(this.formDSScaleChice_Closing);
+            this.Closing += new System.ComponentModel.CancelEventHandler(this.FormDSScaleChice_Closing);
             this.radioGroupDSScale.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

@@ -17,7 +17,7 @@ namespace ChefosForm
         private int dsChoice;
         private Stopwatch dsStopWatch = new Stopwatch();
         private Stopwatch nextWatch = new Stopwatch();
-        formReadExperiment mainForm;
+        FormReadExperiment mainForm;
         private bool allowClose;
         private string outputFileName;
 
@@ -26,7 +26,7 @@ namespace ChefosForm
                              string received, string total,
                              int choiceTime, int nextTime,
                              string outputFileName,
-                             formReadExperiment mainForm)
+                             FormReadExperiment mainForm)
         {
             InitializeComponent();
 
@@ -43,7 +43,7 @@ namespace ChefosForm
             dsStopWatch.start();
         }
 
-        private void print(int nextIterationTime)
+        private void Print(int nextIterationTime)
         {
             System.IO.StreamWriter SW;
             SW = System.IO.File.AppendText(outputFileName);
@@ -52,7 +52,7 @@ namespace ChefosForm
             SW.Close(); 
         }
 
-        private void radioMinus4_CheckedChanged(object sender, EventArgs e)
+        private void RadioMinus4_CheckedChanged(object sender, EventArgs e)
         {
             dsChoiceTime = dsStopWatch.stop();
 
@@ -62,7 +62,7 @@ namespace ChefosForm
             nextWatch.start();
         }
 
-        private void radioMinus3_CheckedChanged(object sender, EventArgs e)
+        private void RadioMinus3_CheckedChanged(object sender, EventArgs e)
         {
             int dsChoiceTime = dsStopWatch.stop();
             radioGroupDSScale.Enabled = false;
@@ -71,7 +71,7 @@ namespace ChefosForm
             nextWatch.start();
         }
 
-        private void radioMinus2_CheckedChanged(object sender, EventArgs e)
+        private void RadioMinus2_CheckedChanged(object sender, EventArgs e)
         {
             dsChoiceTime = dsStopWatch.stop();
             radioGroupDSScale.Enabled = false;
@@ -80,7 +80,7 @@ namespace ChefosForm
             nextWatch.start();
         }
 
-        private void radioMinus1_CheckedChanged(object sender, EventArgs e)
+        private void RadioMinus1_CheckedChanged(object sender, EventArgs e)
         {
             dsChoiceTime = dsStopWatch.stop();
             radioGroupDSScale.Enabled = false;
@@ -89,7 +89,7 @@ namespace ChefosForm
             nextWatch.start();
         }
 
-        private void radioZero_CheckedChanged(object sender, EventArgs e)
+        private void RadioZero_CheckedChanged(object sender, EventArgs e)
         {
             dsChoiceTime = dsStopWatch.stop();
             radioGroupDSScale.Enabled = false;
@@ -98,7 +98,7 @@ namespace ChefosForm
             nextWatch.start();
         }
 
-        private void radioPlus1_CheckedChanged(object sender, EventArgs e)
+        private void RadioPlus1_CheckedChanged(object sender, EventArgs e)
         {
             dsChoiceTime = dsStopWatch.stop();
             radioGroupDSScale.Enabled = false;
@@ -107,7 +107,7 @@ namespace ChefosForm
             nextWatch.start();
         }
 
-        private void radioPlus2_CheckedChanged(object sender, EventArgs e)
+        private void RadioPlus2_CheckedChanged(object sender, EventArgs e)
         {
             dsChoiceTime = dsStopWatch.stop();
             radioGroupDSScale.Enabled = false;
@@ -116,7 +116,7 @@ namespace ChefosForm
             nextWatch.start();
         }
 
-        private void radioPlus3_CheckedChanged(object sender, EventArgs e)
+        private void RadioPlus3_CheckedChanged(object sender, EventArgs e)
         {
             dsChoiceTime = dsStopWatch.stop();
             radioGroupDSScale.Enabled = false;
@@ -125,7 +125,7 @@ namespace ChefosForm
             nextWatch.start();
         }
 
-        private void radioPlus4_CheckedChanged(object sender, EventArgs e)
+        private void RadioPlus4_CheckedChanged(object sender, EventArgs e)
         {
             dsChoiceTime = dsStopWatch.stop();
             radioGroupDSScale.Enabled = false;
@@ -134,15 +134,15 @@ namespace ChefosForm
             nextWatch.start();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
-            print(nextWatch.stop());
-            mainForm.nextIteration();
+            Print(nextWatch.stop());
+            mainForm.NextIteration();
             allowClose = true;
             Close();
         }
 
-        private void formDSScaleChice_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void FormDSScaleChice_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (!allowClose)
             {

@@ -54,7 +54,7 @@ namespace ChefosForm
             resources.ApplyResources(this.beginButton, "beginButton");
             this.beginButton.Name = "beginButton";
             this.beginButton.UseVisualStyleBackColor = false;
-            this.beginButton.Click += new System.EventHandler(this.beginButton_Click);
+            this.beginButton.Click += new System.EventHandler(this.BeginButton_Click);
             // 
             // InstructionsForm
             // 

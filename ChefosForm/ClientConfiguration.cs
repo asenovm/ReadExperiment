@@ -33,19 +33,14 @@ namespace ChefosForm
                 string configurationLine = streamReader.ReadLine();
                 while (configurationLine != null)
                 {
-                    Console.WriteLine("line is " + configurationLine);
                     string[] splitLine = configurationLine.Split(new char[] { '=' });
                     configuration.Add(splitLine[0], splitLine[1]);
                     configurationLine = streamReader.ReadLine();
                 }
                 streamReader.Close();
-
-                foreach (var value in configuration.Values) {
-                    Console.WriteLine("value is " + value);
-                }
             }
             catch (FileNotFoundException ex) {
-                Console.WriteLine(ex.Message);
+                LogUtil.LogException(ex);
             }
 
         }

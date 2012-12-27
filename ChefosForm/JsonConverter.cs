@@ -10,17 +10,15 @@ namespace ChefosForm
     public class JsonConverter
     {
 
-        public static string KEY_STATUS_CODE = "status";
+        public string ToJson(Notification notification) {
+            return JsonConvert.SerializeObject(notification.AsDictionary());
+        }
 
-        public static string KEY_ID = "id";
-
-        public static  string KEY_MESSAGE = "message";
-
-        public string toJson(Object convertee){
+        public string ToJson(Object convertee){
             return JsonConvert.SerializeObject(convertee);
         }
 
-        public Dictionary<string, string> parseJson(string json){
+        public Dictionary<string, string> ParseJson(string json){
             return JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
         }
     }
