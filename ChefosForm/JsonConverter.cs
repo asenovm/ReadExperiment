@@ -21,12 +21,7 @@ namespace ChefosForm
         }
 
         public Dictionary<string, string> parseJson(string json){
-            Dictionary<string, string> result = new Dictionary<string,string>();
-            string[] tokens = json.Split(new char[':']);
-            for (var i = 0; i < tokens.Length; i += 2) {
-                result.Add(tokens[i], tokens[i+1]);
-            }
-            return result;
+            return JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
         }
     }
 }

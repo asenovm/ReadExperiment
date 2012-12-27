@@ -58,7 +58,7 @@ namespace ChefosForm
 
                 if (read > 0)
                 {
-                    state.sb.Append(Encoding.ASCII.GetString(state.buffer, 0, read));
+                    state.sb.Append(Encoding.GetEncoding(1251).GetString(state.buffer, 0, read));
                     handler.BeginReceive(state.buffer, 0, SocketState.BufferSize, 0,
                         new AsyncCallback(readCallback), state);
                 }
@@ -66,8 +66,7 @@ namespace ChefosForm
                 {
                     if (state.sb.Length > 1)
                     {
-                        string content = state.sb.ToString();
-                        listener.onNotificationReceived(new Notification(content, content.Split(new char[] { ' ' })[0]));
+                        listener.OnNotificationReceived(new Notification(state.sb.ToString()));
                     }
                     handler.Close();
                 }
@@ -76,16 +75,22 @@ namespace ChefosForm
 
         public void Daemonize()
         {
-            IPAddress serverAddress = IPAddress.Parse("127.0.0.1");
-            IPEndPoint localEP = new IPEndPoint(serverAddress, 65534);
+            IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
+            IPAddress hostIpAddress = null;
+            foreach (var address in ipHostInfo.AddressList) {
+                if (address.AddressFamily == AddressFamily.InterNetwork) {
+                    hostIpAddress = address;
+                }
+            }
+            IPEndPoint endPoint = new IPEndPoint(hostIpAddress, 65534);
 
-            Socket listener = new Socket(localEP.Address.AddressFamily,
+            Socket listener = new Socket(AddressFamily.InterNetwork,
                 SocketType.Stream, ProtocolType.Tcp);
 
             try
             {
-                listener.Bind(localEP);
-                listener.Listen(10);
+                listener.Bind(endPoint);
+                listener.Listen(10000);
 
                 while (true)
                 {
@@ -95,12 +100,9 @@ namespace ChefosForm
                         listener);
                     allDone.WaitOne();
                 }
+            } catch (Exception ex) {
+                LogUtil.LogException(ex);
             }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.ToString());
-            }
-
         }
     }
 }

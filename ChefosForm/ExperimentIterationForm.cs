@@ -676,7 +676,7 @@ namespace ChefosForm
                     "READ Експеримент",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
-
+                serverConnection.Unregister();
                 allowClose = true;
                 Close();
             }
@@ -845,22 +845,22 @@ namespace ChefosForm
         }
 
 
-        public void onNotificationReceived(Notification notification)
+        public void OnNotificationReceived(Notification notification)
         {
             feedbackTextBox.Invoke(new DisplayNotification(showNotification), 
             new Notification[]{notification});
         }
 
         private void showNotification(Notification notification){
-            string textToAppend = notification.SenderId + " : " + notification.Message;
+            string notificationText = "\\b " + notification.GetSenderId() + "\\b0 " + " избра доставчик \\b " + notification.GetMessage() + "\\b0 ";
             if (feedbackTextBox.Text.Length == 0)
             {
-                feedbackTextBox.AppendText(textToAppend);
+                feedbackTextBox.Rtf = RTFUtil.ToRTF(notificationText);
             }
             else {
-                feedbackTextBox.AppendText(Environment.NewLine + textToAppend);
+                feedbackTextBox.Rtf = RTFUtil.AppendRTF(feedbackTextBox.Rtf, notificationText);
             }
-            
+            feedbackTextBox.ScrollToCaret();
         }
 
         private delegate void DisplayNotification(Notification notification);

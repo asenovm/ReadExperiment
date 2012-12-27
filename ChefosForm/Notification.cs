@@ -7,30 +7,19 @@ namespace ChefosForm
     public class Notification
     {
 
-        public Notification(string message, string id) {
-            this.message = message;
-            this.senderId = id;
+        public Notification(string jsonMessage) {
+            message = new JsonConverter().parseJson(jsonMessage);
         }
 
-        private string message;
+        private Dictionary<string, string> message;
 
-        public string Message
-        {
-            get {
-                return message;
-            }
+        public string GetSenderId() {
+            return message[JsonConverter.KEY_ID];
         }
 
-        private string senderId;
-
-        public string SenderId
-        {
-            get {
-                return senderId;
-            }
+        public string GetMessage() {
+            return message[JsonConverter.KEY_MESSAGE];
         }
 
-
-        
     }
 }

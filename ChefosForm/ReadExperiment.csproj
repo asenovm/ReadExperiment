@@ -141,6 +141,7 @@
       <DependentUpon>InstructionsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="JsonConverter.cs" />
+    <Compile Include="LogUtil.cs" />
     <Compile Include="ManufacturingIncrease.cs" />
     <Compile Include="ManufacturingLevels.cs" />
     <Compile Include="Notification.cs" />
@@ -150,6 +151,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="RTFUtil.cs" />
     <Compile Include="ServerConnection.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Stopwatch.cs" />

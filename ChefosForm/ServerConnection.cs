@@ -14,7 +14,7 @@ namespace ChefosForm
             REGISTER, ANSWER, UNREGISTER
         }
 
-        private ASCIIEncoding encoding;
+        private Encoding encoding;
 
         private INotificationsListener notificationsListener;
 
@@ -23,7 +23,7 @@ namespace ChefosForm
         private JsonConverter converter;
 
         public class SimpleNotificationsListener : INotificationsListener {
-            public void onNotificationReceived(Notification notification) { 
+            public void OnNotificationReceived(Notification notification) { 
                 //blank
             }
         }
@@ -33,25 +33,36 @@ namespace ChefosForm
             //blank
         }
 
+        public ServerConnection(ClientConfiguration configuration) : this(new SimpleNotificationsListener(), configuration) { 
+            //blank
+        }
+
         public ServerConnection(INotificationsListener notificationsListener, ClientConfiguration configuration){
-            encoding = new ASCIIEncoding();
+            encoding = Encoding.GetEncoding(1251);
             this.notificationsListener = notificationsListener;
             this.clientConfiguration = configuration;
             converter = new JsonConverter();
         }
 
         public void Register() {
-            TcpClient client = new TcpClient("127.0.0.1", 65535);
-            Dictionary<string, string> registerData = new Dictionary<string, string>();
-            registerData.Add(JsonConverter.KEY_STATUS_CODE, ((int)Status.REGISTER).ToString());
-            registerData.Add(JsonConverter.KEY_ID, clientConfiguration.GetClientId());
-            registerData.Add(JsonConverter.KEY_MESSAGE, "Register!");
-            
-            byte[] encodedString = encoding.GetBytes(converter.toJson(registerData));
-            NetworkStream writeStream = client.GetStream();
-            writeStream.Write(encodedString, 0, encodedString.Length);
-            writeStream.Flush();
-            writeStream.Close();           
+            try
+            {
+                TcpClient server = new TcpClient(clientConfiguration.GetServerIdAppress(), clientConfiguration.GetServerPort());
+                byte[] encodedString = encoding.GetBytes(converter.toJson(getRequestDictionary(Status.REGISTER, "register")));
+                WriteToServer(server, encodedString);
+            }
+            catch (Exception ex)
+            {
+                LogUtil.LogException(ex);
+            }
+        }
+
+        private Dictionary<string, string> getRequestDictionary(Status status, string message) {
+            Dictionary<string, string> result = new Dictionary<string, string>();
+            result.Add(JsonConverter.KEY_STATUS_CODE, ((int)status).ToString());
+            result.Add(JsonConverter.KEY_ID, clientConfiguration.GetClientId());
+            result.Add(JsonConverter.KEY_MESSAGE, message);
+            return result;
         }
 
        
@@ -62,17 +73,39 @@ namespace ChefosForm
         }
 
         public void SendAnswer(Answer answer) {
-            TcpClient client = new TcpClient("127.0.0.1", 65535);
-            byte[] encodedString = encoding.GetBytes("1 " + clientConfiguration.GetClientId() + " " + answer.ToString());
-            NetworkStream writeStream = client.GetStream();
-            writeStream.Write(encodedString, 0, encodedString.Length);
+            try
+            {
+                TcpClient server = new TcpClient(clientConfiguration.GetServerIdAppress(), clientConfiguration.GetServerPort());
+                byte[] encodedString = encoding.GetBytes(converter.toJson(getRequestDictionary(Status.ANSWER, answer.ToString())));
+                WriteToServer(server, encodedString);
+            }
+            catch (Exception ex) {
+                LogUtil.LogException(ex);
+            }
+        }
+
+        private void WriteToServer(TcpClient server, byte[] message) {
+            NetworkStream writeStream = server.GetStream();
+            writeStream.Write(message, 0, message.Length);
             writeStream.Flush();
             writeStream.Close();
         }
 
-        public void onNotificationReceived(Notification notification)
+        public void Unregister() {
+            try
+            {
+                TcpClient server = new TcpClient(clientConfiguration.GetServerIdAppress(), clientConfiguration.GetServerPort());
+                byte[] encodedString = encoding.GetBytes(converter.toJson(getRequestDictionary(Status.UNREGISTER, "Unregister")));
+                WriteToServer(server, encodedString);
+            }
+            catch (Exception ex) {
+                LogUtil.LogException(ex);
+            }
+        }
+
+        public void OnNotificationReceived(Notification notification)
         {
-            notificationsListener.onNotificationReceived(notification);
+            notificationsListener.OnNotificationReceived(notification);
         }
     }
 }

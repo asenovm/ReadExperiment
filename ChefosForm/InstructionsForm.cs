@@ -28,7 +28,7 @@ namespace ChefosForm
                 fi1 = new System.IO.FileInfo(outputFileName);
             }
 
-            ServerConnection connection = new ServerConnection();
+            ServerConnection connection = new ServerConnection(new ClientConfiguration("client.dat"));
             connection.Register();
             
             formReadExperiment frm =

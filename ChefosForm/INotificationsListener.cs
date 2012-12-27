@@ -6,6 +6,6 @@ namespace ChefosForm
 {
     public interface INotificationsListener
     {
-        void onNotificationReceived(Notification notification);
+        void OnNotificationReceived(Notification notification);
     }
 }
