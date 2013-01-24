@@ -28,7 +28,7 @@ namespace ChefosForm
                              string received, string total,
                              int choiceTime, int nextTime,
                              string outputFileName,
-                             FormReadExperiment mainForm)
+                             FormReadExperiment mainForm, ServerConnection serverConnection)
         {
             InitializeComponent();
 
@@ -42,7 +42,7 @@ namespace ChefosForm
             this.allowClose = false;
             this.outputFileName = outputFileName;
 
-            serverConnection = new ServerConnection();
+            this.serverConnection = serverConnection;
 
             dsStopWatch.start();
         }

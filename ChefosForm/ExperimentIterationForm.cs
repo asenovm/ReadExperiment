@@ -851,7 +851,7 @@ namespace ChefosForm
                                   choiceTime,
                                   nextSwtopwatch.stop(),
                                   outputFile,
-                                  this);
+                                  this, serverConnection);
             this.Visible = false;
             frm.ShowDialog();
         }
