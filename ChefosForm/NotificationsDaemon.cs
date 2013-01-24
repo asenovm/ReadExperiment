@@ -10,12 +10,14 @@ namespace ChefosForm
     class NotificationsDaemon
     {
 
+        private const int CLIENT_PORT_LISTENING = 65534;
 
         private static ManualResetEvent allDone = new ManualResetEvent(false);
 
         private INotificationsListener notificationsListener;
 
-        public NotificationsDaemon(INotificationsListener listener) {
+        public NotificationsDaemon(INotificationsListener listener)
+        {
             this.notificationsListener = listener;
         }
 
@@ -24,7 +26,8 @@ namespace ChefosForm
 
             private INotificationsListener listener;
 
-            public SocketListener(INotificationsListener notificationsListener) {
+            public SocketListener(INotificationsListener notificationsListener)
+            {
                 this.listener = notificationsListener;
             }
 
@@ -75,18 +78,16 @@ namespace ChefosForm
 
         public void Daemonize()
         {
-            IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
-            IPAddress hostIpAddress = null;
-            foreach (var address in ipHostInfo.AddressList) {
-                if (address.AddressFamily == AddressFamily.InterNetwork) {
-                    hostIpAddress = address;
-                }
-            }
-            IPEndPoint endPoint = new IPEndPoint(hostIpAddress, 65534);
+            IPEndPoint endPoint = new IPEndPoint(GetHostIpAddress(), CLIENT_PORT_LISTENING);
 
             Socket listener = new Socket(AddressFamily.InterNetwork,
                 SocketType.Stream, ProtocolType.Tcp);
 
+            Listen(endPoint, listener);
+        }
+
+        private void Listen(IPEndPoint endPoint, Socket listener)
+        {
             try
             {
                 listener.Bind(endPoint);
@@ -100,9 +101,24 @@ namespace ChefosForm
                         listener);
                     allDone.WaitOne();
                 }
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 LogUtil.LogException(ex);
             }
+        }
+
+        private IPAddress GetHostIpAddress()
+        {
+            IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (var address in ipHostInfo.AddressList)
+            {
+                if (address.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return address;
+                }
+            }
+            return null;
         }
     }
 }

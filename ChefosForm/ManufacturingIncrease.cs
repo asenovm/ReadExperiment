@@ -9,7 +9,8 @@ namespace ChefosForm
 
         private double increase;
 
-        public ManufacturingIncrease(double increase) {
+        public ManufacturingIncrease(double increase)
+        {
             this.increase = increase;
         }
 

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Net;
+using System.Net.Sockets;
 
 namespace ChefosForm
 {
@@ -16,17 +18,18 @@ namespace ChefosForm
 
         private const string DEFAULT_CLIENT_ID = "UnconfiguredId";
 
-        private const string DEFAULT_SERVER_IP_ADDRESS = "77.70.11.102";
-
-        private const int DEFAULT_SERVER_PORT = 65534;
+        private const int DEFAULT_SERVER_PORT = 65535;
 
         private Dictionary<string, string> configuration;
 
-        public ClientConfiguration() {
+        public ClientConfiguration()
+        {
             configuration = new Dictionary<string, string>();
         }
 
-        public ClientConfiguration(string configurationPath) : this(){
+        public ClientConfiguration(string configurationPath)
+            : this()
+        {
             try
             {
                 System.IO.StreamReader streamReader = new StreamReader(configurationPath, Encoding.GetEncoding(1251));
@@ -39,28 +42,48 @@ namespace ChefosForm
                 }
                 streamReader.Close();
             }
-            catch (FileNotFoundException ex) {
+            catch (FileNotFoundException ex)
+            {
                 LogUtil.LogException(ex);
             }
 
         }
 
-        public string GetClientId() {
-            if (configuration.ContainsKey(KEY_ID)) {
+        public string GetClientId()
+        {
+            if (configuration.ContainsKey(KEY_ID))
+            {
                 return configuration[KEY_ID];
             }
             return DEFAULT_CLIENT_ID;
         }
 
-        public string GetServerIdAppress() {
-            if (configuration.ContainsKey(KEY_SERVER_ADDRESS)) {
+        public string GetServerIdAppress()
+        {
+            if (configuration.ContainsKey(KEY_SERVER_ADDRESS))
+            {
                 return configuration[KEY_SERVER_ADDRESS];
             }
-            return DEFAULT_SERVER_IP_ADDRESS;
+            return GetDefaultServerIpAddress();
         }
 
-        public int GetServerPort() {
-            if (configuration.ContainsKey(KEY_SERVER_PORT)) {
+        private string GetDefaultServerIpAddress()
+        {
+            IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (var address in ipHostInfo.AddressList)
+            {
+                if (address.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return address.ToString();
+                }
+            }
+            return null;
+        }
+
+        public int GetServerPort()
+        {
+            if (configuration.ContainsKey(KEY_SERVER_PORT))
+            {
                 return Int32.Parse(configuration[KEY_SERVER_PORT]);
             }
             return DEFAULT_SERVER_PORT;

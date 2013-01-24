@@ -1,0 +1,18 @@
+D 900 386 5 0 105 
+UnconfiguredId D 0 112 
+D 850 321 51 0 629 
+UnconfiguredId D 0 47 
+D 996 453 912 1 495 
+UnconfiguredId D 1 48 
+D 646 258 891 1 603 
+UnconfiguredId D 1 57 
+D 716 407 992 1 715 
+UnconfiguredId D 1 61 
+D 835 667 94 1 604 
+UnconfiguredId D 1 37 
+D 939 289 720 1 990 
+UnconfiguredId D 1 57 
+D 118 423 846 1 773 
+UnconfiguredId D 1 46 
+D 555 498 866 1 703 
+UnconfiguredId D 1 54 

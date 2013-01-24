@@ -9,16 +9,18 @@ namespace ChefosForm
     public class LogUtil
     {
 
-        private LogUtil() { 
+        private LogUtil()
+        {
             // blank
         }
 
-        public static void LogException(Exception ex) {
+        public static void LogException(Exception ex)
+        {
             StreamWriter streamWriter = System.IO.File.AppendText("stacktrace.dat");
             streamWriter.WriteLine(ex.ToString() + " " + ex.StackTrace);
             streamWriter.WriteLine("error code is " + ex.Message);
             streamWriter.WriteLine("\n");
-            streamWriter.Close(); 
+            streamWriter.Close();
         }
     }
 }

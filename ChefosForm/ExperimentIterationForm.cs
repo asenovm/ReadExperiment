@@ -6,12 +6,13 @@ using System.Windows.Forms;
 using System.Data;
 using System.IO;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace ChefosForm
 {
-	/// <summary>
-	/// Summary description for Form1.
-	/// </summary>
+    /// <summary>
+    /// Summary description for Form1.
+    /// </summary>
     public class FormReadExperiment : System.Windows.Forms.Form, INotificationsListener
     {
         /// <summary>
@@ -29,6 +30,9 @@ namespace ChefosForm
             ReadExperimentData(offersFile);
             InitializeComponent();
 
+            nextTextBackgroundColor = Color.FromArgb(0xCCCCCC);
+
+            feedbackWatch = new Stopwatch();
             currentIteration = 0;
             omniumQuantity = 0;
             nextBtn.Enabled = true;
@@ -39,7 +43,8 @@ namespace ChefosForm
             PerformIteration();
         }
 
-        private void ReadExperimentData(string offersFile) {
+        private void ReadExperimentData(string offersFile)
+        {
             System.IO.StreamReader streamReader = System.IO.File.OpenText(offersFile);
             string experimentIterationAsString = streamReader.ReadLine();
             while (experimentIterationAsString != null)
@@ -538,7 +543,7 @@ namespace ChefosForm
             this.feedbackTextBox.Name = "feedbackTextBox";
             this.feedbackTextBox.ReadOnly = true;
             // 
-            // formReadExperiment
+            // FormReadExperiment
             // 
             resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.White;
@@ -554,7 +559,7 @@ namespace ChefosForm
             this.Controls.Add(this.offersPanel);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "formReadExperiment";
+            this.Name = "FormReadExperiment";
             this.Closing += new System.ComponentModel.CancelEventHandler(this.FormReadExperiment_Closing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -660,6 +665,10 @@ namespace ChefosForm
         private Label manufacturingLevelUnitsLabel;
         private string outputFile;
 
+        private Color nextTextBackgroundColor;
+
+        private Stopwatch feedbackWatch;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -688,6 +697,7 @@ namespace ChefosForm
 
         private void PerformIteration()
         {
+            feedbackWatch.start();
             EnableButtons();
             this.Visible = true;
 
@@ -833,7 +843,6 @@ namespace ChefosForm
         private void NextBtn_Click(object sender, EventArgs e)
         {
             ExperimentIteration it = experimentIterations[currentIteration];
-            serverConnection.SendAnswer(new Answer(supplierNames[supplierIndx]));
             DSScaleChoice frm =
                 new DSScaleChoice(supplierNames[supplierIndx],
                                   it.Suppliers[supplierIndx].AdPrice,
@@ -850,19 +859,29 @@ namespace ChefosForm
 
         public void OnNotificationReceived(Notification notification)
         {
-            feedbackTextBox.Invoke(new DisplayNotification(ShowNotification), 
-            new Notification[]{notification});
+            feedbackTextBox.Invoke(new DisplayNotification(ShowNotification),
+            new Notification[] { notification });
         }
 
-        private void ShowNotification(Notification notification){
-            string notificationText = "\\b " + notification.GetSenderId() + "\\b0 " + " избра доставчик \\b " + notification.GetMessage() + "\\b0 ";
+        private void ShowNotification(Notification notification)
+        {
+            string notificationText = "Участник " + "\\b " + notification.GetSenderId() + "\\b0 " + " е " + notification.GetSatisfaction() + " от доставчик \\b " + notification.GetSupplier() + "\\b0 ";
             if (feedbackTextBox.Text.Length == 0)
             {
                 feedbackTextBox.Rtf = RTFUtil.ToRTF(notificationText);
             }
-            else {
+            else
+            {
                 feedbackTextBox.Rtf = RTFUtil.AppendRTF(feedbackTextBox.Rtf, notificationText);
             }
+        
+            feedbackTextBox.Select(0,notificationText.Length-14);
+            feedbackTextBox.SelectionBackColor = nextTextBackgroundColor;
+
+            feedbackTextBox.DeselectAll();
+            nextTextBackgroundColor = nextTextBackgroundColor == Color.FromArgb(0xCCCCCC) ? Color.White : Color.FromArgb(0xCCCCCC);
+
+            FileUtil.WriteToFile(notification, feedbackWatch.stop(), outputFile);
         }
 
         private delegate void DisplayNotification(Notification notification);

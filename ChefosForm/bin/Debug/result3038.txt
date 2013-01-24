@@ -1,0 +1,22 @@
+C 873 567 43 1 747 
+UnconfiguredId C 1 94 
+D 977 544 851 1 541 
+UnconfiguredId D 1 61 
+D 781 516 824 2 945 
+UnconfiguredId D 2 84 
+D 928 365 23 4 427 
+UnconfiguredId D 4 69 
+C 396 364 981 0 952 
+UnconfiguredId C 0 58 
+C 821 649 963 2 396 
+UnconfiguredId C 2 72 
+D 472 464 991 3 333 
+UnconfiguredId D 3 79 
+D 536 642 252 3 233 
+UnconfiguredId D 3 52 
+C 703 495 826 2 762 
+UnconfiguredId C 2 59 
+D 930 616 818 2 696 
+UnconfiguredId D 2 63 
+C 469 533 359 1 500 
+UnconfiguredId C 1 69 

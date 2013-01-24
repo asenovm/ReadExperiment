@@ -10,12 +10,22 @@ namespace ChefosForm
 
         private string vendor;
 
-        public Answer(string vendor) {
+        private int satisfaction;
+
+        public Answer(string vendor, int satisfaction) {
             this.vendor = vendor;
+            this.satisfaction = satisfaction;
         }
 
         public override string ToString(){
-            return vendor;
+            return vendor + " " + satisfaction;
+        }
+
+        public Dictionary<string, string> AsDictionary() { 
+            Dictionary<string, string> result= new Dictionary<string,string>();
+            result.Add("vendor", vendor);
+            result.Add("satisfaction", satisfaction.ToString());
+            return result;
         }
        
     }

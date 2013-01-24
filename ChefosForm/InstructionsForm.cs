@@ -30,7 +30,7 @@ namespace ChefosForm
 
             ServerConnection connection = new ServerConnection(new ClientConfiguration("client.dat"));
             connection.Register();
-            
+
             FormReadExperiment frm =
                 new FormReadExperiment("SuppliersOffers.txt", outputFileName);
             this.Hide();

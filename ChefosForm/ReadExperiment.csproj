@@ -133,6 +133,7 @@
     <Compile Include="ExperimentIterationForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FileUtil.cs" />
     <Compile Include="INotificationsListener.cs" />
     <Compile Include="InstructionsForm.cs">
       <SubType>Form</SubType>

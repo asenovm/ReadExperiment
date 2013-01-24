@@ -10,7 +10,12 @@ namespace ChefosForm
     public class ServerConnection : INotificationsListener
     {
 
-        private enum Status { 
+        private const string REGISTER_MESSAGE = "register";
+
+        private const string UNREGISTER_MESSAGE = "unregister";
+
+        private enum Status
+        {
             REGISTER, ANSWER, UNREGISTER
         }
 
@@ -22,77 +27,83 @@ namespace ChefosForm
 
         private JsonConverter converter;
 
-        public class SimpleNotificationsListener : INotificationsListener {
-            public void OnNotificationReceived(Notification notification) { 
+        public class SimpleNotificationsListener : INotificationsListener
+        {
+            public void OnNotificationReceived(Notification notification)
+            {
                 //blank
             }
         }
 
 
-        public ServerConnection() : this(new SimpleNotificationsListener(), new ClientConfiguration()) {
+        public ServerConnection()
+            : this(new SimpleNotificationsListener(), new ClientConfiguration())
+        {
             //blank
         }
 
-        public ServerConnection(ClientConfiguration configuration) : this(new SimpleNotificationsListener(), configuration) { 
+        public ServerConnection(ClientConfiguration configuration)
+            : this(new SimpleNotificationsListener(), configuration)
+        {
             //blank
         }
 
-        public ServerConnection(INotificationsListener notificationsListener, ClientConfiguration configuration){
+        public ServerConnection(INotificationsListener notificationsListener, ClientConfiguration configuration)
+        {
             encoding = Encoding.GetEncoding(1251);
             this.notificationsListener = notificationsListener;
             this.clientConfiguration = configuration;
             converter = new JsonConverter();
         }
 
-        public void Register() {
-            try
-            {
-                TcpClient server = new TcpClient(clientConfiguration.GetServerIdAppress(), clientConfiguration.GetServerPort());
-                byte[] encodedString = encoding.GetBytes(converter.ToJson(GetNotification(((int)Status.REGISTER).ToString(), "register")));
-                WriteToServer(server, encodedString);
-            }
-            catch (Exception ex)
-            {
-                LogUtil.LogException(ex);
-            }
+        public void Register()
+        {
+            SendRequest(((int)Status.REGISTER).ToString(), REGISTER_MESSAGE);
         }
 
-        public void Daemonize() {
+        public void SendAnswer(Answer answer)
+        {
+            SendRequest(((int)Status.ANSWER).ToString(), converter.ToJson(answer));
+        }
+
+        public void Unregister()
+        {
+            SendRequest(((int)Status.UNREGISTER).ToString(), UNREGISTER_MESSAGE);
+        }
+
+
+        public void Daemonize()
+        {
             Thread daemonThread = new Thread(new NotificationsDaemon(this).Daemonize);
             daemonThread.Start();
         }
 
-        public void SendAnswer(Answer answer) {
-            try
-            {
-                TcpClient server = new TcpClient(clientConfiguration.GetServerIdAppress(), clientConfiguration.GetServerPort());
-                byte[] encodedString = encoding.GetBytes(converter.ToJson(GetNotification(((int)Status.ANSWER).ToString(), answer.ToString())));
-                WriteToServer(server, encodedString);
-            }
-            catch (Exception ex) {
-                LogUtil.LogException(ex);
-            }
-        }
 
-        private Notification GetNotification(string status, string message) {
+        private Notification GetNotification(string status, string message)
+        {
             return new Notification(clientConfiguration.GetClientId(), status, message);
         }
 
-        private void WriteToServer(TcpClient server, byte[] message) {
+        private void WriteToServer(TcpClient server, byte[] message)
+        {
             NetworkStream writeStream = server.GetStream();
             writeStream.Write(message, 0, message.Length);
             writeStream.Flush();
             writeStream.Close();
         }
 
-        public void Unregister() {
+
+        private void SendRequest(string status, string message)
+        {
             try
             {
                 TcpClient server = new TcpClient(clientConfiguration.GetServerIdAppress(), clientConfiguration.GetServerPort());
-                byte[] encodedString = encoding.GetBytes(converter.ToJson(GetNotification(((int)Status.UNREGISTER).ToString(), "Unregister")));
+                byte[] encodedString = encoding.GetBytes(converter.ToJson(GetNotification(status, message)));
                 WriteToServer(server, encodedString);
+                server.Close();
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 LogUtil.LogException(ex);
             }
         }

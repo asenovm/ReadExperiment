@@ -21,8 +21,10 @@ namespace ChefosForm
         private bool allowClose;
         private string outputFileName;
 
+        private ServerConnection serverConnection;
 
-        public DSScaleChoice(string supplier, string offered, 
+
+        public DSScaleChoice(string supplier, string offered,
                              string received, string total,
                              int choiceTime, int nextTime,
                              string outputFileName,
@@ -39,17 +41,10 @@ namespace ChefosForm
             this.mainForm = mainForm;
             this.allowClose = false;
             this.outputFileName = outputFileName;
-           
-            dsStopWatch.start();
-        }
 
-        private void Print(int nextIterationTime)
-        {
-            System.IO.StreamWriter SW;
-            SW = System.IO.File.AppendText(outputFileName);
-            SW.WriteLine(supplier + " " + choiceTime.ToString() + " "  + nextTime.ToString() + " " + 
-                         dsChoiceTime.ToString() + " " + dsChoice + " " + nextIterationTime);
-            SW.Close(); 
+            serverConnection = new ServerConnection();
+
+            dsStopWatch.start();
         }
 
         private void RadioMinus4_CheckedChanged(object sender, EventArgs e)
@@ -57,7 +52,7 @@ namespace ChefosForm
             dsChoiceTime = dsStopWatch.stop();
 
             radioGroupDSScale.Enabled = false;
-            dsChoice =  -4;
+            dsChoice = -4;
             nextBtn.Enabled = true;
             nextWatch.start();
         }
@@ -129,16 +124,17 @@ namespace ChefosForm
         {
             dsChoiceTime = dsStopWatch.stop();
             radioGroupDSScale.Enabled = false;
-            dsChoiceTime = 4;
+            dsChoice = 4;
             nextBtn.Enabled = true;
             nextWatch.start();
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Print(nextWatch.stop());
+            FileUtil.WriteToFile(supplier,choiceTime.ToString(),nextTime.ToString(),dsChoiceTime.ToString(),dsChoice.ToString(),nextWatch.stop().ToString(),  outputFileName);
             mainForm.NextIteration();
             allowClose = true;
+            serverConnection.SendAnswer(new Answer(supplier, dsChoice));
             Close();
         }
 
@@ -148,6 +144,11 @@ namespace ChefosForm
             {
                 e.Cancel = true;
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
 
 
