@@ -1,4 +1,0 @@
-C 738 691 64 2 493 
-UnconfiguredId C 2 144 
-D 21 470 155 1 771 
-UnconfiguredId D 1 60 
