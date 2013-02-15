@@ -2610,6 +2610,9 @@
   <data name="&gt;&gt;offersPanel.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="feedbackTextBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="feedbackTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
