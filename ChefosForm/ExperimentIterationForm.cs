@@ -7,6 +7,7 @@ using System.Data;
 using System.IO;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using Transitions;
 
 namespace ChefosForm
 {
@@ -30,7 +31,8 @@ namespace ChefosForm
             ReadExperimentData(offersFile);
             InitializeComponent();
 
-            nextTextBackgroundColor = Color.FromArgb(0xCCCCCC);
+            colors = new ColorsList();
+            animator = new Animator();
 
             feedbackWatch = new Stopwatch();
             currentIteration = 0;
@@ -138,7 +140,8 @@ namespace ChefosForm
             this.manufacturingLevelUnitsLabel = new System.Windows.Forms.Label();
             this.manufacturingLevelsValueLabel = new System.Windows.Forms.Label();
             this.manufacturingLevelsTextLabel = new System.Windows.Forms.Label();
-            this.feedbackTextBox = new System.Windows.Forms.RichTextBox();
+            this.feedbackLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.firstSupplierRealPanel.SuspendLayout();
@@ -154,6 +157,7 @@ namespace ChefosForm
             this.offersPanel.SuspendLayout();
             this.manufacturingIncreasePanel.SuspendLayout();
             this.manufacturingLevelsPanel.SuspendLayout();
+            this.feedbackLayout.SuspendLayout();
             this.SuspendLayout();
             // 
             // firstSuppierBtn
@@ -536,18 +540,24 @@ namespace ChefosForm
             resources.ApplyResources(this.manufacturingLevelsTextLabel, "manufacturingLevelsTextLabel");
             this.manufacturingLevelsTextLabel.Name = "manufacturingLevelsTextLabel";
             // 
-            // feedbackTextBox
+            // feedbackLayout
             // 
-            this.feedbackTextBox.Cursor = System.Windows.Forms.Cursors.Default;
-            resources.ApplyResources(this.feedbackTextBox, "feedbackTextBox");
-            this.feedbackTextBox.Name = "feedbackTextBox";
-            this.feedbackTextBox.ReadOnly = true;
+            this.feedbackLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(235)))), ((int)(((byte)(221)))));
+            this.feedbackLayout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.feedbackLayout.Controls.Add(this.panel9);
+            resources.ApplyResources(this.feedbackLayout, "feedbackLayout");
+            this.feedbackLayout.Name = "feedbackLayout";
+            // 
+            // panel9
+            // 
+            resources.ApplyResources(this.panel9, "panel9");
+            this.panel9.Name = "panel9";
             // 
             // FormReadExperiment
             // 
             resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.feedbackTextBox);
+            this.Controls.Add(this.feedbackLayout);
             this.Controls.Add(this.nextBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.omniumQuontityLabel);
@@ -586,6 +596,7 @@ namespace ChefosForm
             this.manufacturingIncreasePanel.PerformLayout();
             this.manufacturingLevelsPanel.ResumeLayout(false);
             this.manufacturingLevelsPanel.PerformLayout();
+            this.feedbackLayout.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -661,11 +672,15 @@ namespace ChefosForm
         private Panel manufacturingIncreasePanel;
         private Label manufacturingIncreaseValueLabel;
         private Label manufacturingIncreaseTextLabel;
-        private RichTextBox feedbackTextBox;
         private Label manufacturingLevelUnitsLabel;
         private string outputFile;
 
-        private Color nextTextBackgroundColor;
+        private ColorsList colors;
+
+        private Animator animator;
+
+        private FlowLayoutPanel feedbackLayout;
+        private Panel panel9;
 
         private Stopwatch feedbackWatch;
 
@@ -859,29 +874,37 @@ namespace ChefosForm
 
         public void OnNotificationReceived(Notification notification)
         {
-            feedbackTextBox.Invoke(new DisplayNotification(ShowNotification),
+            feedbackLayout.Invoke(new DisplayNotification(ShowNotification),
             new Notification[] { notification });
         }
 
         private void ShowNotification(Notification notification)
         {
-            string notificationText = "Участник " + "\\b " + notification.GetSenderId() + "\\b0 " + " е " + notification.GetSatisfaction() + " от доставчик \\b " + notification.GetSupplier() + "\\b0 ";
-            if (feedbackTextBox.Text.Length == 0)
-            {
-                feedbackTextBox.Rtf = RTFUtil.ToRTF(notificationText);
-            }
-            else
-            {
-                feedbackTextBox.Rtf = RTFUtil.AppendRTF(feedbackTextBox.Rtf, notificationText);
-            }
-        
-            feedbackTextBox.Select(0,notificationText.Length-14);
-            feedbackTextBox.SelectionBackColor = nextTextBackgroundColor;
+            Control notificationBox = GetNotificationContainer(notification);
+            feedbackLayout.Controls.Add(notificationBox);
+            feedbackLayout.Controls.SetChildIndex(notificationBox, 0);
 
-            feedbackTextBox.DeselectAll();
-            nextTextBackgroundColor = nextTextBackgroundColor == Color.FromArgb(0xCCCCCC) ? Color.White : Color.FromArgb(0xCCCCCC);
+            animator.flash(notificationBox);
 
             FileUtil.WriteToFile(notification, feedbackWatch.stop(), outputFile);
+        }
+
+        private Control GetNotificationContainer(Notification notification) {
+            string notificationText = "Участник " + "\\b " + notification.GetSenderId() + "\\b0 " + " е " + notification.GetSatisfaction() + " от доставчик \\b " + notification.GetSupplier() + "\\b0 ";
+
+            RichTextBox notificationBox = new RichTextBox();
+            notificationBox.Font = new Font(FontFamily.GenericSansSerif, 10f);
+            notificationBox.Width = feedbackLayout.Width - 8;
+            notificationBox.ScrollBars = RichTextBoxScrollBars.None;
+            notificationBox.BorderStyle = BorderStyle.None;
+            notificationBox.ReadOnly = true;
+            notificationBox.Rtf = RTFUtil.ToRTF(notificationText);
+
+            Size size = TextRenderer.MeasureText(notificationBox.Text, notificationBox.Font, notificationBox.ClientRectangle.Size, TextFormatFlags.WordBreak);
+            notificationBox.Height = size.Height;
+            notificationBox.BackColor = colors.NextColor();
+
+            return notificationBox;
         }
 
         private delegate void DisplayNotification(Notification notification);

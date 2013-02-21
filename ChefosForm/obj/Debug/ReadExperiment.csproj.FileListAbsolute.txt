@@ -38,3 +38,4 @@ C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\GenerateResource.
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\GenerateResource.write.1.tlog
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\bin\Debug\Newtonsoft.Json.dll
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\bin\Debug\Newtonsoft.Json.xml
+C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\bin\Debug\Transitions.dll

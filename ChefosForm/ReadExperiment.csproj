@@ -113,14 +113,19 @@
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
     </Reference>
+    <Reference Include="Transitions">
+      <HintPath>.\Transitions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.ico" />
+    <Compile Include="Animator.cs" />
     <Compile Include="Answer.cs" />
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ClientConfiguration.cs" />
+    <Compile Include="ColorsList.cs" />
     <Compile Include="DSScaleChoice.cs">
       <SubType>Form</SubType>
     </Compile>
