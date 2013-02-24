@@ -17,6 +17,8 @@ namespace ChefosForm
             StringBuilder builder = new StringBuilder();
             builder.Append(notification.GetSenderId());
             builder.Append(" ");
+            builder.Append(notification.GetSenderServerId());
+            builder.Append(" ");
             builder.Append(notification.GetSupplier());
             builder.Append(" ");
             builder.Append(notification.Satisfaction.ToString());

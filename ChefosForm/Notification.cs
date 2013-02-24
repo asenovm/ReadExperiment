@@ -12,6 +12,8 @@ namespace ChefosForm
 
         private const string KEY_ID = "id";
 
+        private const string KEY_SYSTEM_ID = "systemId";
+
         private const string KEY_MESSAGE = "message";
 
         private const string KEY_SUPPLIER = "vendor";
@@ -40,6 +42,10 @@ namespace ChefosForm
         public string GetSenderId()
         {
             return notification[KEY_ID];
+        }
+
+        public string GetSenderServerId() {
+            return notification[KEY_SYSTEM_ID];
         }
 
         public string GetSupplier()

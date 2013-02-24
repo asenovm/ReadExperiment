@@ -13,7 +13,7 @@ namespace ChefosForm
         private int colorIndex;
 
         public ColorsList() {
-            colors = new Color[3] { Color.FromArgb(229,229,229), Color.White, Color.FromArgb(193,193,193) };
+            colors = new Color[3] { Color.FromArgb(193, 193, 193), Color.FromArgb(229, 229, 229), Color.White};
             colorIndex = 0;
         }
 

@@ -11,8 +11,8 @@ namespace ChefosForm
     public class Animator
     {
         public void flash(Control control) {
-            var transition = new Transition(new TransitionType_Flash(2, 700));
-            transition.add(control, "BackColor", Color.FromArgb(151, 31, 62));
+            var transition = new Transition(new TransitionType_Flash(2, 500));
+            transition.add(control, "BackColor", Color.FromArgb(240, 121, 88));
             transition.run();
         }
     }
