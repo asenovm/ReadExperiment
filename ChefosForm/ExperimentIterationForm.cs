@@ -892,12 +892,8 @@ namespace ChefosForm
         private Control GetNotificationContainer(Notification notification) {
             string notificationText = "Участник " + "\\b " + notification.GetSenderId() + "\\b0 " + " е " + notification.GetSatisfaction() + " от доставчик \\b " + notification.GetSupplier() + "\\b0 ";
 
-            RichTextBox notificationBox = new RichTextBox();
-            notificationBox.Font = new Font(FontFamily.GenericSansSerif, 10f);
+            RichTextBox notificationBox = new ReadOnlyRichTextBox();
             notificationBox.Width = feedbackLayout.Width - 8;
-            notificationBox.ScrollBars = RichTextBoxScrollBars.None;
-            notificationBox.BorderStyle = BorderStyle.None;
-            notificationBox.ReadOnly = true;
             notificationBox.Rtf = RTFUtil.ToRTF(notificationText);
 
             Size size = TextRenderer.MeasureText(notificationBox.Text, notificationBox.Font, notificationBox.ClientRectangle.Size, TextFormatFlags.WordBreak);
