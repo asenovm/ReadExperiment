@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ChefosForm
+namespace Read
 {
     public partial class InstructionsForm : Form
     {
@@ -27,9 +27,6 @@ namespace ChefosForm
                 outputFileName = "resul" + fileSuffix + ".txt";
                 fi1 = new System.IO.FileInfo(outputFileName);
             }
-
-            ServerConnection connection = new ServerConnection(new ClientConfiguration("client.dat"));
-            connection.Register();
 
             FormReadExperiment frm =
                 new FormReadExperiment("SuppliersOffers.txt", outputFileName);

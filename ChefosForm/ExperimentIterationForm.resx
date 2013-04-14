@@ -149,7 +149,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;firstSuppierBtn.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="secondSupplierBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -180,7 +180,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;secondSupplierBtn.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="thirdSupplierBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -211,7 +211,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;thirdSupplierBtn.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="fourthSupplierBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -242,7 +242,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;fourthSupplierBtn.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -272,7 +272,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="omniumQuontityLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -305,7 +305,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;omniumQuontityLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -335,7 +335,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="nextBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1045,7 +1045,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;nextBtn.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;firstSupplierOfferLabel.Name" xml:space="preserve">
     <value>firstSupplierOfferLabel</value>
@@ -2854,7 +2854,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;offersPanel.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="&gt;&gt;manufacturingIncreaseValueLabel.Name" xml:space="preserve">
     <value>manufacturingIncreaseValueLabel</value>
@@ -3126,57 +3126,6 @@
   <data name="&gt;&gt;manufacturingLevelsTextLabel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="panel9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="panel9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="panel9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 100</value>
-  </data>
-  <data name="panel9.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panel9.Name" xml:space="preserve">
-    <value>panel9</value>
-  </data>
-  <data name="&gt;&gt;panel9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel9.Parent" xml:space="preserve">
-    <value>feedbackLayout</value>
-  </data>
-  <data name="&gt;&gt;panel9.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="feedbackLayout.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
-    <value>TopDown</value>
-  </data>
-  <data name="feedbackLayout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>677, 21</value>
-  </data>
-  <data name="feedbackLayout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="feedbackLayout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>309, 479</value>
-  </data>
-  <data name="feedbackLayout.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;feedbackLayout.Name" xml:space="preserve">
-    <value>feedbackLayout</value>
-  </data>
-  <data name="&gt;&gt;feedbackLayout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;feedbackLayout.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;feedbackLayout.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -3190,13 +3139,13 @@
     <value>5, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1008, 712</value>
+    <value>694, 712</value>
   </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1024, 800</value>
+    <value>710, 800</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1024, 750</value>
+    <value>710, 750</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>READ Експеримент</value>

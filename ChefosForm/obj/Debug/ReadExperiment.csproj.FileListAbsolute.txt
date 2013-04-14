@@ -21,13 +21,6 @@ C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\bin\Debug\ChefosForm.pdb
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\bin\Debug\bg\ChefosForm.resources.dll
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\bin\Debug\bg-BG\ChefosForm.resources.dll
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\ChefosForm.DSScaleChoice.resources
-C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\ChefosForm.formReadExperiment.resources
-C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\ChefosForm.InstructionsForm.resources
-C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\ChefosForm.Properties.Resources.resources
-C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\ChefosForm.DSScaleChoice.bg.resources
-C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\ChefosForm.formReadExperiment.bg-BG.resources
-C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\ChefosForm.formReadExperiment.bg.resources
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\GenerateResource-ResGen.read.1.tlog
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\GenerateResource-ResGen.write.1.tlog
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\bg\ChefosForm.resources.dll
@@ -39,3 +32,12 @@ C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\GenerateResource.
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\bin\Debug\Newtonsoft.Json.dll
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\bin\Debug\Newtonsoft.Json.xml
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\bin\Debug\Transitions.dll
+C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\bin\Debug\ReadQuestionnaire.exe
+C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\bin\Debug\ReadQuestionnaire.pdb
+C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\Read.DSScaleChoice.resources
+C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\Read.FormReadExperiment.resources
+C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\Read.InstructionsForm.resources
+C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\Read.Properties.Resources.resources
+C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\Read.DSScaleChoice.bg.resources
+C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\Read.FormReadExperiment.bg-BG.resources
+C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\Read.FormReadExperiment.bg.resources

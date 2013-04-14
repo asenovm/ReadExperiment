@@ -9,12 +9,12 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using Transitions;
 
-namespace ChefosForm
+namespace Read
 {
     /// <summary>
     /// Summary description for Form1.
     /// </summary>
-    public class FormReadExperiment : System.Windows.Forms.Form, INotificationsListener
+    public class FormReadExperiment : System.Windows.Forms.Form
     {
         /// <summary>
         /// Required designer variable.
@@ -39,8 +39,6 @@ namespace ChefosForm
             omniumQuantity = 0;
             nextBtn.Enabled = true;
             this.outputFile = outputFile;
-            serverConnection = new ServerConnection(this, new ClientConfiguration("client.dat"));
-            serverConnection.Daemonize();
 
             PerformIteration();
         }
@@ -140,8 +138,6 @@ namespace ChefosForm
             this.manufacturingLevelUnitsLabel = new System.Windows.Forms.Label();
             this.manufacturingLevelsValueLabel = new System.Windows.Forms.Label();
             this.manufacturingLevelsTextLabel = new System.Windows.Forms.Label();
-            this.feedbackLayout = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.firstSupplierRealPanel.SuspendLayout();
@@ -157,7 +153,6 @@ namespace ChefosForm
             this.offersPanel.SuspendLayout();
             this.manufacturingIncreasePanel.SuspendLayout();
             this.manufacturingLevelsPanel.SuspendLayout();
-            this.feedbackLayout.SuspendLayout();
             this.SuspendLayout();
             // 
             // firstSuppierBtn
@@ -540,24 +535,10 @@ namespace ChefosForm
             resources.ApplyResources(this.manufacturingLevelsTextLabel, "manufacturingLevelsTextLabel");
             this.manufacturingLevelsTextLabel.Name = "manufacturingLevelsTextLabel";
             // 
-            // feedbackLayout
-            // 
-            this.feedbackLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(235)))), ((int)(((byte)(221)))));
-            this.feedbackLayout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.feedbackLayout.Controls.Add(this.panel9);
-            resources.ApplyResources(this.feedbackLayout, "feedbackLayout");
-            this.feedbackLayout.Name = "feedbackLayout";
-            // 
-            // panel9
-            // 
-            resources.ApplyResources(this.panel9, "panel9");
-            this.panel9.Name = "panel9";
-            // 
             // FormReadExperiment
             // 
             resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.feedbackLayout);
             this.Controls.Add(this.nextBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.omniumQuontityLabel);
@@ -596,7 +577,6 @@ namespace ChefosForm
             this.manufacturingIncreasePanel.PerformLayout();
             this.manufacturingLevelsPanel.ResumeLayout(false);
             this.manufacturingLevelsPanel.PerformLayout();
-            this.feedbackLayout.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -620,7 +600,6 @@ namespace ChefosForm
         private Stopwatch nextSwtopwatch = new Stopwatch();
         private Stopwatch choiceStopwatch = new Stopwatch();
         private int choiceTime;
-        private ServerConnection serverConnection;
         private Panel panel1;
         private Label firstSupplierOfferLabel;
         private Label label12;
@@ -679,9 +658,6 @@ namespace ChefosForm
 
         private Animator animator;
 
-        private FlowLayoutPanel feedbackLayout;
-        private Panel panel9;
-
         private Stopwatch feedbackWatch;
 
         /// <summary>
@@ -703,9 +679,8 @@ namespace ChefosForm
                     "READ Експеримент",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
-                serverConnection.Unregister();
-                allowClose = true;
-                Close();
+                new Read.MainContainer().Show();
+                return;
             }
             PerformIteration();
         }
@@ -866,43 +841,9 @@ namespace ChefosForm
                                   choiceTime,
                                   nextSwtopwatch.stop(),
                                   outputFile,
-                                  this, serverConnection);
+                                  this);
             this.Visible = false;
             frm.ShowDialog();
         }
-
-
-        public void OnNotificationReceived(Notification notification)
-        {
-            feedbackLayout.Invoke(new DisplayNotification(ShowNotification),
-            new Notification[] { notification });
-        }
-
-        private void ShowNotification(Notification notification)
-        {
-            Control notificationBox = GetNotificationContainer(notification);
-            feedbackLayout.Controls.Add(notificationBox);
-            feedbackLayout.Controls.SetChildIndex(notificationBox, 0);
-
-            animator.flash(notificationBox);
-
-            FileUtil.WriteToFile(notification, feedbackWatch.stop(), outputFile);
-        }
-
-        private Control GetNotificationContainer(Notification notification) {
-            string notificationText = "Участник " + "\\b " + notification.GetSenderId() + "\\b0 " + " е " + notification.GetSatisfaction() + " от доставчик \\b " + notification.GetSupplier() + "\\b0 ";
-
-            RichTextBox notificationBox = new ReadOnlyRichTextBox();
-            notificationBox.Width = feedbackLayout.Width - 8;
-            notificationBox.Rtf = RTFUtil.ToRTF(notificationText);
-
-            Size size = TextRenderer.MeasureText(notificationBox.Text, notificationBox.Font, notificationBox.ClientRectangle.Size, TextFormatFlags.WordBreak);
-            notificationBox.Height = size.Height;
-            notificationBox.BackColor = colors.NextColor();
-
-            return notificationBox;
-        }
-
-        private delegate void DisplayNotification(Notification notification);
     }
 }

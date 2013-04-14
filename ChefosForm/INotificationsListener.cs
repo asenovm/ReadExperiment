@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ChefosForm
+namespace Read
 {
     public interface INotificationsListener
     {

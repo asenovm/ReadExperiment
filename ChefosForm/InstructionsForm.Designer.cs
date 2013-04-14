@@ -1,4 +1,4 @@
-namespace ChefosForm
+namespace Read
 {
     partial class InstructionsForm
     {

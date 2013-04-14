@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using Transitions;
 using System.Drawing;
 
-namespace ChefosForm
+namespace Read
 {
     public class Animator
     {

@@ -18,7 +18,7 @@
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
     <DelaySign>false</DelaySign>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ChefosForm</RootNamespace>
+    <RootNamespace>Read</RootNamespace>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
     <StartupObject>
     </StartupObject>
@@ -214,6 +214,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Documents\Visual Studio 2010\Projects\ReadQuestionnaire\ReadQuestionnaire\ReadQuestionnaire.csproj">
+      <Project>{0B822AAE-D54C-4836-84BF-45CFDF50E7EA}</Project>
+      <Name>ReadQuestionnaire</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

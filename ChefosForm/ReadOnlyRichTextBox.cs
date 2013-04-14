@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace ChefosForm
+namespace Read
 {
     public class ReadOnlyRichTextBox : System.Windows.Forms.RichTextBox
     {

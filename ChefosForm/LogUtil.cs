@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 
-namespace ChefosForm
+namespace Read
 {
     public class LogUtil
     {

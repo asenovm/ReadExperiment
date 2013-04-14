@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ChefosForm
+namespace Read
 {
     public partial class DSScaleChoice : Form
     {
@@ -21,14 +21,11 @@ namespace ChefosForm
         private bool allowClose;
         private string outputFileName;
 
-        private ServerConnection serverConnection;
-
-
         public DSScaleChoice(string supplier, string offered,
                              string received, string total,
                              int choiceTime, int nextTime,
                              string outputFileName,
-                             FormReadExperiment mainForm, ServerConnection serverConnection)
+                             FormReadExperiment mainForm)
         {
             InitializeComponent();
 
@@ -41,8 +38,6 @@ namespace ChefosForm
             this.mainForm = mainForm;
             this.allowClose = false;
             this.outputFileName = outputFileName;
-
-            this.serverConnection = serverConnection;
 
             dsStopWatch.start();
         }
@@ -134,7 +129,6 @@ namespace ChefosForm
             FileUtil.WriteToFile(supplier,choiceTime.ToString(),nextTime.ToString(),dsChoiceTime.ToString(),dsChoice.ToString(),nextWatch.stop().ToString(),  outputFileName);
             mainForm.NextIteration();
             allowClose = true;
-            serverConnection.SendAnswer(new Answer(supplier, dsChoice));
             Close();
         }
 
@@ -145,12 +139,6 @@ namespace ChefosForm
                 e.Cancel = true;
             }
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
     }
 }

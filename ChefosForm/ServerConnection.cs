@@ -5,7 +5,7 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Net;
 
-namespace ChefosForm
+namespace Read
 {
     public class ServerConnection : INotificationsListener
     {
