@@ -152,11 +152,11 @@
     <Compile Include="ManufacturingLevels.cs" />
     <Compile Include="Notification.cs" />
     <Compile Include="NotificationsDaemon.cs" />
-    <Compile Include="PersonalInformation.cs">
+    <Compile Include="PersonalInformationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PersonalInformation.Designer.cs">
-      <DependentUpon>PersonalInformation.cs</DependentUpon>
+    <Compile Include="PersonalInformationForm.Designer.cs">
+      <DependentUpon>PersonalInformationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -195,8 +195,8 @@
       <SubType>Designer</SubType>
       <DependentUpon>InstructionsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PersonalInformation.resx">
-      <DependentUpon>PersonalInformation.cs</DependentUpon>
+    <EmbeddedResource Include="PersonalInformationForm.resx">
+      <DependentUpon>PersonalInformationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <SubType>Designer</SubType>

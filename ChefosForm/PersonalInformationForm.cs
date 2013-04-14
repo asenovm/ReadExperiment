@@ -10,12 +10,12 @@ using System.IO;
 
 namespace Read
 {
-    public partial class PersonalInformation : Form
+    public partial class PersonalInformationForm : Form
     {
 
         private const string MESSAGE_ERROR = "Моля попълнете всички необходими данни";
 
-        public PersonalInformation()
+        public PersonalInformationForm()
         {
             InitializeComponent();
         }
@@ -31,8 +31,8 @@ namespace Read
                 return;
             }
 
-            string resultsFile = "results_experiment_" + Guid.NewGuid() + ".txt";
-            FileUtil.WriteToFile(ageBox.Text, maleRadio.Checked ? "0" : "1", majorDropDown.SelectedText, resultsFile);
+            string resultsFile = FileName.RESULTS_EXPERIMENT + Guid.NewGuid() + ".txt";
+            FileUtil.WriteToFile(ageBox.Text, maleRadio.Checked ? "0" : "1", majorDropDown.SelectedIndex.ToString(), resultsFile);
 
             FormReadExperiment frm = new FormReadExperiment(resultsFile);
 
@@ -43,6 +43,11 @@ namespace Read
         private bool CanOpenExperimentForm()
         {
             return ageBox.Text.Length > 0 && majorDropDown.SelectedItem != null && (maleRadio.Checked || femaleRadio.Checked);
+        }
+
+        private void OnCloseRequired(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
         }
     }
 }

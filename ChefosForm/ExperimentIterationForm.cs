@@ -26,11 +26,9 @@ namespace Read
             InitializeComponent();
         }
 
-        private const string OFFERS_FILE = "SuppliersOffers.txt";
-
         public FormReadExperiment(string outputFile)
         {
-            ReadExperimentData(OFFERS_FILE);
+            ReadExperimentData(FileName.QUESTIONS_OFFERS);
 
             InitializeComponent();
 
@@ -682,7 +680,7 @@ namespace Read
                     "READ Експеримент",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
-                new EconomicInstructionForm(outputFile.Substring("results_experiment_".Length)).Show();
+                new EconomicInstructionForm(outputFile.Substring(FileName.RESULTS_EXPERIMENT.Length)).Show();
                 return;
             }
             PerformIteration();

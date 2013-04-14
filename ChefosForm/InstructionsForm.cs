@@ -19,7 +19,7 @@ namespace Read
         private void BeginButton_Click(object sender, EventArgs e)
         {
             Hide();
-            PersonalInformation informationForm = new PersonalInformation();
+            PersonalInformationForm informationForm = new PersonalInformationForm();
             informationForm.Show();
         }
     }
