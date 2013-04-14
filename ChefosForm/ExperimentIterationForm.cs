@@ -682,7 +682,7 @@ namespace Read
                     "READ Експеримент",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
-                new Read.MainContainer(outputFile.Substring("results_experiment_".Length)).Show();
+                new EconomicInstructionForm(outputFile.Substring("results_experiment_".Length)).Show();
                 return;
             }
             PerformIteration();

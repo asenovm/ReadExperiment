@@ -13,6 +13,8 @@ namespace Read
     public partial class PersonalInformation : Form
     {
 
+        private const string MESSAGE_ERROR = "Моля попълнете всички необходими данни";
+
         public PersonalInformation()
         {
             InitializeComponent();
@@ -22,14 +24,18 @@ namespace Read
         {
             if (!CanOpenExperimentForm())
             {
+                MessageBox.Show(MESSAGE_ERROR,
+                "READ Експеримент",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Warning);
                 return;
             }
 
             string resultsFile = "results_experiment_" + Guid.NewGuid() + ".txt";
             FileUtil.WriteToFile(ageBox.Text, maleRadio.Checked ? "0" : "1", majorDropDown.SelectedText, resultsFile);
 
-            FormReadExperiment frm =
-                new FormReadExperiment(resultsFile);
+            FormReadExperiment frm = new FormReadExperiment(resultsFile);
+
             this.Hide();
             frm.Show();
         }
