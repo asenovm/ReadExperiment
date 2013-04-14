@@ -26,9 +26,12 @@ namespace Read
             InitializeComponent();
         }
 
-        public FormReadExperiment(string offersFile, string outputFile)
+        private const string OFFERS_FILE = "SuppliersOffers.txt";
+
+        public FormReadExperiment(string outputFile)
         {
-            ReadExperimentData(offersFile);
+            ReadExperimentData(OFFERS_FILE);
+
             InitializeComponent();
 
             colors = new ColorsList();

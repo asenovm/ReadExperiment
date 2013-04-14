@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 
 namespace Read
 {
@@ -13,7 +14,7 @@ namespace Read
         }
 
         public static void WriteToFile(Notification notification, long time, string outputFile) {
-            System.IO.StreamWriter SW= System.IO.File.AppendText(outputFile);
+            StreamWriter SW= File.AppendText(outputFile);
             StringBuilder builder = new StringBuilder();
             builder.Append(notification.GetSenderId());
             builder.Append(" ");
@@ -30,7 +31,7 @@ namespace Read
         }
 
         public static void WriteToFile(string supplier, string choiceTime, string nextTime, string dsChoiceTime, string dsChoice, string nextWatch, string outputFile) {
-            System.IO.StreamWriter SW = System.IO.File.AppendText(outputFile);
+            StreamWriter SW = File.AppendText(outputFile);
             StringBuilder builder = new StringBuilder();
             builder.Append(supplier);
             builder.Append(" ");
@@ -46,6 +47,18 @@ namespace Read
             builder.Append(" ");
             SW.WriteLine(builder.ToString());
             SW.Close();
+        }
+
+        public static void WriteToFile(string age, string gender, string major, string outputFileName) {
+            StreamWriter writer = File.AppendText(outputFileName);
+            StringBuilder builder = new StringBuilder();
+            builder.Append(age);
+            builder.Append(" ");
+            builder.Append(gender);
+            builder.Append(" ");
+            builder.Append(major);
+            writer.WriteLine(builder.ToString());
+            writer.Close();
         }
     }
 }

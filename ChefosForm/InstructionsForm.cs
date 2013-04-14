@@ -18,20 +18,9 @@ namespace Read
 
         private void BeginButton_Click(object sender, EventArgs e)
         {
-            Random random = new Random();
-            int fileSuffix = random.Next(10000);
-            string outputFileName = "result" + fileSuffix + ".txt";
-            System.IO.FileInfo fi1 = new System.IO.FileInfo(outputFileName);
-            while (fi1.Exists)
-            {
-                outputFileName = "resul" + fileSuffix + ".txt";
-                fi1 = new System.IO.FileInfo(outputFileName);
-            }
-
-            FormReadExperiment frm =
-                new FormReadExperiment("SuppliersOffers.txt", outputFileName);
-            this.Hide();
-            frm.Show();
+            Hide();
+            PersonalInformation informationForm = new PersonalInformation();
+            informationForm.Show();
         }
     }
 }

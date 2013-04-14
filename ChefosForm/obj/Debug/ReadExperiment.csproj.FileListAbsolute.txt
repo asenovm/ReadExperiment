@@ -41,3 +41,4 @@ C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\Read.Properties.R
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\Read.DSScaleChoice.bg.resources
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\Read.FormReadExperiment.bg-BG.resources
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\Read.FormReadExperiment.bg.resources
+C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\Read.PersonalInformation.resources
