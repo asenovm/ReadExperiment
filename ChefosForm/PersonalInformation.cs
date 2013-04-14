@@ -20,12 +20,12 @@ namespace Read
 
         private void OnNextButtonClicked(object sender, EventArgs e)
         {
-            if (!CanOpenExperiment())
+            if (!CanOpenExperimentForm())
             {
                 return;
             }
 
-            string resultsFile = "results" + Guid.NewGuid() + ".txt";
+            string resultsFile = "results_experiment_" + Guid.NewGuid() + ".txt";
             FileUtil.WriteToFile(ageBox.Text, maleRadio.Checked ? "0" : "1", majorDropDown.SelectedText, resultsFile);
 
             FormReadExperiment frm =
@@ -34,7 +34,7 @@ namespace Read
             frm.Show();
         }
 
-        private bool CanOpenExperiment()
+        private bool CanOpenExperimentForm()
         {
             return ageBox.Text.Length > 0 && majorDropDown.SelectedItem != null && (maleRadio.Checked || femaleRadio.Checked);
         }
