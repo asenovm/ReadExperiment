@@ -19,8 +19,9 @@ namespace Read
         private void BeginButton_Click(object sender, EventArgs e)
         {
             Hide();
-            PersonalInformationForm informationForm = new PersonalInformationForm();
-            informationForm.Show();
+            string resultsFile = FileName.RESULTS_EXPERIMENT + Guid.NewGuid() + ".txt";
+            FormReadExperiment experimentForm = new FormReadExperiment(resultsFile);
+            experimentForm.Show();
         }
     }
 }

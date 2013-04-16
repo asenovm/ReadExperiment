@@ -42,16 +42,16 @@ namespace Read
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.instructionsLabel);
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // beginButton
             // 
-            this.beginButton.BackColor = System.Drawing.Color.LimeGreen;
             resources.ApplyResources(this.beginButton, "beginButton");
+            this.beginButton.BackColor = System.Drawing.Color.LimeGreen;
             this.beginButton.Name = "beginButton";
             this.beginButton.UseVisualStyleBackColor = false;
             this.beginButton.Click += new System.EventHandler(this.BeginButton_Click);
@@ -62,6 +62,9 @@ namespace Read
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.beginButton);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "InstructionsForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
