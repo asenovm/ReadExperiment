@@ -673,13 +673,15 @@ namespace Read
         public void NextIteration()
         {
             currentIteration++;
-            if (currentIteration >= experimentIterations.Count)
+            if (currentIteration < experimentIterations.Count)
+            {
+                PerformIteration();
+            }
+            else
             {
                 new NotificationPrompt().ShowExperimentEndPrompt();
                 new EconomicInstructionForm(outputFile.Substring(FileName.RESULTS_EXPERIMENT.Length)).Show();
-                return;
             }
-            PerformIteration();
         }
 
         private void PerformIteration()
@@ -740,14 +742,7 @@ namespace Read
 
         private void FormReadExperiment_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (!allowClose)
-            {
-                e.Cancel = true; //don't close 		
-            }
-            else
-            {
-                Environment.Exit(0);
-            }
+            e.Cancel = !allowClose;
         }
 
         private void DisableButtons()

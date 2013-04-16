@@ -134,10 +134,7 @@ namespace Read
 
         private void FormDSScaleChice_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (!allowClose)
-            {
-                e.Cancel = true;
-            }
+            e.Cancel = !allowClose;
         }
 
     }

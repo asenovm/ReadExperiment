@@ -20,6 +20,7 @@ namespace Read
         {
             Hide();
             string resultsFile = FileName.RESULTS_EXPERIMENT + Guid.NewGuid() + ".txt";
+
             FormReadExperiment experimentForm = new FormReadExperiment(resultsFile);
             experimentForm.Show();
         }
