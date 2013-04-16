@@ -32,7 +32,6 @@ C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\GenerateResource.
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\bin\Debug\Newtonsoft.Json.dll
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\bin\Debug\Newtonsoft.Json.xml
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\bin\Debug\Transitions.dll
-C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\bin\Debug\ReadQuestionnaire.exe
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\bin\Debug\ReadQuestionnaire.pdb
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\Read.DSScaleChoice.resources
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\Read.FormReadExperiment.resources
@@ -42,3 +41,4 @@ C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\Read.DSScaleChoic
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\Read.FormReadExperiment.bg-BG.resources
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\Read.FormReadExperiment.bg.resources
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\Read.PersonalInformationForm.resources
+C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\bin\Debug\ReadQuestionnaire.dll

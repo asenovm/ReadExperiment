@@ -675,11 +675,7 @@ namespace Read
             currentIteration++;
             if (currentIteration >= experimentIterations.Count)
             {
-                Console.Beep();
-                MessageBox.Show("\"Благодарим, че взехте участие в експеримента\": \n\tМоля, НЕ натискайте бутона ОК преди ръководителят на експеримента да дойде и да отбележи натрупаното от вас общо количество омниум бонум.",
-                    "READ Експеримент",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
+                new NotificationPrompt().ShowExperimentEndPrompt();
                 new EconomicInstructionForm(outputFile.Substring(FileName.RESULTS_EXPERIMENT.Length)).Show();
                 return;
             }
