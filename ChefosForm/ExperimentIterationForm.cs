@@ -615,7 +615,7 @@ namespace Read
             }
             else
             {
-                new NotificationPrompt().ShowExperimentEndPrompt();
+                new ExprimentEndDialog().ShowDialog();
                 new EconomicInstructionForm(outputFile.Substring(FileName.RESULTS_EXPERIMENT.Length)).Show();
             }
         }

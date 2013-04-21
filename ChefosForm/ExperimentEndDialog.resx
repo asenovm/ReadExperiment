@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAIAAAADnC86AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAADTWlUWHRYTUw6Y29tLmFkb2Jl
+        LnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQi
+        Pz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENv
+        cmUgNS4zLWMwMTEgNjYuMTQ1NjYxLCAyMDEyLzAyLzA2LTE0OjU2OjI3ICAgICAgICAiPiA8cmRmOlJE
+        RiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8
+        cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20v
+        eGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxu
+        czpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1w
+        OkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2ICgxMy4wIDIwMTIwMzA1Lm0uNDE1IDIwMTIv
+        MDMvMDU6MjE6MDA6MDApICAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Mzg5N0JD
+        MDNBQUE4MTFFMkI4QzNCMDU3NTc0MkFBMEEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Mzg5N0JD
+        MDRBQUE4MTFFMkI4QzNCMDU3NTc0MkFBMEEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFu
+        Y2VJRD0ieG1wLmlpZDozODk3QkMwMUFBQTgxMUUyQjhDM0IwNTc1NzQyQUEwQSIgc3RSZWY6ZG9jdW1l
+        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
+        2QUAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>    Благодарим, че взехте участие в първата част на
+изследването. Моля, НЕ натискайте бутона ОК преди
+ръководителят на експеримента да дойде и да отбележи
+натрупаното от Вас количество омниум бонум. Преди
+да получите съответстващото му заплащане е
+необходимо да попълните въпросник относно Вашата
+стратегия по време на играта и личните Ви
+предпочитания.
+</value>
+  </data>
+</root>

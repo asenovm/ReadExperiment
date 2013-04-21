@@ -42,3 +42,4 @@ C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\Read.FormReadExpe
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\Read.FormReadExperiment.bg.resources
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\bin\Debug\ReadQuestionnaire.dll
 C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\Read.InstructionsForm.bg.resources
+C:\Users\martin\Downloads\ChefosFormNoAPP\ChefosForm\obj\Debug\Read.ExprimentEndDialog.resources

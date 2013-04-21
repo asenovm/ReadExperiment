@@ -132,6 +132,12 @@
     <Compile Include="DSScaleChoice.Designer.cs">
       <DependentUpon>DSScaleChoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExperimentEndDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExperimentEndDialog.Designer.cs">
+      <DependentUpon>ExperimentEndDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExperimentIteration.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     <EmbeddedResource Include="DSScaleChoice.resx">
       <SubType>Designer</SubType>
       <DependentUpon>DSScaleChoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExperimentEndDialog.resx">
+      <DependentUpon>ExperimentEndDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExperimentIterationForm.bg-BG.resx">
       <DependentUpon>ExperimentIterationForm.cs</DependentUpon>
