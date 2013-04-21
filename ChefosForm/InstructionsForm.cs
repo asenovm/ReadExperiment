@@ -14,6 +14,7 @@ namespace Read
         public InstructionsForm()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         private void BeginButton_Click(object sender, EventArgs e)

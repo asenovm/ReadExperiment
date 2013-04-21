@@ -4,7 +4,6 @@ using System.Text;
 
 namespace Read
 {
-
     public class Answer
     {
 

@@ -28,7 +28,6 @@ namespace Read
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InstructionsForm));
             this.instructionsLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.beginButton = new System.Windows.Forms.Button();
@@ -37,35 +36,52 @@ namespace Read
             // 
             // instructionsLabel
             // 
-            resources.ApplyResources(this.instructionsLabel, "instructionsLabel");
+            this.instructionsLabel.AutoSize = true;
+            this.instructionsLabel.Location = new System.Drawing.Point(28, 15);
             this.instructionsLabel.Name = "instructionsLabel";
+            this.instructionsLabel.Size = new System.Drawing.Size(81, 38);
+            this.instructionsLabel.TabIndex = 0;
+            this.instructionsLabel.Text = "Instruction\r\n...\r\n";
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.instructionsLabel);
+            this.panel1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(679, 346);
+            this.panel1.TabIndex = 1;
             // 
             // beginButton
             // 
-            resources.ApplyResources(this.beginButton, "beginButton");
             this.beginButton.BackColor = System.Drawing.Color.LimeGreen;
+            this.beginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.beginButton.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.beginButton.Location = new System.Drawing.Point(10, 364);
             this.beginButton.Name = "beginButton";
+            this.beginButton.Size = new System.Drawing.Size(680, 70);
+            this.beginButton.TabIndex = 2;
+            this.beginButton.Text = "Начало";
             this.beginButton.UseVisualStyleBackColor = false;
             this.beginButton.Click += new System.EventHandler(this.BeginButton_Click);
             // 
             // InstructionsForm
             // 
-            resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(713, 455);
+            this.ControlBox = false;
             this.Controls.Add(this.beginButton);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(719, 483);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(719, 483);
             this.Name = "InstructionsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Експеримент";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

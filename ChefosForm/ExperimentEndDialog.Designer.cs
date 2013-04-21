@@ -80,6 +80,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(498, 231);
             this.Name = "ExprimentEndDialog";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Експеримент";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OnFormCloseRequired);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
