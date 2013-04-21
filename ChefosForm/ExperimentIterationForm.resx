@@ -2419,7 +2419,7 @@
     <value>710, 624</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>READ Експеримент</value>
+    <value>Експеримент</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormReadExperiment</value>

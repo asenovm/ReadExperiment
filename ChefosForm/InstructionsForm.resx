@@ -184,9 +184,6 @@
   <data name="&gt;&gt;instructionsLabel.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="beginButton.Text" xml:space="preserve">
-    <value>Начало</value>
-  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>719, 483</value>
   </data>
@@ -196,6 +193,9 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="beginButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>InstructionsForm</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -215,8 +215,8 @@
   <data name="&gt;&gt;instructionsLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>InstructionsForm</value>
+  <data name="beginButton.Text" xml:space="preserve">
+    <value>Начало</value>
   </data>
   <data name="instructionsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
