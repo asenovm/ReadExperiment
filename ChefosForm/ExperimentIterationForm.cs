@@ -132,6 +132,13 @@ namespace Read
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.manufacturingIncreasePanel = new System.Windows.Forms.Panel();
+            this.manufacturingIncreaseValueLabel = new System.Windows.Forms.Label();
+            this.manufacturingIncreaseTextLabel = new System.Windows.Forms.Label();
+            this.manufacturingLevelsPanel = new System.Windows.Forms.Panel();
+            this.manufacturingLevelUnitsLabel = new System.Windows.Forms.Label();
+            this.manufacturingLevelsValueLabel = new System.Windows.Forms.Label();
+            this.manufacturingLevelsTextLabel = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.firstSupplierRealPanel.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -145,6 +152,8 @@ namespace Read
             this.fourthSupplierRealPanel.SuspendLayout();
             this.offersPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.manufacturingIncreasePanel.SuspendLayout();
+            this.manufacturingLevelsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // firstSuppierBtn
@@ -436,6 +445,8 @@ namespace Read
             // 
             // offersPanel
             // 
+            this.offersPanel.Controls.Add(this.manufacturingIncreasePanel);
+            this.offersPanel.Controls.Add(this.manufacturingLevelsPanel);
             this.offersPanel.Controls.Add(this.panel5);
             this.offersPanel.Controls.Add(this.panel6);
             this.offersPanel.Controls.Add(this.panel3);
@@ -483,6 +494,48 @@ namespace Read
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
+            // manufacturingIncreasePanel
+            // 
+            this.manufacturingIncreasePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturingIncreasePanel.Controls.Add(this.manufacturingIncreaseValueLabel);
+            this.manufacturingIncreasePanel.Controls.Add(this.manufacturingIncreaseTextLabel);
+            resources.ApplyResources(this.manufacturingIncreasePanel, "manufacturingIncreasePanel");
+            this.manufacturingIncreasePanel.Name = "manufacturingIncreasePanel";
+            // 
+            // manufacturingIncreaseValueLabel
+            // 
+            resources.ApplyResources(this.manufacturingIncreaseValueLabel, "manufacturingIncreaseValueLabel");
+            this.manufacturingIncreaseValueLabel.Name = "manufacturingIncreaseValueLabel";
+            // 
+            // manufacturingIncreaseTextLabel
+            // 
+            resources.ApplyResources(this.manufacturingIncreaseTextLabel, "manufacturingIncreaseTextLabel");
+            this.manufacturingIncreaseTextLabel.Name = "manufacturingIncreaseTextLabel";
+            // 
+            // manufacturingLevelsPanel
+            // 
+            this.manufacturingLevelsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturingLevelsPanel.Controls.Add(this.manufacturingLevelUnitsLabel);
+            this.manufacturingLevelsPanel.Controls.Add(this.manufacturingLevelsValueLabel);
+            this.manufacturingLevelsPanel.Controls.Add(this.manufacturingLevelsTextLabel);
+            resources.ApplyResources(this.manufacturingLevelsPanel, "manufacturingLevelsPanel");
+            this.manufacturingLevelsPanel.Name = "manufacturingLevelsPanel";
+            // 
+            // manufacturingLevelUnitsLabel
+            // 
+            resources.ApplyResources(this.manufacturingLevelUnitsLabel, "manufacturingLevelUnitsLabel");
+            this.manufacturingLevelUnitsLabel.Name = "manufacturingLevelUnitsLabel";
+            // 
+            // manufacturingLevelsValueLabel
+            // 
+            resources.ApplyResources(this.manufacturingLevelsValueLabel, "manufacturingLevelsValueLabel");
+            this.manufacturingLevelsValueLabel.Name = "manufacturingLevelsValueLabel";
+            // 
+            // manufacturingLevelsTextLabel
+            // 
+            resources.ApplyResources(this.manufacturingLevelsTextLabel, "manufacturingLevelsTextLabel");
+            this.manufacturingLevelsTextLabel.Name = "manufacturingLevelsTextLabel";
+            // 
             // FormReadExperiment
             // 
             resources.ApplyResources(this, "$this");
@@ -521,6 +574,10 @@ namespace Read
             this.offersPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.manufacturingIncreasePanel.ResumeLayout(false);
+            this.manufacturingIncreasePanel.PerformLayout();
+            this.manufacturingLevelsPanel.ResumeLayout(false);
+            this.manufacturingLevelsPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -594,6 +651,13 @@ namespace Read
         private Label label13;
         private Label label11;
         private Label label1;
+        private Panel manufacturingIncreasePanel;
+        private Label manufacturingIncreaseValueLabel;
+        private Label manufacturingIncreaseTextLabel;
+        private Panel manufacturingLevelsPanel;
+        private Label manufacturingLevelUnitsLabel;
+        private Label manufacturingLevelsValueLabel;
+        private Label manufacturingLevelsTextLabel;
 
         private Stopwatch feedbackWatch;
 
@@ -627,6 +691,7 @@ namespace Read
             this.Visible = true;
 
             ExperimentIteration experimentIteration = experimentIterations[currentIteration];
+            SetupEconomicDataPanels(experimentIteration);
 
             omniumQuontityLabel.Text = omniumQuantity.ToString();
 
@@ -647,6 +712,32 @@ namespace Read
             fourthSuppliarRealLabel.Text = experimentIteration.Suppliers[3].RealPrice;
 
             choiceStopwatch.start();
+        }
+
+        private void SetupEconomicDataPanels(ExperimentIteration experimentIteration)
+        {
+            if (experimentIteration.HasEconomicData())
+            {
+                ShowEconomicDataPanels();
+                manufacturingLevelsValueLabel.Text = experimentIteration.GetManufacturingLevels();
+                manufacturingIncreaseValueLabel.Text = experimentIteration.GetManufacturingIncrease();
+            }
+            else
+            {
+                HideEconomicDataPanels();
+            }
+        }
+
+        private void HideEconomicDataPanels()
+        {
+            manufacturingLevelsPanel.Visible = false;
+            manufacturingIncreasePanel.Visible = false;
+        }
+
+        private void ShowEconomicDataPanels()
+        {
+            manufacturingLevelsPanel.Visible = true;
+            manufacturingIncreasePanel.Visible = true;
         }
 
         private void FormReadExperiment_Closing(object sender, System.ComponentModel.CancelEventArgs e)

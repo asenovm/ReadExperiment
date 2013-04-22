@@ -126,7 +126,7 @@
     <value>Times New Roman, 15.75pt, style=Bold</value>
   </data>
   <data name="firstSuppierBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 421</value>
+    <value>8, 550</value>
   </data>
   <data name="firstSuppierBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>145, 70</value>
@@ -158,7 +158,7 @@
     <value>Times New Roman, 15.75pt, style=Bold</value>
   </data>
   <data name="secondSupplierBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>188, 421</value>
+    <value>179, 550</value>
   </data>
   <data name="secondSupplierBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 70</value>
@@ -189,7 +189,7 @@
     <value>Times New Roman, 15.75pt, style=Bold</value>
   </data>
   <data name="thirdSupplierBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>355, 421</value>
+    <value>346, 550</value>
   </data>
   <data name="thirdSupplierBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 70</value>
@@ -220,7 +220,7 @@
     <value>Times New Roman, 15.75pt, style=Bold</value>
   </data>
   <data name="fourthSupplierBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>532, 421</value>
+    <value>523, 550</value>
   </data>
   <data name="fourthSupplierBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 70</value>
@@ -251,7 +251,7 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 513</value>
+    <value>6, 642</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>283, 17</value>
@@ -281,7 +281,7 @@
     <value>Microsoft Sans Serif, 10pt, style=Bold</value>
   </data>
   <data name="omniumQuontityLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 538</value>
+    <value>96, 667</value>
   </data>
   <data name="omniumQuontityLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 17</value>
@@ -314,7 +314,7 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 539</value>
+    <value>6, 668</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 17</value>
@@ -1027,7 +1027,7 @@
     <value>Times New Roman, 15.75pt, style=Bold</value>
   </data>
   <data name="nextBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>532, 526</value>
+    <value>523, 655</value>
   </data>
   <data name="nextBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 36</value>
@@ -1171,7 +1171,7 @@
     <value>0</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 103</value>
+    <value>18, 220</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>298, 88</value>
@@ -1189,7 +1189,7 @@
     <value>offersPanel</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="thirdSupplierOfferLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1360,7 +1360,7 @@
     <value>4</value>
   </data>
   <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 207</value>
+    <value>18, 324</value>
   </data>
   <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>298, 88</value>
@@ -1378,7 +1378,7 @@
     <value>offersPanel</value>
   </data>
   <data name="&gt;&gt;panel8.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="secondSupplierOfferLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1549,7 +1549,7 @@
     <value>4</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>338, 18</value>
+    <value>340, 135</value>
   </data>
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>298, 88</value>
@@ -1567,7 +1567,7 @@
     <value>offersPanel</value>
   </data>
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="label32.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1693,7 +1693,7 @@
     <value>0</value>
   </data>
   <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 292</value>
+    <value>18, 409</value>
   </data>
   <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
     <value>298, 88</value>
@@ -1711,7 +1711,7 @@
     <value>offersPanel</value>
   </data>
   <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="label17.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1837,7 +1837,7 @@
     <value>0</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>338, 103</value>
+    <value>340, 220</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>298, 88</value>
@@ -1855,7 +1855,7 @@
     <value>offersPanel</value>
   </data>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="fourthSupplierOfferLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2026,7 +2026,7 @@
     <value>4</value>
   </data>
   <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>338, 207</value>
+    <value>340, 324</value>
   </data>
   <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
     <value>298, 88</value>
@@ -2044,7 +2044,7 @@
     <value>offersPanel</value>
   </data>
   <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="label20.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2170,7 +2170,7 @@
     <value>0</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>338, 292</value>
+    <value>340, 409</value>
   </data>
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>298, 88</value>
@@ -2188,7 +2188,226 @@
     <value>offersPanel</value>
   </data>
   <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="manufacturingIncreaseValueLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="manufacturingIncreaseValueLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="manufacturingIncreaseValueLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="manufacturingIncreaseValueLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 62</value>
+  </data>
+  <data name="manufacturingIncreaseValueLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="manufacturingIncreaseValueLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 17</value>
+  </data>
+  <data name="manufacturingIncreaseValueLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="manufacturingIncreaseValueLabel.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="manufacturingIncreaseValueLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;manufacturingIncreaseValueLabel.Name" xml:space="preserve">
+    <value>manufacturingIncreaseValueLabel</value>
+  </data>
+  <data name="&gt;&gt;manufacturingIncreaseValueLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;manufacturingIncreaseValueLabel.Parent" xml:space="preserve">
+    <value>manufacturingIncreasePanel</value>
+  </data>
+  <data name="&gt;&gt;manufacturingIncreaseValueLabel.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="manufacturingIncreaseTextLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="manufacturingIncreaseTextLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="manufacturingIncreaseTextLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="manufacturingIncreaseTextLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 7</value>
+  </data>
+  <data name="manufacturingIncreaseTextLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 51</value>
+  </data>
+  <data name="manufacturingIncreaseTextLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="manufacturingIncreaseTextLabel.Text" xml:space="preserve">
+    <value>Прогнозата за нарастването на
+производството на омниум бонум
+през настоящия кръг е</value>
+  </data>
+  <data name="&gt;&gt;manufacturingIncreaseTextLabel.Name" xml:space="preserve">
+    <value>manufacturingIncreaseTextLabel</value>
+  </data>
+  <data name="&gt;&gt;manufacturingIncreaseTextLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;manufacturingIncreaseTextLabel.Parent" xml:space="preserve">
+    <value>manufacturingIncreasePanel</value>
+  </data>
+  <data name="&gt;&gt;manufacturingIncreaseTextLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="manufacturingIncreasePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>338, 18</value>
+  </data>
+  <data name="manufacturingIncreasePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 88</value>
+  </data>
+  <data name="manufacturingIncreasePanel.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;manufacturingIncreasePanel.Name" xml:space="preserve">
+    <value>manufacturingIncreasePanel</value>
+  </data>
+  <data name="&gt;&gt;manufacturingIncreasePanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;manufacturingIncreasePanel.Parent" xml:space="preserve">
+    <value>offersPanel</value>
+  </data>
+  <data name="&gt;&gt;manufacturingIncreasePanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="manufacturingLevelUnitsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="manufacturingLevelUnitsLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="manufacturingLevelUnitsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="manufacturingLevelUnitsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 62</value>
+  </data>
+  <data name="manufacturingLevelUnitsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 17</value>
+  </data>
+  <data name="manufacturingLevelUnitsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="manufacturingLevelUnitsLabel.Text" xml:space="preserve">
+    <value>единици</value>
+  </data>
+  <data name="&gt;&gt;manufacturingLevelUnitsLabel.Name" xml:space="preserve">
+    <value>manufacturingLevelUnitsLabel</value>
+  </data>
+  <data name="&gt;&gt;manufacturingLevelUnitsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;manufacturingLevelUnitsLabel.Parent" xml:space="preserve">
+    <value>manufacturingLevelsPanel</value>
+  </data>
+  <data name="&gt;&gt;manufacturingLevelUnitsLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="manufacturingLevelsValueLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="manufacturingLevelsValueLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="manufacturingLevelsValueLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="manufacturingLevelsValueLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 62</value>
+  </data>
+  <data name="manufacturingLevelsValueLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="manufacturingLevelsValueLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 17</value>
+  </data>
+  <data name="manufacturingLevelsValueLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="manufacturingLevelsValueLabel.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;manufacturingLevelsValueLabel.Name" xml:space="preserve">
+    <value>manufacturingLevelsValueLabel</value>
+  </data>
+  <data name="&gt;&gt;manufacturingLevelsValueLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;manufacturingLevelsValueLabel.Parent" xml:space="preserve">
+    <value>manufacturingLevelsPanel</value>
+  </data>
+  <data name="&gt;&gt;manufacturingLevelsValueLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="manufacturingLevelsTextLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="manufacturingLevelsTextLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="manufacturingLevelsTextLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="manufacturingLevelsTextLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 9</value>
+  </data>
+  <data name="manufacturingLevelsTextLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 34</value>
+  </data>
+  <data name="manufacturingLevelsTextLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="manufacturingLevelsTextLabel.Text" xml:space="preserve">
+    <value>Общото производство на омниум
+бонум през изминалия кръг е:</value>
+  </data>
+  <data name="&gt;&gt;manufacturingLevelsTextLabel.Name" xml:space="preserve">
+    <value>manufacturingLevelsTextLabel</value>
+  </data>
+  <data name="&gt;&gt;manufacturingLevelsTextLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;manufacturingLevelsTextLabel.Parent" xml:space="preserve">
+    <value>manufacturingLevelsPanel</value>
+  </data>
+  <data name="&gt;&gt;manufacturingLevelsTextLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="manufacturingLevelsPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 18</value>
+  </data>
+  <data name="manufacturingLevelsPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 88</value>
+  </data>
+  <data name="manufacturingLevelsPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;manufacturingLevelsPanel.Name" xml:space="preserve">
+    <value>manufacturingLevelsPanel</value>
+  </data>
+  <data name="&gt;&gt;manufacturingLevelsPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;manufacturingLevelsPanel.Parent" xml:space="preserve">
+    <value>offersPanel</value>
+  </data>
+  <data name="&gt;&gt;manufacturingLevelsPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="firstSupplierOfferLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2359,7 +2578,7 @@
     <value>4</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 18</value>
+    <value>18, 135</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>298, 88</value>
@@ -2377,13 +2596,13 @@
     <value>offersPanel</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="offersPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 3</value>
+    <value>8, 6</value>
   </data>
   <data name="offersPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>657, 401</value>
+    <value>657, 522</value>
   </data>
   <data name="offersPanel.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -2410,13 +2629,13 @@
     <value>5, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>694, 586</value>
+    <value>694, 712</value>
   </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>710, 624</value>
+    <value>710, 750</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>710, 624</value>
+    <value>710, 750</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
