@@ -11,10 +11,10 @@ namespace Read
             startTime = DateTime.Now;
         }
 
-        public int stop()
+        public long stop()
         {
             TimeSpan duration = DateTime.Now - startTime;
-            return duration.Milliseconds;
+            return (long)duration.TotalMilliseconds;
         }
 
         private DateTime startTime;

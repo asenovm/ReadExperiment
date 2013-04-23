@@ -11,9 +11,9 @@ namespace Read
     public partial class DSScaleChoice : Form
     {
         private string supplier;
-        private int choiceTime;
-        private int nextTime;
-        private int dsChoiceTime;
+        private long choiceTime;
+        private long nextTime;
+        private long dsChoiceTime;
         private int dsChoice;
         private Stopwatch dsStopWatch = new Stopwatch();
         private Stopwatch nextWatch = new Stopwatch();
@@ -23,7 +23,7 @@ namespace Read
 
         public DSScaleChoice(string supplier, string offered,
                              string received, string total,
-                             int choiceTime, int nextTime,
+                             long choiceTime, long nextTime,
                              string outputFileName,
                              FormReadExperiment mainForm)
         {
@@ -54,7 +54,7 @@ namespace Read
 
         private void RadioMinus3_CheckedChanged(object sender, EventArgs e)
         {
-            int dsChoiceTime = dsStopWatch.stop();
+            dsChoiceTime = dsStopWatch.stop();
             radioGroupDSScale.Enabled = false;
             dsChoice = -3;
             nextBtn.Enabled = true;

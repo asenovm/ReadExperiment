@@ -600,7 +600,7 @@ namespace Read
         private int supplierIndx;
         private Stopwatch nextSwtopwatch = new Stopwatch();
         private Stopwatch choiceStopwatch = new Stopwatch();
-        private int choiceTime;
+        private long choiceTime;
         private Panel panel2;
         private Panel firstSupplierRealPanel;
         private Label label16;
