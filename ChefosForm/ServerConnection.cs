@@ -7,7 +7,7 @@ using System.Net;
 
 namespace Read
 {
-    public class ServerConnection : INotificationsListener
+    public class ServerConnection
     {
 
         private const string REGISTER_MESSAGE = "register";
@@ -21,37 +21,13 @@ namespace Read
 
         private Encoding encoding;
 
-        private INotificationsListener notificationsListener;
-
         private ClientConfiguration clientConfiguration;
 
         private JsonConverter converter;
 
-        public class SimpleNotificationsListener : INotificationsListener
-        {
-            public void OnNotificationReceived(Notification notification)
-            {
-                //blank
-            }
-        }
-
-
-        public ServerConnection()
-            : this(new SimpleNotificationsListener(), new ClientConfiguration())
-        {
-            //blank
-        }
-
         public ServerConnection(ClientConfiguration configuration)
-            : this(new SimpleNotificationsListener(), configuration)
-        {
-            //blank
-        }
-
-        public ServerConnection(INotificationsListener notificationsListener, ClientConfiguration configuration)
         {
             encoding = Encoding.GetEncoding(1251);
-            this.notificationsListener = notificationsListener;
             this.clientConfiguration = configuration;
             converter = new JsonConverter();
         }
@@ -62,18 +38,10 @@ namespace Read
             registerThread.Start();
         }
 
-        private void RegisterInternal() {
-            SendRequest(((int)Status.REGISTER).ToString(), REGISTER_MESSAGE);
-        }
-
         public void SendAnswer(Answer answer)
         {
             Thread sendAnswerThread = new Thread(() => SendAnswerInternal(answer));
             sendAnswerThread.Start();
-        }
-
-        private void SendAnswerInternal(Answer answer) {
-            SendRequest(((int)Status.ANSWER).ToString(), converter.ToJson(answer));
         }
 
         public void Unregister()
@@ -82,7 +50,18 @@ namespace Read
             unregisterThread.Start();
         }
 
-        private void UnregisterInternal() {
+        private void RegisterInternal()
+        {
+            SendRequest(((int)Status.REGISTER).ToString(), REGISTER_MESSAGE);
+        }
+
+        private void SendAnswerInternal(Answer answer)
+        {
+            SendRequest(((int)Status.ANSWER).ToString(), converter.ToJson(answer));
+        }
+
+        private void UnregisterInternal()
+        {
             SendRequest(((int)Status.UNREGISTER).ToString(), UNREGISTER_MESSAGE);
         }
 
@@ -115,9 +94,5 @@ namespace Read
             }
         }
 
-        public void OnNotificationReceived(Notification notification)
-        {
-            notificationsListener.OnNotificationReceived(notification);
-        }
     }
 }

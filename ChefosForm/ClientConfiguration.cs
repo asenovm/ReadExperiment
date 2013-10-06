@@ -23,21 +23,13 @@ namespace Read
         private Dictionary<string, string> configuration;
 
         /**
-         * Creates a new, default client configuration
-         */
-        public ClientConfiguration()
-        {
-            configuration = new Dictionary<string, string>();
-        }
-
-        /**
          * Creats a new client configuration by using
          * the values specified in the configuration file that can be found
          * at the <tt>configurationPath</tt> given
          */
         public ClientConfiguration(string configurationPath)
-            : this()
         {
+            configuration = new Dictionary<string, string>();
             try
             {
                 System.IO.StreamReader streamReader = new StreamReader(configurationPath, Encoding.GetEncoding(1251));
