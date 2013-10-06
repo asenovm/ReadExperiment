@@ -39,9 +39,9 @@ namespace Read
             this.instructionsLabel.AutoSize = true;
             this.instructionsLabel.Location = new System.Drawing.Point(28, 15);
             this.instructionsLabel.Name = "instructionsLabel";
-            this.instructionsLabel.Size = new System.Drawing.Size(81, 38);
+            this.instructionsLabel.Size = new System.Drawing.Size(97, 19);
             this.instructionsLabel.TabIndex = 0;
-            this.instructionsLabel.Text = "Instruction\r\n...\r\n";
+            this.instructionsLabel.Text = "Инструкция";
             // 
             // panel1
             // 
@@ -63,7 +63,7 @@ namespace Read
             this.beginButton.Name = "beginButton";
             this.beginButton.Size = new System.Drawing.Size(680, 70);
             this.beginButton.TabIndex = 2;
-            this.beginButton.Text = "Start";
+            this.beginButton.Text = "Начало";
             this.beginButton.UseVisualStyleBackColor = false;
             this.beginButton.Click += new System.EventHandler(this.BeginButton_Click);
             // 
@@ -81,7 +81,7 @@ namespace Read
             this.MinimumSize = new System.Drawing.Size(719, 483);
             this.Name = "InstructionsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Experiment";
+            this.Text = "Експеримент";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

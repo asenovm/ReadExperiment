@@ -235,6 +235,7 @@ namespace Read
             // offerLabel
             // 
             resources.ApplyResources(this.offerLabel, "offerLabel");
+            this.offerLabel.BackColor = System.Drawing.Color.Transparent;
             this.offerLabel.Name = "offerLabel";
             // 
             // label12

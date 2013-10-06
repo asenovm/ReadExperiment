@@ -369,7 +369,7 @@
     <value>17</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
-    <value>Extremely satisfied</value>
+    <value>Изключително Удовлетворен</value>
   </data>
   <data name="&gt;&gt;label10.Name" xml:space="preserve">
     <value>label10</value>
@@ -396,7 +396,7 @@
     <value>16</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
-    <value>Very satisfied</value>
+    <value>Много удовлетворен</value>
   </data>
   <data name="&gt;&gt;label9.Name" xml:space="preserve">
     <value>label9</value>
@@ -423,7 +423,7 @@
     <value>15</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
-    <value>Satisfied</value>
+    <value>Удовлетворен</value>
   </data>
   <data name="&gt;&gt;label8.Name" xml:space="preserve">
     <value>label8</value>
@@ -450,7 +450,7 @@
     <value>14</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>More satisfied than disappointed</value>
+    <value>По-скоро удовлетворен, отколкото разочарован</value>
   </data>
   <data name="&gt;&gt;label7.Name" xml:space="preserve">
     <value>label7</value>
@@ -477,7 +477,7 @@
     <value>13</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
-    <value>As much satisfied as disappointed</value>
+    <value>Колкото удовлетворен, толкова и разочарован</value>
   </data>
   <data name="&gt;&gt;label6.Name" xml:space="preserve">
     <value>label6</value>
@@ -504,7 +504,7 @@
     <value>12</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
-    <value>More disappointed than satisfied</value>
+    <value>По-скоро разочарован, отколкото удовлетворен</value>
   </data>
   <data name="&gt;&gt;label5.Name" xml:space="preserve">
     <value>label5</value>
@@ -531,7 +531,7 @@
     <value>11</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>Disappointed</value>
+    <value>Разочарован</value>
   </data>
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>
@@ -558,7 +558,7 @@
     <value>10</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Very disappointed</value>
+    <value>Много разочарован</value>
   </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
@@ -585,7 +585,7 @@
     <value>9</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Extremely disappointed</value>
+    <value>Изключително разочарован</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -963,13 +963,14 @@
     <value>290, 84</value>
   </data>
   <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>435, 46</value>
+    <value>468, 46</value>
   </data>
   <data name="label16.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
   <data name="label16.Text" xml:space="preserve">
-    <value>units of omnium bonum</value>
+    <value>единици омниум бонум
+</value>
   </data>
   <data name="&gt;&gt;label16.Name" xml:space="preserve">
     <value>label16</value>
@@ -990,16 +991,16 @@
     <value>Microsoft Sans Serif, 30pt, style=Bold</value>
   </data>
   <data name="realLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>152, 83</value>
+    <value>194, 83</value>
   </data>
   <data name="realLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 46</value>
+    <value>89, 46</value>
   </data>
   <data name="realLabel.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
   <data name="realLabel.Text" xml:space="preserve">
-    <value>12345</value>
+    <value>123</value>
   </data>
   <data name="&gt;&gt;realLabel.Name" xml:space="preserve">
     <value>realLabel</value>
@@ -1020,16 +1021,16 @@
     <value>Microsoft Sans Serif, 30pt</value>
   </data>
   <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>42, 20</value>
+    <value>194, 20</value>
   </data>
   <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>814, 46</value>
+    <value>555, 46</value>
   </data>
   <data name="label14.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="label14.Text" xml:space="preserve">
-    <value>The omnium bonum actually delivered will be</value>
+    <value>Реално ще бъдат доставени</value>
   </data>
   <data name="&gt;&gt;label14.Name" xml:space="preserve">
     <value>label14</value>
@@ -1043,87 +1044,6 @@
   <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;offerLabel.Name" xml:space="preserve">
-    <value>offerLabel</value>
-  </data>
-  <data name="&gt;&gt;offerLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;offerLabel.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;offerLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label12.Name" xml:space="preserve">
-    <value>label12</value>
-  </data>
-  <data name="&gt;&gt;label12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label13.Name" xml:space="preserve">
-    <value>label13</value>
-  </data>
-  <data name="&gt;&gt;label13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;supplierLabel.Name" xml:space="preserve">
-    <value>supplierLabel</value>
-  </data>
-  <data name="&gt;&gt;supplierLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;supplierLabel.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;supplierLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>920, 157</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
   <data name="offerLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1131,16 +1051,16 @@
     <value>Microsoft Sans Serif, 30pt, style=Bold</value>
   </data>
   <data name="offerLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>323, 77</value>
+    <value>345, 77</value>
   </data>
   <data name="offerLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 46</value>
+    <value>89, 46</value>
   </data>
   <data name="offerLabel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="offerLabel.Text" xml:space="preserve">
-    <value>12345</value>
+    <value>123</value>
   </data>
   <data name="offerLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
@@ -1164,16 +1084,16 @@
     <value>Microsoft Sans Serif, 30pt</value>
   </data>
   <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>451, 78</value>
+    <value>439, 78</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>435, 46</value>
+    <value>468, 46</value>
   </data>
   <data name="label12.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="label12.Text" xml:space="preserve">
-    <value>units of omnium bonum</value>
+    <value>единици омниум бонум</value>
   </data>
   <data name="&gt;&gt;label12.Name" xml:space="preserve">
     <value>label12</value>
@@ -1194,16 +1114,16 @@
     <value>Microsoft Sans Serif, 30pt</value>
   </data>
   <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 78</value>
+    <value>161, 78</value>
   </data>
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 46</value>
+    <value>183, 46</value>
   </data>
   <data name="label13.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="label13.Text" xml:space="preserve">
-    <value>Offer:</value>
+    <value>Оферта:</value>
   </data>
   <data name="&gt;&gt;label13.Name" xml:space="preserve">
     <value>label13</value>
@@ -1257,13 +1177,13 @@
     <value>259, 17</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 46</value>
+    <value>232, 46</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Supplier:</value>
+    <value>Доставчик:</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -1276,6 +1196,27 @@
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>920, 157</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="&gt;&gt;panel4.Name" xml:space="preserve">
     <value>panel4</value>
@@ -1350,16 +1291,16 @@
     <value>Microsoft Sans Serif, 14pt, style=Bold</value>
   </data>
   <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>34, 10</value>
+    <value>9, 10</value>
   </data>
   <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>833, 24</value>
+    <value>918, 24</value>
   </data>
   <data name="label17.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="label17.Text" xml:space="preserve">
-    <value>Please indicate your satisfaction or disappointment with this supplier in the current round</value>
+    <value>Моля посочете вашето удовлетворение или разочарование от този доставчик в този кръг</value>
   </data>
   <data name="&gt;&gt;label17.Name" xml:space="preserve">
     <value>label17</value>
@@ -2094,16 +2035,16 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 555</value>
+    <value>12, 549</value>
   </data>
   <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 17</value>
+    <value>89, 17</value>
   </data>
   <data name="label18.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
   <data name="label18.Text" xml:space="preserve">
-    <value>so far:</value>
+    <value>до момента:</value>
   </data>
   <data name="&gt;&gt;label18.Name" xml:space="preserve">
     <value>label18</value>
@@ -2124,7 +2065,7 @@
     <value>Microsoft Sans Serif, 10pt, style=Bold</value>
   </data>
   <data name="omniumQuontityLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 554</value>
+    <value>97, 548</value>
   </data>
   <data name="omniumQuontityLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 17</value>
@@ -2154,16 +2095,16 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 529</value>
+    <value>12, 523</value>
   </data>
   <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 17</value>
+    <value>283, 17</value>
   </data>
   <data name="label19.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
   <data name="label19.Text" xml:space="preserve">
-    <value>Omnium bonum accumulated</value>
+    <value>Общо количество единици омниум бонум</value>
   </data>
   <data name="&gt;&gt;label19.Name" xml:space="preserve">
     <value>label19</value>
@@ -2196,7 +2137,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Experiment</value>
+    <value>Експеримент</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>DSScaleChoice</value>

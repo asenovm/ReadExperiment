@@ -43,6 +43,7 @@ namespace Read
             animator = new Animator();
 
             feedbackLayout.BackColor = Color.FromArgb(237, 235, 221);
+
             feedbackWatch = new Stopwatch();
             currentIteration = 0;
             omniumQuantity = 0;
@@ -148,6 +149,7 @@ namespace Read
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.feedbackLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.firstSupplierRealPanel.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -268,6 +270,7 @@ namespace Read
             // thirdSupplierOfferLabel
             // 
             resources.ApplyResources(this.thirdSupplierOfferLabel, "thirdSupplierOfferLabel");
+            this.thirdSupplierOfferLabel.BackColor = System.Drawing.Color.Transparent;
             this.thirdSupplierOfferLabel.Name = "thirdSupplierOfferLabel";
             // 
             // label36
@@ -304,6 +307,7 @@ namespace Read
             // secondSupplierOfferLabel
             // 
             resources.ApplyResources(this.secondSupplierOfferLabel, "secondSupplierOfferLabel");
+            this.secondSupplierOfferLabel.BackColor = System.Drawing.Color.Transparent;
             this.secondSupplierOfferLabel.Name = "secondSupplierOfferLabel";
             // 
             // label21
@@ -400,6 +404,7 @@ namespace Read
             // fourthSupplierOfferLabel
             // 
             resources.ApplyResources(this.fourthSupplierOfferLabel, "fourthSupplierOfferLabel");
+            this.fourthSupplierOfferLabel.BackColor = System.Drawing.Color.Transparent;
             this.fourthSupplierOfferLabel.Name = "fourthSupplierOfferLabel";
             // 
             // label28
@@ -523,6 +528,7 @@ namespace Read
             // firstSupplierOfferLabel
             // 
             resources.ApplyResources(this.firstSupplierOfferLabel, "firstSupplierOfferLabel");
+            this.firstSupplierOfferLabel.BackColor = System.Drawing.Color.Transparent;
             this.firstSupplierOfferLabel.Name = "firstSupplierOfferLabel";
             // 
             // label12
@@ -548,13 +554,24 @@ namespace Read
             // feedbackLayout
             // 
             this.feedbackLayout.BackColor = System.Drawing.Color.White;
+            this.feedbackLayout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.feedbackLayout, "feedbackLayout");
             this.feedbackLayout.Name = "feedbackLayout";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.BackColor = System.Drawing.Color.Tan;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.MaximumSize = new System.Drawing.Size(282, 50);
+            this.label4.MinimumSize = new System.Drawing.Size(282, 50);
+            this.label4.Name = "label4";
             // 
             // FormReadExperiment
             // 
             resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.feedbackLayout);
             this.Controls.Add(this.nextBtn);
             this.Controls.Add(this.label3);
@@ -676,6 +693,7 @@ namespace Read
         private Label manufacturingLevelsValueLabel;
         private Label manufacturingLevelsTextLabel;
         private FlowLayoutPanel feedbackLayout;
+        private Label label4;
 
         private Stopwatch feedbackWatch;
 
