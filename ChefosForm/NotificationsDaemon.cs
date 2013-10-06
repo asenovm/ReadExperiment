@@ -78,13 +78,18 @@ namespace Read
 
         public void Daemonize()
         {
+            Thread daemonThread = new Thread(DaemonizeInternal);
+            daemonThread.Start();
+        }
+
+        private void DaemonizeInternal() {
             IPEndPoint endPoint = new IPEndPoint(GetHostIpAddress(), CLIENT_PORT_LISTENING);
 
             Socket listener = new Socket(AddressFamily.InterNetwork,
                 SocketType.Stream, ProtocolType.Tcp);
 
             Listen(endPoint, listener);
-        }
+        } 
 
         private void Listen(IPEndPoint endPoint, Socket listener)
         {

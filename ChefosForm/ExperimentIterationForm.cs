@@ -678,8 +678,8 @@ namespace Read
             serverConnection = new ServerConnection(new ClientConfiguration("client.dat"));
             serverConnection.Register();
 
-            Thread daemonThread = new Thread(new NotificationsDaemon(this).Daemonize);
-            daemonThread.Start();
+            NotificationsDaemon daemon = new NotificationsDaemon(this);
+            daemon.Daemonize();
 
             colors = new ColorsList();
             animator = new Animator();
@@ -725,18 +725,18 @@ namespace Read
         {
             feedbackWatch.start();
             EnableButtons();
-            this.Visible = true;
+            Show();
 
             ExperimentIteration experimentIteration = experimentIterations[currentIteration];
+
             SetupEconomicDataPanels(experimentIteration);
 
             omniumQuontityLabel.Text = omniumQuantity.ToString();
 
-            firstSupplierRealPanel.Visible = false;
-
-            secondSuppliarRealPanel.Visible = false;
-            thirdSupplierRealPanel.Visible = false;
-            fourthSupplierRealPanel.Visible = false;
+            firstSupplierRealPanel.Hide();
+            secondSuppliarRealPanel.Hide();
+            thirdSupplierRealPanel.Hide();
+            fourthSupplierRealPanel.Hide();
 
             firstSupplierOfferLabel.Text = experimentIteration.Suppliers[0].AdPrice;
             secondSupplierOfferLabel.Text = experimentIteration.Suppliers[1].AdPrice;
