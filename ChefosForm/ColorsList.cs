@@ -13,11 +13,11 @@ namespace Read
         private int colorIndex;
 
         public ColorsList() {
-            colors = new Color[3] { Color.FromArgb(193, 193, 193), Color.FromArgb(229, 229, 229), Color.White};
+            colors = new System.Drawing.Color[3] { Color.DARK_GREY,Color.LIGHT_GREY, Color.WHITE};
             colorIndex = 0;
         }
 
-        public Color NextColor() {
+        public System.Drawing.Color NextColor() {
             if (colorIndex >= colors.Length) {
                 colorIndex = 0;
             }

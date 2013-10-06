@@ -4,6 +4,13 @@ namespace Read
 {
     public class ExperimentIteration
     {
+
+        public SupplierOffer[] Suppliers;
+
+        private ManufacturingLevels manufacturingLevels;
+
+        private ManufacturingIncrease manufacturingIncrease;
+
         public ExperimentIteration(string iterationAsString)
         {
             char[] separators = new char[2];
@@ -22,12 +29,6 @@ namespace Read
                 manufacturingIncrease = new ManufacturingIncrease(double.Parse(items[9], System.Globalization.CultureInfo.CreateSpecificCulture("en-US")));
             }
         }
-
-        public SupplierOffer[] Suppliers;
-
-        private ManufacturingLevels manufacturingLevels;
-
-        private ManufacturingIncrease manufacturingIncrease;
 
         public Boolean HasEconomicData()
         {

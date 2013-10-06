@@ -71,14 +71,6 @@ namespace Read
             SendRequest(((int)Status.UNREGISTER).ToString(), UNREGISTER_MESSAGE);
         }
 
-
-        public void Daemonize()
-        {
-            Thread daemonThread = new Thread(new NotificationsDaemon(this).Daemonize);
-            daemonThread.Start();
-        }
-
-
         private Notification GetNotification(string status, string message)
         {
             return new Notification(clientConfiguration.GetClientId(), status, message);

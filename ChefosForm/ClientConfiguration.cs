@@ -10,23 +10,31 @@ namespace Read
     public class ClientConfiguration
     {
 
-        private const string KEY_ID = "id";
+        private static string KEY_ID = "id";
 
-        private const string KEY_SERVER_ADDRESS = "serverAddress";
+        private static string KEY_SERVER_ADDRESS = "serverAddress";
 
-        private const string KEY_SERVER_PORT = "serverPort";
+        private static string KEY_SERVER_PORT = "serverPort";
 
-        private const string DEFAULT_CLIENT_ID = "UnconfiguredId";
+        private static string DEFAULT_CLIENT_ID = "UnconfiguredId";
 
-        private const int DEFAULT_SERVER_PORT = 65535;
+        private static int DEFAULT_SERVER_PORT = 65535;
 
         private Dictionary<string, string> configuration;
 
+        /**
+         * Creates a new, default client configuration
+         */
         public ClientConfiguration()
         {
             configuration = new Dictionary<string, string>();
         }
 
+        /**
+         * Creats a new client configuration by using
+         * the values specified in the configuration file that can be found
+         * at the <tt>configurationPath</tt> given
+         */
         public ClientConfiguration(string configurationPath)
             : this()
         {
@@ -49,6 +57,9 @@ namespace Read
 
         }
 
+        /**
+         *  Returns the Id of the client
+         */
         public string GetClientId()
         {
             if (configuration.ContainsKey(KEY_ID))
@@ -58,6 +69,9 @@ namespace Read
             return DEFAULT_CLIENT_ID;
         }
 
+        /**
+         *  Returns the IP address of the server to which the client is to connect
+         */
         public string GetServerIdAppress()
         {
             if (configuration.ContainsKey(KEY_SERVER_ADDRESS))
@@ -80,6 +94,10 @@ namespace Read
             return null;
         }
 
+        /**
+         * Gets the port at which the server, the client will be trying
+         * to connect to is listening for requests.
+         */
         public int GetServerPort()
         {
             if (configuration.ContainsKey(KEY_SERVER_PORT))

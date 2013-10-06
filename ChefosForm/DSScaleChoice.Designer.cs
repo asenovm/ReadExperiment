@@ -285,7 +285,7 @@ namespace Read
             resources.ApplyResources(this.nextBtn, "nextBtn");
             this.nextBtn.Name = "nextBtn";
             this.nextBtn.UseVisualStyleBackColor = false;
-            this.nextBtn.Click += new System.EventHandler(this.Button1_Click);
+            this.nextBtn.Click += new System.EventHandler(this.onNextButtonClicked);
             // 
             // label18
             // 

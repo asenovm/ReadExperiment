@@ -8,6 +8,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using Transitions;
+using System.Threading;
 
 namespace Read
 {
@@ -20,50 +21,6 @@ namespace Read
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.Container components = null;
-
-        public FormReadExperiment()
-        {
-            InitializeComponent();
-        }
-
-        public FormReadExperiment(string outputFile)
-        {
-            ReadExperimentData(FileName.QUESTIONS_OFFERS);
-
-            InitializeComponent();
-
-
-            serverConnection = new ServerConnection(new ClientConfiguration("client.dat"));
-            serverConnection.Register();
-
-            ServerConnection daemon = new ServerConnection(this, new ClientConfiguration("client.dat"));
-            daemon.Daemonize();
-
-            colors = new ColorsList();
-            animator = new Animator();
-
-            feedbackLayout.BackColor = Color.FromArgb(237, 235, 221);
-
-            feedbackWatch = new Stopwatch();
-            currentIteration = 0;
-            omniumQuantity = 0;
-            nextBtn.Enabled = true;
-            this.outputFile = outputFile;
-
-            PerformIteration();
-        }
-
-        private void ReadExperimentData(string offersFile)
-        {
-            System.IO.StreamReader streamReader = System.IO.File.OpenText(offersFile);
-            string experimentIterationAsString = streamReader.ReadLine();
-            while (experimentIterationAsString != null)
-            {
-                experimentIterations.Add(new ExperimentIteration(experimentIterationAsString));
-                experimentIterationAsString = streamReader.ReadLine();
-            }
-            streamReader.Close();
-        }
 
         /// <summary>
         /// Clean up any resources being used.
@@ -706,6 +663,50 @@ namespace Read
             Application.Run(new InstructionsForm());
         }
 
+        public FormReadExperiment()
+        {
+            InitializeComponent();
+        }
+
+        public FormReadExperiment(string outputFile)
+        {
+            ReadExperimentData(FileName.QUESTIONS_OFFERS);
+
+            InitializeComponent();
+
+
+            serverConnection = new ServerConnection(new ClientConfiguration("client.dat"));
+            serverConnection.Register();
+
+            Thread daemonThread = new Thread(new NotificationsDaemon(this).Daemonize);
+            daemonThread.Start();
+
+            colors = new ColorsList();
+            animator = new Animator();
+
+            feedbackLayout.BackColor = Color.LIGHT_ORANGE;
+
+            feedbackWatch = new Stopwatch();
+            currentIteration = 0;
+            omniumQuantity = 0;
+            nextBtn.Enabled = true;
+            this.outputFile = outputFile;
+
+            PerformIteration();
+        }
+
+        private void ReadExperimentData(string offersFile)
+        {
+            System.IO.StreamReader streamReader = System.IO.File.OpenText(offersFile);
+            string experimentIterationAsString = streamReader.ReadLine();
+            while (experimentIterationAsString != null)
+            {
+                experimentIterations.Add(new ExperimentIteration(experimentIterationAsString));
+                experimentIterationAsString = streamReader.ReadLine();
+            }
+            streamReader.Close();
+        }
+
         public void NextIteration()
         {
             currentIteration++;
@@ -870,7 +871,7 @@ namespace Read
                                   nextSwtopwatch.stop(),
                                   outputFile,
                                   this, serverConnection);
-            this.Visible = false;
+            Hide();
             frm.ShowDialog();
         }
 

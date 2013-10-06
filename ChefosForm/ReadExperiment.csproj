@@ -125,6 +125,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ClientConfiguration.cs" />
+    <Compile Include="Color.cs" />
     <Compile Include="ColorsList.cs" />
     <Compile Include="DSScaleChoice.cs">
       <SubType>Form</SubType>
@@ -163,9 +164,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ReadOnlyRichTextBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="ReadOnlyRichTextBox.cs" />
     <Compile Include="RTFUtil.cs" />
     <Compile Include="ServerConnection.cs" />
     <Compile Include="Settings.cs" />
