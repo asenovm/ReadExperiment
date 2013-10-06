@@ -13,7 +13,7 @@ namespace Read
 
         private static int ANIMATED_PROPERTY_FLASH_NUMBER = 2;
 
-        private static int ANIMATED_PROPERTY_FLASH_TIME = 500;
+        private static int ANIMATED_PROPERTY_FLASH_TIME = 300;
 
         public void flash(Control control)
         {

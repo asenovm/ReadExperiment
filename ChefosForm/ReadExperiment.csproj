@@ -145,6 +145,7 @@
     <Compile Include="ExperimentIterationForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExperimentReader.cs" />
     <Compile Include="FileUtil.cs" />
     <Compile Include="INotificationsListener.cs" />
     <Compile Include="InstructionsForm.cs">
