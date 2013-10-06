@@ -6,6 +6,8 @@ namespace Read
 {
     class Stopwatch
     {
+        private DateTime startTime;
+
         public void start()
         {
             startTime = DateTime.Now;
@@ -16,7 +18,5 @@ namespace Read
             TimeSpan duration = DateTime.Now - startTime;
             return (long)duration.TotalMilliseconds;
         }
-
-        private DateTime startTime;
     }
 }

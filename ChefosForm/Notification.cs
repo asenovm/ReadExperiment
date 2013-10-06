@@ -8,17 +8,17 @@ namespace Read
     {
 
 
-        private const string KEY_STATUS_CODE = "status";
+        private static string KEY_STATUS_CODE = "status";
 
-        private const string KEY_ID = "id";
+        private static string KEY_ID = "id";
 
-        private const string KEY_SYSTEM_ID = "systemId";
+        private static string KEY_SYSTEM_ID = "systemId";
 
-        private const string KEY_MESSAGE = "message";
+        private static string KEY_MESSAGE = "message";
 
-        private const string KEY_SUPPLIER = "vendor";
+        private static string KEY_SUPPLIER = "vendor";
 
-        private const string KEY_SATISFCATION = "satisfaction";
+        private static string KEY_SATISFCATION = "satisfaction";
 
         private Dictionary<string, string> notification;
 

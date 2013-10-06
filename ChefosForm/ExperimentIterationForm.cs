@@ -665,17 +665,12 @@ namespace Read
 
         public FormReadExperiment()
         {
-            InitializeComponent();
-        }
-
-        public FormReadExperiment(string outputFile)
-        {
             ReadExperimentData(FileName.QUESTIONS_OFFERS);
 
             InitializeComponent();
 
 
-            serverConnection = new ServerConnection(new ClientConfiguration("client.dat"));
+            serverConnection = new ServerConnection(new ClientConfiguration(FileName.CONFIGURATION_CLIENT));
             serverConnection.Register();
 
             NotificationsDaemon daemon = new NotificationsDaemon(this);
@@ -690,7 +685,7 @@ namespace Read
             currentIteration = 0;
             omniumQuantity = 0;
             nextBtn.Enabled = true;
-            this.outputFile = outputFile;
+            this.outputFile = FileName.RESULTS_EXPERIMENT + Guid.NewGuid() + ".txt";
 
             PerformIteration();
         }

@@ -20,9 +20,7 @@ namespace Read
         private void BeginButton_Click(object sender, EventArgs e)
         {
             Hide();
-            string resultsFile = FileName.RESULTS_EXPERIMENT + Guid.NewGuid() + ".txt";
-
-            FormReadExperiment experimentForm = new FormReadExperiment(resultsFile);
+            FormReadExperiment experimentForm = new FormReadExperiment();
             experimentForm.Show();
         }
     }
