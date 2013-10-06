@@ -631,7 +631,6 @@ namespace Read
         private Label label26;
         private Label fourthSuppliarRealLabel;
         private Panel offersPanel;
-        private string outputFile;
 
         private ColorsList colors;
 
@@ -665,10 +664,10 @@ namespace Read
 
         public FormReadExperiment()
         {
-            ReadExperimentData(FileName.QUESTIONS_OFFERS);
-
             InitializeComponent();
 
+            ExperimentReader reader = new ExperimentReader();
+            experimentIterations = reader.GetExperimentData();
 
             serverConnection = new ServerConnection(new ClientConfiguration(FileName.CONFIGURATION_CLIENT));
             serverConnection.Register();
@@ -685,21 +684,8 @@ namespace Read
             currentIteration = 0;
             omniumQuantity = 0;
             nextBtn.Enabled = true;
-            this.outputFile = FileName.RESULTS_EXPERIMENT + Guid.NewGuid() + ".txt";
 
             PerformIteration();
-        }
-
-        private void ReadExperimentData(string offersFile)
-        {
-            System.IO.StreamReader streamReader = System.IO.File.OpenText(offersFile);
-            string experimentIterationAsString = streamReader.ReadLine();
-            while (experimentIterationAsString != null)
-            {
-                experimentIterations.Add(new ExperimentIteration(experimentIterationAsString));
-                experimentIterationAsString = streamReader.ReadLine();
-            }
-            streamReader.Close();
         }
 
         public void NextIteration()
@@ -712,7 +698,7 @@ namespace Read
             else
             {
                 new ExprimentEndDialog().ShowDialog();
-                new EconomicInstructionForm(outputFile.Substring(FileName.RESULTS_EXPERIMENT.Length)).Show();
+                new EconomicInstructionForm().Show();
             }
         }
 
@@ -864,7 +850,6 @@ namespace Read
                                   omniumQuantity.ToString(),
                                   choiceTime,
                                   nextSwtopwatch.stop(),
-                                  outputFile,
                                   this, serverConnection);
             Hide();
             frm.ShowDialog();
@@ -884,7 +869,7 @@ namespace Read
 
             animator.flash(notificationBox);
 
-            FileUtil.WriteToFile(notification, feedbackWatch.stop(), outputFile);
+            FileUtil.WriteToFile(notification, feedbackWatch.stop(), FileName.RESULTS_EXPERIMENT);
         }
 
         private Control GetNotificationContainer(Notification notification)

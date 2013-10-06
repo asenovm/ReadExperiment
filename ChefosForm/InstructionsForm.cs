@@ -23,5 +23,10 @@ namespace Read
             FormReadExperiment experimentForm = new FormReadExperiment();
             experimentForm.Show();
         }
+
+        private void OnCloseRequired(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+        }
     }
 }

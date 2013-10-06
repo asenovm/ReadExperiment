@@ -28,14 +28,11 @@ namespace Read
 
         private bool allowClose;
 
-        private string outputFileName;
-
         private ServerConnection serverConnection;
 
         public DSScaleChoice(string supplier, string offered,
                              string received, string total,
                              long choiceTime, long nextTime,
-                             string outputFileName,
                              FormReadExperiment mainForm,
                              ServerConnection serverConnection)
         {
@@ -49,7 +46,6 @@ namespace Read
             this.nextTime = nextTime;
             this.mainForm = mainForm;
             this.allowClose = false;
-            this.outputFileName = outputFileName;
             this.serverConnection = serverConnection;
 
             dsStopWatch.start();
@@ -116,7 +112,7 @@ namespace Read
 
         private void onNextButtonClicked(object sender, EventArgs e)
         {
-            FileUtil.WriteToFile(supplier, choiceTime.ToString(), nextTime.ToString(), dsChoiceTime.ToString(), dsChoice.ToString(), nextWatch.stop().ToString(), outputFileName);
+            FileUtil.WriteToFile(supplier, choiceTime.ToString(), nextTime.ToString(), dsChoiceTime.ToString(), dsChoice.ToString(), nextWatch.stop().ToString(), FileName.RESULTS_EXPERIMENT);
             serverConnection.SendAnswer(new Answer(supplier, dsChoice));
             mainForm.NextIteration();
             allowClose = true;
