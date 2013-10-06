@@ -14,7 +14,7 @@ namespace Read
     /// <summary>
     /// Summary description for Form1.
     /// </summary>
-    public class FormReadExperiment : System.Windows.Forms.Form
+    public class FormReadExperiment : System.Windows.Forms.Form, INotificationsListener
     {
         /// <summary>
         /// Required designer variable.
@@ -32,9 +32,17 @@ namespace Read
 
             InitializeComponent();
 
+
+            serverConnection = new ServerConnection(new ClientConfiguration("client.dat"));
+            serverConnection.Register();
+
+            ServerConnection daemon = new ServerConnection(this, new ClientConfiguration("client.dat"));
+            daemon.Daemonize();
+
             colors = new ColorsList();
             animator = new Animator();
 
+            feedbackLayout.BackColor = Color.FromArgb(237, 235, 221);
             feedbackWatch = new Stopwatch();
             currentIteration = 0;
             omniumQuantity = 0;
@@ -126,12 +134,6 @@ namespace Read
             this.label26 = new System.Windows.Forms.Label();
             this.fourthSuppliarRealLabel = new System.Windows.Forms.Label();
             this.offersPanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.firstSupplierOfferLabel = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.manufacturingIncreasePanel = new System.Windows.Forms.Panel();
             this.manufacturingIncreaseValueLabel = new System.Windows.Forms.Label();
             this.manufacturingIncreaseTextLabel = new System.Windows.Forms.Label();
@@ -139,6 +141,13 @@ namespace Read
             this.manufacturingLevelUnitsLabel = new System.Windows.Forms.Label();
             this.manufacturingLevelsValueLabel = new System.Windows.Forms.Label();
             this.manufacturingLevelsTextLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.firstSupplierOfferLabel = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.feedbackLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2.SuspendLayout();
             this.firstSupplierRealPanel.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -151,9 +160,9 @@ namespace Read
             this.panel5.SuspendLayout();
             this.fourthSupplierRealPanel.SuspendLayout();
             this.offersPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.manufacturingIncreasePanel.SuspendLayout();
             this.manufacturingLevelsPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // firstSuppierBtn
@@ -458,42 +467,6 @@ namespace Read
             resources.ApplyResources(this.offersPanel, "offersPanel");
             this.offersPanel.Name = "offersPanel";
             // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.firstSupplierOfferLabel);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label1);
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Name = "panel1";
-            // 
-            // firstSupplierOfferLabel
-            // 
-            resources.ApplyResources(this.firstSupplierOfferLabel, "firstSupplierOfferLabel");
-            this.firstSupplierOfferLabel.Name = "firstSupplierOfferLabel";
-            // 
-            // label12
-            // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
-            // 
-            // label13
-            // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.Name = "label13";
-            // 
-            // label11
-            // 
-            resources.ApplyResources(this.label11, "label11");
-            this.label11.Name = "label11";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
             // manufacturingIncreasePanel
             // 
             this.manufacturingIncreasePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -536,10 +509,53 @@ namespace Read
             resources.ApplyResources(this.manufacturingLevelsTextLabel, "manufacturingLevelsTextLabel");
             this.manufacturingLevelsTextLabel.Name = "manufacturingLevelsTextLabel";
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.firstSupplierOfferLabel);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label1);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
+            // firstSupplierOfferLabel
+            // 
+            resources.ApplyResources(this.firstSupplierOfferLabel, "firstSupplierOfferLabel");
+            this.firstSupplierOfferLabel.Name = "firstSupplierOfferLabel";
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.Name = "label13";
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // feedbackLayout
+            // 
+            this.feedbackLayout.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.feedbackLayout, "feedbackLayout");
+            this.feedbackLayout.Name = "feedbackLayout";
+            // 
             // FormReadExperiment
             // 
             resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.feedbackLayout);
             this.Controls.Add(this.nextBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.omniumQuontityLabel);
@@ -572,18 +588,19 @@ namespace Read
             this.fourthSupplierRealPanel.ResumeLayout(false);
             this.fourthSupplierRealPanel.PerformLayout();
             this.offersPanel.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.manufacturingIncreasePanel.ResumeLayout(false);
             this.manufacturingIncreasePanel.PerformLayout();
             this.manufacturingLevelsPanel.ResumeLayout(false);
             this.manufacturingLevelsPanel.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
         #endregion
 
+        private ServerConnection serverConnection;
         private List<ExperimentIteration> experimentIterations = new List<ExperimentIteration>();
         private int currentIteration;
         private Button firstSuppierBtn;
@@ -658,6 +675,7 @@ namespace Read
         private Label manufacturingLevelUnitsLabel;
         private Label manufacturingLevelsValueLabel;
         private Label manufacturingLevelsTextLabel;
+        private FlowLayoutPanel feedbackLayout;
 
         private Stopwatch feedbackWatch;
 
@@ -833,9 +851,43 @@ namespace Read
                                   choiceTime,
                                   nextSwtopwatch.stop(),
                                   outputFile,
-                                  this);
+                                  this, serverConnection);
             this.Visible = false;
             frm.ShowDialog();
         }
+
+        public void OnNotificationReceived(Notification notification)
+        {
+            feedbackLayout.Invoke(new DisplayNotification(ShowNotification),
+            new Notification[] { notification });
+        }
+
+        private void ShowNotification(Notification notification)
+        {
+            Control notificationBox = GetNotificationContainer(notification);
+            feedbackLayout.Controls.Add(notificationBox);
+            feedbackLayout.Controls.SetChildIndex(notificationBox, 0);
+
+            animator.flash(notificationBox);
+
+            FileUtil.WriteToFile(notification, feedbackWatch.stop(), outputFile);
+        }
+
+        private Control GetNotificationContainer(Notification notification)
+        {
+            string notificationText = "Участник " + "\\b " + notification.GetSenderId() + "\\b0 " + " е " + notification.GetSatisfaction() + " от достачик \\b " + notification.GetSupplier() + "\\b0 ";
+
+            RichTextBox notificationBox = new ReadOnlyRichTextBox();
+            notificationBox.Width = feedbackLayout.Width - 8;
+            notificationBox.Rtf = RTFUtil.ToRTF(notificationText);
+
+            Size size = TextRenderer.MeasureText(notificationBox.Text, notificationBox.Font, notificationBox.ClientRectangle.Size, TextFormatFlags.WordBreak);
+            notificationBox.Height = size.Height;
+            notificationBox.BackColor = colors.NextColor();
+
+            return notificationBox;
+        }
+
+        private delegate void DisplayNotification(Notification notification);
     }
 }

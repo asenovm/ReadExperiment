@@ -63,7 +63,7 @@ namespace Read
             this.beginButton.Name = "beginButton";
             this.beginButton.Size = new System.Drawing.Size(680, 70);
             this.beginButton.TabIndex = 2;
-            this.beginButton.Text = "Начало";
+            this.beginButton.Text = "Start";
             this.beginButton.UseVisualStyleBackColor = false;
             this.beginButton.Click += new System.EventHandler(this.BeginButton_Click);
             // 
@@ -81,7 +81,7 @@ namespace Read
             this.MinimumSize = new System.Drawing.Size(719, 483);
             this.Name = "InstructionsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Експеримент";
+            this.Text = "Experiment";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
