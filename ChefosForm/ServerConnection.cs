@@ -58,16 +58,31 @@ namespace Read
 
         public void Register()
         {
+            Thread registerThread = new Thread(RegisterInternal);
+            registerThread.Start();
+        }
+
+        private void RegisterInternal() {
             SendRequest(((int)Status.REGISTER).ToString(), REGISTER_MESSAGE);
         }
 
         public void SendAnswer(Answer answer)
         {
+            Thread sendAnswerThread = new Thread(() => SendAnswerInternal(answer));
+            sendAnswerThread.Start();
+        }
+
+        private void SendAnswerInternal(Answer answer) {
             SendRequest(((int)Status.ANSWER).ToString(), converter.ToJson(answer));
         }
 
         public void Unregister()
         {
+            Thread unregisterThread = new Thread(UnregisterInternal);
+            unregisterThread.Start();
+        }
+
+        private void UnregisterInternal() {
             SendRequest(((int)Status.UNREGISTER).ToString(), UNREGISTER_MESSAGE);
         }
 
