@@ -11,9 +11,9 @@ namespace Read
     {
         private static string ANIMATED_PROPERTY_COLOR = "BackColor";
 
-        private static int ANIMATED_PROPERTY_FLASH_NUMBER = 2;
+        private static int ANIMATED_PROPERTY_FLASH_NUMBER = 1;
 
-        private static int ANIMATED_PROPERTY_FLASH_TIME = 300;
+        private static int ANIMATED_PROPERTY_FLASH_TIME = 200;
 
         public void flash(Control control)
         {
