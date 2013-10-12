@@ -1,3 +1,5 @@
 id=Компютър Тест
 serverAddress=192.168.0.2
 serverPort=65535
+pause=800
+flash=200

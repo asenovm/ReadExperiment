@@ -15,7 +15,7 @@ namespace Read
     /// <summary>
     /// Summary description for Form1.
     /// </summary>
-    public class FormReadExperiment : System.Windows.Forms.Form, INotificationsListener
+    public class FormReadExperiment : System.Windows.Forms.Form
     {
         /// <summary>
         /// Required designer variable.
@@ -653,6 +653,11 @@ namespace Read
 
         private Stopwatch feedbackWatch;
 
+        private System.Windows.Forms.Timer startTimer;
+        private System.Windows.Forms.Timer notificationTimer;
+
+        private NotificationsService notificationsService;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -666,14 +671,24 @@ namespace Read
         {
             InitializeComponent();
 
+            ClientConfiguration configuration = new ClientConfiguration(FileName.CONFIGURATION_CLIENT);
+
+            startTimer = new System.Windows.Forms.Timer();
+            startTimer.Interval = configuration.GetNotificationFlashTime();
+            startTimer.Tick += new EventHandler(StartTimerTick);
+
+            notificationTimer = new System.Windows.Forms.Timer();
+            notificationTimer.Interval = configuration.GetNotificationPauseTime() + configuration.GetNotificationFlashTime();
+            notificationTimer.Tick += new EventHandler(NotificationTimerTick);
+
             ExperimentReader reader = new ExperimentReader();
             experimentIterations = reader.GetExperimentData();
 
-            serverConnection = new ServerConnection(new ClientConfiguration(FileName.CONFIGURATION_CLIENT));
+            serverConnection = new ServerConnection(configuration);
             serverConnection.Register();
 
-            NotificationsDaemon daemon = new NotificationsDaemon(this);
-            daemon.Daemonize();
+            notificationsService = new NotificationsService();
+            notificationsService.Daemonize();
 
             colors = new ColorsList();
             animator = new Animator();
@@ -697,6 +712,8 @@ namespace Read
             }
             else
             {
+                notificationTimer.Stop();
+                startTimer.Stop();
                 new ExprimentEndDialog().ShowDialog();
                 new EconomicInstructionForm().Show();
             }
@@ -707,6 +724,8 @@ namespace Read
             feedbackWatch.start();
             EnableButtons();
             Show();
+
+            startTimer.Start();
 
             ExperimentIteration experimentIteration = experimentIterations[currentIteration];
 
@@ -855,10 +874,26 @@ namespace Read
             frm.ShowDialog();
         }
 
-        public void OnNotificationReceived(Notification notification)
+        private void StartTimerTick(object sender, EventArgs e)
         {
-            feedbackLayout.Invoke(new DisplayNotification(ShowNotification),
-            new Notification[] { notification });
+            startTimer.Stop();
+            ShowNextNotification();
+
+            notificationTimer.Start();
+        }
+
+        private void NotificationTimerTick(object sender, EventArgs e)
+        {
+            ShowNextNotification();
+        }
+
+        private void ShowNextNotification()
+        {
+            Notification nextNotification = notificationsService.GetNextNotification();
+            if (nextNotification != null)
+            {
+                ShowNotification(nextNotification);
+            }
         }
 
         private void ShowNotification(Notification notification)
@@ -874,7 +909,7 @@ namespace Read
 
         private Control GetNotificationContainer(Notification notification)
         {
-            string notificationText = "Участник " + "\\b " + notification.GetSenderId() + "\\b0 " + " е " + notification.GetSatisfaction() + " от достачик \\b " + notification.GetSupplier() + "\\b0 ";
+            string notificationText = "Участник " + notification.GetSenderId() + " е \\b" + notification.GetSatisfaction() + "\\b0  от доставчик \\b " + notification.GetSupplier() + "\\b0 ";
 
             RichTextBox notificationBox = new ReadOnlyRichTextBox();
             notificationBox.Width = feedbackLayout.Width - 8;
@@ -886,7 +921,5 @@ namespace Read
 
             return notificationBox;
         }
-
-        private delegate void DisplayNotification(Notification notification);
     }
 }

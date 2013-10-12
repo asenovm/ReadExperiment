@@ -159,7 +159,7 @@
     <Compile Include="ManufacturingIncrease.cs" />
     <Compile Include="ManufacturingLevels.cs" />
     <Compile Include="Notification.cs" />
-    <Compile Include="NotificationsDaemon.cs" />
+    <Compile Include="NotificationsService.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

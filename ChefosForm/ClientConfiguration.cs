@@ -16,9 +16,17 @@ namespace Read
 
         private static string KEY_SERVER_PORT = "serverPort";
 
+        private static string KEY_NOTIFICATION_PAUSE = "pause";
+
+        private static string KEY_NOTIFICATION_FLASH = "flash";
+
         private static string DEFAULT_CLIENT_ID = "UnconfiguredId";
 
         private static int DEFAULT_SERVER_PORT = 65535;
+
+        private static int DEFAULT_NOTIFICATION_PAUSE = 800;
+
+        private static int DEFAULT_NOTIFICATION_FLASH = 200;
 
         private Dictionary<string, string> configuration;
 
@@ -71,6 +79,20 @@ namespace Read
                 return configuration[KEY_SERVER_ADDRESS];
             }
             return GetDefaultServerIpAddress();
+        }
+
+        public int GetNotificationPauseTime() {
+            if (configuration.ContainsKey(KEY_NOTIFICATION_PAUSE)) {
+                return int.Parse(configuration[KEY_NOTIFICATION_PAUSE]);
+            }
+            return DEFAULT_NOTIFICATION_PAUSE;
+        }
+
+        public int GetNotificationFlashTime() {
+            if (configuration.ContainsKey(KEY_NOTIFICATION_FLASH)) {
+                return int.Parse(configuration[KEY_NOTIFICATION_FLASH]);
+            }
+            return DEFAULT_NOTIFICATION_FLASH;
         }
 
         private string GetDefaultServerIpAddress()

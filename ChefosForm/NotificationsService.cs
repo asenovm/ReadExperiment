@@ -7,19 +7,20 @@ using System.Net;
 
 namespace Read
 {
-    class NotificationsDaemon
+    public class NotificationsService : INotificationsListener
     {
 
         private const int CLIENT_PORT_LISTENING = 65534;
 
         private static ManualResetEvent allDone = new ManualResetEvent(false);
 
-        private INotificationsListener notificationsListener;
+        private Queue<Notification> notificationQueue;
 
-        public NotificationsDaemon(INotificationsListener listener)
+        public NotificationsService()
         {
-            this.notificationsListener = listener;
+            notificationQueue = new Queue<Notification>();
         }
+
 
         private class SocketListener
         {
@@ -82,14 +83,15 @@ namespace Read
             daemonThread.Start();
         }
 
-        private void DaemonizeInternal() {
+        private void DaemonizeInternal()
+        {
             IPEndPoint endPoint = new IPEndPoint(GetHostIpAddress(), CLIENT_PORT_LISTENING);
 
             Socket listener = new Socket(AddressFamily.InterNetwork,
                 SocketType.Stream, ProtocolType.Tcp);
 
             Listen(endPoint, listener);
-        } 
+        }
 
         private void Listen(IPEndPoint endPoint, Socket listener)
         {
@@ -102,7 +104,7 @@ namespace Read
                 {
                     allDone.Reset();
                     listener.BeginAccept(
-                        new AsyncCallback(new SocketListener(notificationsListener).acceptCallback),
+                        new AsyncCallback(new SocketListener(this).acceptCallback),
                         listener);
                     allDone.WaitOne();
                 }
@@ -124,6 +126,20 @@ namespace Read
                 }
             }
             return null;
+        }
+
+        public void OnNotificationReceived(Notification notification)
+        {
+            notificationQueue.Enqueue(notification);
+        }
+
+        public Notification GetNextNotification()
+        {
+            if (notificationQueue.Count == 0)
+            {
+                return null;
+            }
+            return notificationQueue.Dequeue();
         }
     }
 }
