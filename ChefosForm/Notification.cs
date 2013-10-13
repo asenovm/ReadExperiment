@@ -12,7 +12,7 @@ namespace Read
 
         private static string KEY_ID = "id";
 
-        private static string KEY_SYSTEM_ID = "systemId";
+        private static string KEY_UID = "uid";
 
         private static string KEY_MESSAGE = "message";
 
@@ -45,7 +45,7 @@ namespace Read
         }
 
         public string GetSenderServerId() {
-            return notification[KEY_SYSTEM_ID];
+            return notification[KEY_UID];
         }
 
         public string GetSupplier()

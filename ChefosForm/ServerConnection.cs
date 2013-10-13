@@ -32,9 +32,9 @@ namespace Read
             converter = new JsonConverter();
         }
 
-        public void Register()
+        public void Register(string uid)
         {
-            Thread registerThread = new Thread(RegisterInternal);
+            Thread registerThread = new Thread(() => RegisterInternal(uid));
             registerThread.Start();
         }
 
@@ -50,9 +50,12 @@ namespace Read
             unregisterThread.Start();
         }
 
-        private void RegisterInternal()
+        private void RegisterInternal(string uid)
         {
-            SendRequest(((int)Status.REGISTER).ToString(), REGISTER_MESSAGE);
+            Dictionary<string, string> registerMeta = new Dictionary<string, string>();
+            registerMeta["uid"] = uid;
+
+            SendRequest(((int)Status.REGISTER).ToString(), converter.ToJson(registerMeta));
         }
 
         private void SendAnswerInternal(Answer answer)

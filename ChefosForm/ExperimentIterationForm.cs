@@ -696,7 +696,7 @@ namespace Read
             experimentIterations = reader.GetExperimentData();
 
             serverConnection = new ServerConnection(configuration);
-            serverConnection.Register();
+            serverConnection.Register(FileName.UID.ToString());
 
             notificationsService = new NotificationsService();
             notificationsService.Daemonize();
