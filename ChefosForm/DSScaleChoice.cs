@@ -52,7 +52,7 @@ namespace Read
             this.allowClose = false;
             this.serverConnection = serverConnection;
 
-            dsStopWatch.start();
+            dsStopWatch.Start();
         }
 
         private void RadioMinus4_CheckedChanged(object sender, EventArgs e)
@@ -102,11 +102,11 @@ namespace Read
 
         private void onSatisfactionPicked(int satisfaction)
         {
-            dsChoiceTime = dsStopWatch.stop();
+            dsChoiceTime = dsStopWatch.Stop();
             radioGroupDSScale.Enabled = false;
             dsChoice = satisfaction;
             nextBtn.Enabled = true;
-            nextWatch.start();
+            nextWatch.Start();
         }
 
         private void FormDSScaleChice_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -121,7 +121,7 @@ namespace Read
             experimentRecorder.WriteAnswer(nextTime.ToString(), true);
             experimentRecorder.WriteAnswer(dsChoiceTime.ToString(), true);
             experimentRecorder.WriteAnswer(dsChoice.ToString(), true);
-            experimentRecorder.WriteAnswer(nextWatch.stop().ToString(), false);
+            experimentRecorder.WriteAnswer(nextWatch.Stop().ToString(), false);
             experimentRecorder.WriteAnswer(Environment.NewLine, false);
 
             serverConnection.SendAnswer(new Answer(supplier, dsChoice));

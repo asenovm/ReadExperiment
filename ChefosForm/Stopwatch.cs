@@ -8,12 +8,12 @@ namespace Read
     {
         private DateTime startTime;
 
-        public void start()
+        public void Start()
         {
             startTime = DateTime.Now;
         }
 
-        public long stop()
+        public long Stop()
         {
             TimeSpan duration = DateTime.Now - startTime;
             return (long)duration.TotalMilliseconds;

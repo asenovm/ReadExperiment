@@ -651,14 +651,14 @@ namespace Read
         private FlowLayoutPanel feedbackLayout;
         private Label label4;
 
-        private Stopwatch feedbackWatch;
-
         private System.Windows.Forms.Timer startTimer;
         private System.Windows.Forms.Timer notificationTimer;
 
         private NotificationsService notificationsService;
 
-        private DateTime experimentStartTime;
+        private Stopwatch roundNotificationWatch;
+
+        private Stopwatch experimentNotificationWatch;
 
         private AnswerRecorder notificationRecorder;
 
@@ -682,7 +682,10 @@ namespace Read
             notificationRecorder = new AnswerRecorder(FileName.RESULTS_EXPERIMENT_NOTIFICATIONS, " ");
             experimentRecorder = new AnswerRecorder(FileName.RESULTS_EXPERIMENT, " ");
 
-            experimentStartTime = DateTime.UtcNow;
+            experimentNotificationWatch = new Stopwatch();
+            experimentNotificationWatch.Start();
+
+            Console.WriteLine("start!");
 
             startTimer = new System.Windows.Forms.Timer();
             startTimer.Interval = configuration.GetNotificationFlashTime();
@@ -706,7 +709,7 @@ namespace Read
 
             feedbackLayout.BackColor = Color.LIGHT_ORANGE;
 
-            feedbackWatch = new Stopwatch();
+            roundNotificationWatch = new Stopwatch();
             currentIteration = 0;
             omniumQuantity = 0;
             nextBtn.Enabled = true;
@@ -732,7 +735,7 @@ namespace Read
 
         private void PerformIteration()
         {
-            feedbackWatch.start();
+            roundNotificationWatch.Start();
             EnableButtons();
             Show();
 
@@ -759,7 +762,7 @@ namespace Read
             thirdSupplierRealLabel.Text = experimentIteration.Suppliers[2].RealPrice;
             fourthSupplierRealLabel.Text = experimentIteration.Suppliers[3].RealPrice;
 
-            choiceStopwatch.start();
+            choiceStopwatch.Start();
         }
 
         private void SetupEconomicDataPanels(ExperimentIteration experimentIteration)
@@ -843,13 +846,13 @@ namespace Read
             omniumQuontityLabel.Text = omniumQuantity.ToString();
             supplierPanel.Visible = true;
             DisableButtons();
-            nextSwtopwatch.start();
-            choiceTime = choiceStopwatch.stop();
+            nextSwtopwatch.Start();
+            choiceTime = choiceStopwatch.Stop();
         }
 
         private void NextBtn_Click(object sender, EventArgs e)
         {
-            notificationRecorder.WriteAnswer(DateTime.UtcNow.Subtract(experimentStartTime).TotalMilliseconds.ToString(), false);
+            notificationRecorder.WriteAnswer(experimentNotificationWatch.Stop().ToString(), false);
             notificationRecorder.WriteAnswer(Environment.NewLine, false);
 
             notificationTimer.Stop();
@@ -861,7 +864,7 @@ namespace Read
                                   it.Suppliers[supplierIndex].RealPrice,
                                   omniumQuantity.ToString(),
                                   choiceTime,
-                                  nextSwtopwatch.stop(),
+                                  nextSwtopwatch.Stop(),
                                   this, serverConnection);
             Hide();
             frm.ShowDialog();
@@ -871,14 +874,10 @@ namespace Read
         {
             startTimer.Stop();
             notificationTimer.Start();
-            if (!notificationsService.HasNextNotification())
-            {
-                notificationRecorder.WriteAnswer(DateTime.UtcNow.Subtract(experimentStartTime).TotalMilliseconds.ToString(), true);
-            }
-            else
-            {
-                ShowNextNotification();
-            }
+
+            notificationRecorder.WriteAnswer(experimentNotificationWatch.Stop().ToString(), true);
+
+            ShowNextNotification();
         }
 
         private void NotificationTimerTick(object sender, EventArgs e)
@@ -892,13 +891,13 @@ namespace Read
             if (nextNotification != null)
             {
                 ShowNotification(nextNotification);
-                notificationRecorder.WriteAnswer(DateTime.UtcNow.Subtract(experimentStartTime).TotalMilliseconds.ToString(), true);
+                notificationRecorder.WriteAnswer(experimentNotificationWatch.Stop().ToString(), true);
 
                 experimentRecorder.WriteAnswer(nextNotification.GetSenderId(), true);
                 experimentRecorder.WriteAnswer(nextNotification.GetSenderServerId(), true);
                 experimentRecorder.WriteAnswer(nextNotification.GetSupplier(), true);
                 experimentRecorder.WriteAnswer(nextNotification.GetSatisfaction(), true);
-                experimentRecorder.WriteAnswer(feedbackWatch.stop().ToString(), false);
+                experimentRecorder.WriteAnswer(roundNotificationWatch.Stop().ToString(), false);
                 experimentRecorder.WriteAnswer(Environment.NewLine, false);
             }
         }

@@ -60,7 +60,10 @@ namespace Read
 
         private void SendAnswerInternal(Answer answer)
         {
-            SendRequest(((int)Status.ANSWER).ToString(), converter.ToJson(answer));
+            Dictionary<string, string> answerDictionary = answer.AsDictionary();
+            answerDictionary["uid"] = FileName.UID.ToString();
+
+            SendRequest(((int)Status.ANSWER).ToString(), converter.ToJson(answerDictionary));
         }
 
         private void UnregisterInternal()
