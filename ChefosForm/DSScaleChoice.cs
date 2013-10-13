@@ -30,6 +30,8 @@ namespace Read
 
         private ServerConnection serverConnection;
 
+        private AnswerRecorder experimentRecorder;
+
         public DSScaleChoice(string supplier, string offered,
                              string received, string total,
                              long choiceTime, long nextTime,
@@ -37,6 +39,8 @@ namespace Read
                              ServerConnection serverConnection)
         {
             InitializeComponent();
+
+            experimentRecorder = new AnswerRecorder(FileName.RESULTS_EXPERIMENT, " ");
 
             offerLabel.Text = offered;
             this.supplier = supplierLabel.Text = supplier;
@@ -112,9 +116,18 @@ namespace Read
 
         private void onNextButtonClicked(object sender, EventArgs e)
         {
-            FileUtil.WriteToFile(supplier, choiceTime.ToString(), nextTime.ToString(), dsChoiceTime.ToString(), dsChoice.ToString(), nextWatch.stop().ToString(), FileName.RESULTS_EXPERIMENT);
+            experimentRecorder.WriteAnswer(supplier, true);
+            experimentRecorder.WriteAnswer(choiceTime.ToString(), true);
+            experimentRecorder.WriteAnswer(nextTime.ToString(), true);
+            experimentRecorder.WriteAnswer(dsChoiceTime.ToString(), true);
+            experimentRecorder.WriteAnswer(dsChoice.ToString(), true);
+            experimentRecorder.WriteAnswer(nextWatch.stop().ToString(), false);
+            experimentRecorder.WriteAnswer(Environment.NewLine, false);
+
             serverConnection.SendAnswer(new Answer(supplier, dsChoice));
+
             mainForm.NextIteration();
+
             allowClose = true;
             Close();
         }

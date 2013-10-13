@@ -660,6 +660,10 @@ namespace Read
 
         private DateTime experimentStartTime;
 
+        private AnswerRecorder notificationRecorder;
+
+        private AnswerRecorder experimentRecorder;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -674,6 +678,9 @@ namespace Read
             InitializeComponent();
 
             ClientConfiguration configuration = new ClientConfiguration(FileName.CONFIGURATION_CLIENT);
+
+            notificationRecorder = new AnswerRecorder(FileName.RESULTS_EXPERIMENT_NOTIFICATIONS, " ");
+            experimentRecorder = new AnswerRecorder(FileName.RESULTS_EXPERIMENT, " ");
 
             experimentStartTime = DateTime.UtcNow;
 
@@ -842,8 +849,8 @@ namespace Read
 
         private void NextBtn_Click(object sender, EventArgs e)
         {
-            FileUtil.WriteToFile(DateTime.UtcNow.Subtract(experimentStartTime).TotalMilliseconds, FileName.RESULTS_EXPERIMENT_NOTIFICATIONS);
-            FileUtil.WriteToFile(Environment.NewLine, FileName.RESULTS_EXPERIMENT_NOTIFICATIONS);
+            notificationRecorder.WriteAnswer(DateTime.UtcNow.Subtract(experimentStartTime).TotalMilliseconds.ToString(), false);
+            notificationRecorder.WriteAnswer(Environment.NewLine, false);
 
             notificationTimer.Stop();
 
@@ -864,10 +871,14 @@ namespace Read
         {
             startTimer.Stop();
             notificationTimer.Start();
-
-            ShowNextNotification();
-
-            FileUtil.WriteToFile(DateTime.UtcNow.Subtract(experimentStartTime).TotalMilliseconds, FileName.RESULTS_EXPERIMENT_NOTIFICATIONS);
+            if (!notificationsService.HasNextNotification())
+            {
+                notificationRecorder.WriteAnswer(DateTime.UtcNow.Subtract(experimentStartTime).TotalMilliseconds.ToString(), true);
+            }
+            else
+            {
+                ShowNextNotification();
+            }
         }
 
         private void NotificationTimerTick(object sender, EventArgs e)
@@ -881,7 +892,14 @@ namespace Read
             if (nextNotification != null)
             {
                 ShowNotification(nextNotification);
-                FileUtil.WriteToFile(DateTime.UtcNow.Subtract(experimentStartTime).TotalMilliseconds, FileName.RESULTS_EXPERIMENT_NOTIFICATIONS);
+                notificationRecorder.WriteAnswer(DateTime.UtcNow.Subtract(experimentStartTime).TotalMilliseconds.ToString(), true);
+
+                experimentRecorder.WriteAnswer(nextNotification.GetSenderId(), true);
+                experimentRecorder.WriteAnswer(nextNotification.GetSenderServerId(), true);
+                experimentRecorder.WriteAnswer(nextNotification.GetSupplier(), true);
+                experimentRecorder.WriteAnswer(nextNotification.GetSatisfaction(), true);
+                experimentRecorder.WriteAnswer(feedbackWatch.stop().ToString(), false);
+                experimentRecorder.WriteAnswer(Environment.NewLine, false);
             }
         }
 
@@ -892,8 +910,6 @@ namespace Read
             feedbackLayout.Controls.SetChildIndex(notificationBox, 0);
 
             animator.flash(notificationBox);
-
-            FileUtil.WriteToFile(notification, feedbackWatch.stop(), FileName.RESULTS_EXPERIMENT);
         }
 
         private Control GetNotificationContainer(Notification notification)

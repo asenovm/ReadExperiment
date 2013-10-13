@@ -141,5 +141,10 @@ namespace Read
             }
             return notificationQueue.Dequeue();
         }
+
+        public bool HasNextNotification()
+        {
+            return notificationQueue.Count != 0;
+        }
     }
 }
