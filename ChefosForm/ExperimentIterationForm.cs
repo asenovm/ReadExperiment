@@ -56,7 +56,7 @@ namespace Read
             this.panel2 = new System.Windows.Forms.Panel();
             this.firstSupplierRealPanel = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
-            this.firstSuppliarRealLabel = new System.Windows.Forms.Label();
+            this.firstSupplierRealLabel = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.thirdSupplierOfferLabel = new System.Windows.Forms.Label();
@@ -76,10 +76,10 @@ namespace Read
             this.label34 = new System.Windows.Forms.Label();
             this.thirdSupplierRealLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.secondSuppliarRealPanel = new System.Windows.Forms.Panel();
+            this.secondSupplierRealPanel = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.secondSuppliarRealLabel = new System.Windows.Forms.Label();
+            this.secondSupplierRealLabel = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.fourthSupplierOfferLabel = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
@@ -90,7 +90,7 @@ namespace Read
             this.fourthSupplierRealPanel = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.fourthSuppliarRealLabel = new System.Windows.Forms.Label();
+            this.fourthSupplierRealLabel = new System.Windows.Forms.Label();
             this.offersPanel = new System.Windows.Forms.Panel();
             this.manufacturingIncreasePanel = new System.Windows.Forms.Panel();
             this.manufacturingIncreaseValueLabel = new System.Windows.Forms.Label();
@@ -114,7 +114,7 @@ namespace Read
             this.panel7.SuspendLayout();
             this.thirdSupplierRealPanel.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.secondSuppliarRealPanel.SuspendLayout();
+            this.secondSupplierRealPanel.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.fourthSupplierRealPanel.SuspendLayout();
@@ -193,7 +193,7 @@ namespace Read
             // firstSupplierRealPanel
             // 
             this.firstSupplierRealPanel.Controls.Add(this.label16);
-            this.firstSupplierRealPanel.Controls.Add(this.firstSuppliarRealLabel);
+            this.firstSupplierRealPanel.Controls.Add(this.firstSupplierRealLabel);
             this.firstSupplierRealPanel.Controls.Add(this.label14);
             resources.ApplyResources(this.firstSupplierRealPanel, "firstSupplierRealPanel");
             this.firstSupplierRealPanel.Name = "firstSupplierRealPanel";
@@ -203,10 +203,10 @@ namespace Read
             resources.ApplyResources(this.label16, "label16");
             this.label16.Name = "label16";
             // 
-            // firstSuppliarRealLabel
+            // firstSupplierRealLabel
             // 
-            resources.ApplyResources(this.firstSuppliarRealLabel, "firstSuppliarRealLabel");
-            this.firstSuppliarRealLabel.Name = "firstSuppliarRealLabel";
+            resources.ApplyResources(this.firstSupplierRealLabel, "firstSupplierRealLabel");
+            this.firstSupplierRealLabel.Name = "firstSupplierRealLabel";
             // 
             // label14
             // 
@@ -320,17 +320,17 @@ namespace Read
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.secondSuppliarRealPanel);
+            this.panel3.Controls.Add(this.secondSupplierRealPanel);
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
-            // secondSuppliarRealPanel
+            // secondSupplierRealPanel
             // 
-            this.secondSuppliarRealPanel.Controls.Add(this.label17);
-            this.secondSuppliarRealPanel.Controls.Add(this.label19);
-            this.secondSuppliarRealPanel.Controls.Add(this.secondSuppliarRealLabel);
-            resources.ApplyResources(this.secondSuppliarRealPanel, "secondSuppliarRealPanel");
-            this.secondSuppliarRealPanel.Name = "secondSuppliarRealPanel";
+            this.secondSupplierRealPanel.Controls.Add(this.label17);
+            this.secondSupplierRealPanel.Controls.Add(this.label19);
+            this.secondSupplierRealPanel.Controls.Add(this.secondSupplierRealLabel);
+            resources.ApplyResources(this.secondSupplierRealPanel, "secondSupplierRealPanel");
+            this.secondSupplierRealPanel.Name = "secondSupplierRealPanel";
             // 
             // label17
             // 
@@ -342,10 +342,10 @@ namespace Read
             resources.ApplyResources(this.label19, "label19");
             this.label19.Name = "label19";
             // 
-            // secondSuppliarRealLabel
+            // secondSupplierRealLabel
             // 
-            resources.ApplyResources(this.secondSuppliarRealLabel, "secondSuppliarRealLabel");
-            this.secondSuppliarRealLabel.Name = "secondSuppliarRealLabel";
+            resources.ApplyResources(this.secondSupplierRealLabel, "secondSupplierRealLabel");
+            this.secondSupplierRealLabel.Name = "secondSupplierRealLabel";
             // 
             // panel6
             // 
@@ -395,7 +395,7 @@ namespace Read
             // 
             this.fourthSupplierRealPanel.Controls.Add(this.label20);
             this.fourthSupplierRealPanel.Controls.Add(this.label26);
-            this.fourthSupplierRealPanel.Controls.Add(this.fourthSuppliarRealLabel);
+            this.fourthSupplierRealPanel.Controls.Add(this.fourthSupplierRealLabel);
             resources.ApplyResources(this.fourthSupplierRealPanel, "fourthSupplierRealPanel");
             this.fourthSupplierRealPanel.Name = "fourthSupplierRealPanel";
             // 
@@ -409,10 +409,10 @@ namespace Read
             resources.ApplyResources(this.label26, "label26");
             this.label26.Name = "label26";
             // 
-            // fourthSuppliarRealLabel
+            // fourthSupplierRealLabel
             // 
-            resources.ApplyResources(this.fourthSuppliarRealLabel, "fourthSuppliarRealLabel");
-            this.fourthSuppliarRealLabel.Name = "fourthSuppliarRealLabel";
+            resources.ApplyResources(this.fourthSupplierRealLabel, "fourthSupplierRealLabel");
+            this.fourthSupplierRealLabel.Name = "fourthSupplierRealLabel";
             // 
             // offersPanel
             // 
@@ -554,8 +554,8 @@ namespace Read
             this.thirdSupplierRealPanel.ResumeLayout(false);
             this.thirdSupplierRealPanel.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.secondSuppliarRealPanel.ResumeLayout(false);
-            this.secondSuppliarRealPanel.PerformLayout();
+            this.secondSupplierRealPanel.ResumeLayout(false);
+            this.secondSupplierRealPanel.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -588,14 +588,14 @@ namespace Read
         private bool allowClose = false;
         private int omniumQuantity;
         private string[] supplierNames = { "A", "B", "C", "D" };
-        private int supplierIndx;
+        private int supplierIndex;
         private Stopwatch nextSwtopwatch = new Stopwatch();
         private Stopwatch choiceStopwatch = new Stopwatch();
         private long choiceTime;
         private Panel panel2;
         private Panel firstSupplierRealPanel;
         private Label label16;
-        private Label firstSuppliarRealLabel;
+        private Label firstSupplierRealLabel;
         private Label label14;
         private Panel panel8;
         private Label thirdSupplierOfferLabel;
@@ -615,10 +615,10 @@ namespace Read
         private Label label34;
         private Label thirdSupplierRealLabel;
         private Panel panel3;
-        private Panel secondSuppliarRealPanel;
+        private Panel secondSupplierRealPanel;
         private Label label17;
         private Label label19;
-        private Label secondSuppliarRealLabel;
+        private Label secondSupplierRealLabel;
         private Panel panel6;
         private Label fourthSupplierOfferLabel;
         private Label label28;
@@ -629,7 +629,7 @@ namespace Read
         private Panel fourthSupplierRealPanel;
         private Label label20;
         private Label label26;
-        private Label fourthSuppliarRealLabel;
+        private Label fourthSupplierRealLabel;
         private Panel offersPanel;
 
         private ColorsList colors;
@@ -658,6 +658,8 @@ namespace Read
 
         private NotificationsService notificationsService;
 
+        private DateTime experimentStartTime;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -672,6 +674,8 @@ namespace Read
             InitializeComponent();
 
             ClientConfiguration configuration = new ClientConfiguration(FileName.CONFIGURATION_CLIENT);
+
+            experimentStartTime = DateTime.UtcNow;
 
             startTimer = new System.Windows.Forms.Timer();
             startTimer.Interval = configuration.GetNotificationFlashTime();
@@ -734,7 +738,7 @@ namespace Read
             omniumQuontityLabel.Text = omniumQuantity.ToString();
 
             firstSupplierRealPanel.Hide();
-            secondSuppliarRealPanel.Hide();
+            secondSupplierRealPanel.Hide();
             thirdSupplierRealPanel.Hide();
             fourthSupplierRealPanel.Hide();
 
@@ -743,10 +747,10 @@ namespace Read
             thirdSupplierOfferLabel.Text = experimentIteration.Suppliers[2].AdPrice;
             fourthSupplierOfferLabel.Text = experimentIteration.Suppliers[3].AdPrice;
 
-            firstSuppliarRealLabel.Text = experimentIteration.Suppliers[0].RealPrice;
-            secondSuppliarRealLabel.Text = experimentIteration.Suppliers[1].RealPrice;
+            firstSupplierRealLabel.Text = experimentIteration.Suppliers[0].RealPrice;
+            secondSupplierRealLabel.Text = experimentIteration.Suppliers[1].RealPrice;
             thirdSupplierRealLabel.Text = experimentIteration.Suppliers[2].RealPrice;
-            fourthSuppliarRealLabel.Text = experimentIteration.Suppliers[3].RealPrice;
+            fourthSupplierRealLabel.Text = experimentIteration.Suppliers[3].RealPrice;
 
             choiceStopwatch.start();
         }
@@ -804,56 +808,33 @@ namespace Read
 
         private void FirstSuppierBtn_Click(object sender, EventArgs e)
         {
-            supplierIndx = 0;
-
-            ExperimentIteration it = experimentIterations[currentIteration];
-
-            omniumQuantity += int.Parse(it.Suppliers[supplierIndx].RealPrice);
-            omniumQuontityLabel.Text = omniumQuantity.ToString();
-            firstSupplierRealPanel.Visible = true;
-            DisableButtons();
-            nextSwtopwatch.start();
-            choiceTime = choiceStopwatch.stop();
+            OnSupplierButtonClicked(0, firstSupplierRealPanel);
         }
 
         private void SecondSupplierBtn_Click(object sender, EventArgs e)
         {
-            supplierIndx = 1;
-
-            ExperimentIteration it = experimentIterations[currentIteration];
-
-            omniumQuantity += int.Parse(it.Suppliers[supplierIndx].RealPrice);
-            omniumQuontityLabel.Text = omniumQuantity.ToString();
-            secondSuppliarRealPanel.Visible = true;
-            DisableButtons();
-            nextSwtopwatch.start();
-            choiceTime = choiceStopwatch.stop();
+            OnSupplierButtonClicked(1, secondSupplierRealPanel);
         }
 
         private void ThirdSupplierBtn_Click(object sender, EventArgs e)
         {
-            supplierIndx = 2;
-
-            ExperimentIteration it = experimentIterations[currentIteration];
-
-            omniumQuantity += int.Parse(it.Suppliers[supplierIndx].RealPrice);
-            omniumQuontityLabel.Text = omniumQuantity.ToString();
-            thirdSupplierRealPanel.Visible = true;
-            DisableButtons();
-            nextSwtopwatch.start();
-            choiceTime = choiceStopwatch.stop();
-
+            OnSupplierButtonClicked(2, thirdSupplierRealPanel);
         }
 
         private void FourthSupplierBtn_Click(object sender, EventArgs e)
         {
-            supplierIndx = 3;
+            OnSupplierButtonClicked(3, fourthSupplierRealPanel);
+        }
+
+        private void OnSupplierButtonClicked(int supplierIndex, Panel supplierPanel)
+        {
+            this.supplierIndex = supplierIndex;
 
             ExperimentIteration it = experimentIterations[currentIteration];
 
-            omniumQuantity += int.Parse(it.Suppliers[supplierIndx].RealPrice);
+            omniumQuantity += int.Parse(it.Suppliers[supplierIndex].RealPrice);
             omniumQuontityLabel.Text = omniumQuantity.ToString();
-            fourthSupplierRealPanel.Visible = true;
+            supplierPanel.Visible = true;
             DisableButtons();
             nextSwtopwatch.start();
             choiceTime = choiceStopwatch.stop();
@@ -861,11 +842,16 @@ namespace Read
 
         private void NextBtn_Click(object sender, EventArgs e)
         {
+            FileUtil.WriteToFile(DateTime.UtcNow.Subtract(experimentStartTime).TotalMilliseconds, FileName.RESULTS_EXPERIMENT_NOTIFICATIONS);
+            FileUtil.WriteToFile(Environment.NewLine, FileName.RESULTS_EXPERIMENT_NOTIFICATIONS);
+
+            notificationTimer.Stop();
+
             ExperimentIteration it = experimentIterations[currentIteration];
             DSScaleChoice frm =
-                new DSScaleChoice(supplierNames[supplierIndx],
-                                  it.Suppliers[supplierIndx].AdPrice,
-                                  it.Suppliers[supplierIndx].RealPrice,
+                new DSScaleChoice(supplierNames[supplierIndex],
+                                  it.Suppliers[supplierIndex].AdPrice,
+                                  it.Suppliers[supplierIndex].RealPrice,
                                   omniumQuantity.ToString(),
                                   choiceTime,
                                   nextSwtopwatch.stop(),
@@ -877,9 +863,11 @@ namespace Read
         private void StartTimerTick(object sender, EventArgs e)
         {
             startTimer.Stop();
+            notificationTimer.Start();
+
             ShowNextNotification();
 
-            notificationTimer.Start();
+            FileUtil.WriteToFile(DateTime.UtcNow.Subtract(experimentStartTime).TotalMilliseconds, FileName.RESULTS_EXPERIMENT_NOTIFICATIONS);
         }
 
         private void NotificationTimerTick(object sender, EventArgs e)
@@ -893,6 +881,7 @@ namespace Read
             if (nextNotification != null)
             {
                 ShowNotification(nextNotification);
+                FileUtil.WriteToFile(DateTime.UtcNow.Subtract(experimentStartTime).TotalMilliseconds, FileName.RESULTS_EXPERIMENT_NOTIFICATIONS);
             }
         }
 

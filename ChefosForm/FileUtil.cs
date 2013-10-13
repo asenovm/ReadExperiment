@@ -13,6 +13,23 @@ namespace Read
             //blank
         }
 
+        public static void WriteToFile(string value, string outputFile) {
+            StreamWriter SW = File.AppendText(outputFile);
+            SW.Write(value);
+            SW.Close();
+        }
+
+        public static void WriteToFile(double time, string outputFile) {
+            StreamWriter SW = File.AppendText(outputFile);
+
+            StringBuilder builder = new StringBuilder();
+            builder.Append(time);
+            builder.Append(" ");
+
+            SW.Write(builder.ToString());
+            SW.Close();
+        }
+
         public static void WriteToFile(Notification notification, long time, string outputFile) {
             StreamWriter SW= File.AppendText(outputFile);
             StringBuilder builder = new StringBuilder();
