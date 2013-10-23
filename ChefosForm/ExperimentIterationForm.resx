@@ -126,7 +126,7 @@
     <value>Times New Roman, 15.75pt, style=Bold</value>
   </data>
   <data name="firstSuppierBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 550</value>
+    <value>26, 443</value>
   </data>
   <data name="firstSuppierBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>145, 70</value>
@@ -158,7 +158,7 @@
     <value>Times New Roman, 15.75pt, style=Bold</value>
   </data>
   <data name="secondSupplierBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 550</value>
+    <value>197, 443</value>
   </data>
   <data name="secondSupplierBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 70</value>
@@ -189,7 +189,7 @@ B</value>
     <value>Times New Roman, 15.75pt, style=Bold</value>
   </data>
   <data name="thirdSupplierBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>364, 550</value>
+    <value>364, 443</value>
   </data>
   <data name="thirdSupplierBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 70</value>
@@ -220,7 +220,7 @@ C</value>
     <value>Times New Roman, 15.75pt, style=Bold</value>
   </data>
   <data name="fourthSupplierBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>541, 550</value>
+    <value>541, 443</value>
   </data>
   <data name="fourthSupplierBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 70</value>
@@ -251,7 +251,7 @@ D</value>
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 642</value>
+    <value>26, 535</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>283, 17</value>
@@ -281,7 +281,7 @@ D</value>
     <value>Microsoft Sans Serif, 10pt, style=Bold</value>
   </data>
   <data name="omniumQuontityLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 667</value>
+    <value>114, 560</value>
   </data>
   <data name="omniumQuontityLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 17</value>
@@ -314,7 +314,7 @@ D</value>
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 668</value>
+    <value>26, 561</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 17</value>
@@ -1027,7 +1027,7 @@ D</value>
     <value>Times New Roman, 15.75pt, style=Bold</value>
   </data>
   <data name="nextBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>820, 642</value>
+    <value>820, 535</value>
   </data>
   <data name="nextBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 36</value>
@@ -1046,6 +1046,96 @@ D</value>
   </data>
   <data name="&gt;&gt;nextBtn.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;firstSupplierRealPanel.Name" xml:space="preserve">
+    <value>firstSupplierRealPanel</value>
+  </data>
+  <data name="&gt;&gt;firstSupplierRealPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;firstSupplierRealPanel.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;firstSupplierRealPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 103</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 88</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>offersPanel</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label16.Name" xml:space="preserve">
+    <value>label16</value>
+  </data>
+  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+    <value>firstSupplierRealPanel</value>
+  </data>
+  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;firstSupplierRealLabel.Name" xml:space="preserve">
+    <value>firstSupplierRealLabel</value>
+  </data>
+  <data name="&gt;&gt;firstSupplierRealLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;firstSupplierRealLabel.Parent" xml:space="preserve">
+    <value>firstSupplierRealPanel</value>
+  </data>
+  <data name="&gt;&gt;firstSupplierRealLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>firstSupplierRealPanel</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="firstSupplierRealPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="firstSupplierRealPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>290, 72</value>
+  </data>
+  <data name="firstSupplierRealPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;firstSupplierRealPanel.Name" xml:space="preserve">
+    <value>firstSupplierRealPanel</value>
+  </data>
+  <data name="&gt;&gt;firstSupplierRealPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;firstSupplierRealPanel.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;firstSupplierRealPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="label16.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1149,47 +1239,86 @@ D</value>
   <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="firstSupplierRealPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="&gt;&gt;thirdSupplierOfferLabel.Name" xml:space="preserve">
+    <value>thirdSupplierOfferLabel</value>
   </data>
-  <data name="firstSupplierRealPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 72</value>
+  <data name="&gt;&gt;thirdSupplierOfferLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="firstSupplierRealPanel.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;thirdSupplierOfferLabel.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;thirdSupplierOfferLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;firstSupplierRealPanel.Name" xml:space="preserve">
-    <value>firstSupplierRealPanel</value>
+  <data name="&gt;&gt;label36.Name" xml:space="preserve">
+    <value>label36</value>
   </data>
-  <data name="&gt;&gt;firstSupplierRealPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label36.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;firstSupplierRealPanel.Parent" xml:space="preserve">
-    <value>panel2</value>
+  <data name="&gt;&gt;label36.Parent" xml:space="preserve">
+    <value>panel8</value>
   </data>
-  <data name="&gt;&gt;firstSupplierRealPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 220</value>
-  </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>298, 88</value>
-  </data>
-  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;label36.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
+  <data name="&gt;&gt;label37.Name" xml:space="preserve">
+    <value>label37</value>
   </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+  <data name="&gt;&gt;label37.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label37.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;label37.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label38.Name" xml:space="preserve">
+    <value>label38</value>
+  </data>
+  <data name="&gt;&gt;label38.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label38.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;label38.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label39.Name" xml:space="preserve">
+    <value>label39</value>
+  </data>
+  <data name="&gt;&gt;label39.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label39.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;label39.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 207</value>
+  </data>
+  <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 88</value>
+  </data>
+  <data name="panel8.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;panel8.Name" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;panel8.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel8.Parent" xml:space="preserve">
     <value>offersPanel</value>
   </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;panel8.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="thirdSupplierOfferLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1359,26 +1488,86 @@ D</value>
   <data name="&gt;&gt;label39.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 324</value>
+  <data name="&gt;&gt;secondSupplierOfferLabel.Name" xml:space="preserve">
+    <value>secondSupplierOfferLabel</value>
   </data>
-  <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="&gt;&gt;secondSupplierOfferLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;secondSupplierOfferLabel.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;secondSupplierOfferLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label21.Name" xml:space="preserve">
+    <value>label21</value>
+  </data>
+  <data name="&gt;&gt;label21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label21.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label22.Name" xml:space="preserve">
+    <value>label22</value>
+  </data>
+  <data name="&gt;&gt;label22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label22.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label23.Name" xml:space="preserve">
+    <value>label23</value>
+  </data>
+  <data name="&gt;&gt;label23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label23.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;label23.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label24.Name" xml:space="preserve">
+    <value>label24</value>
+  </data>
+  <data name="&gt;&gt;label24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label24.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>341, 18</value>
+  </data>
+  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>298, 88</value>
   </data>
-  <data name="panel8.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="&gt;&gt;panel8.Name" xml:space="preserve">
-    <value>panel8</value>
+  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="&gt;&gt;panel8.Type" xml:space="preserve">
+  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel8.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
     <value>offersPanel</value>
   </data>
-  <data name="&gt;&gt;panel8.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="secondSupplierOfferLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1548,26 +1737,95 @@ D</value>
   <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 135</value>
+  <data name="&gt;&gt;thirdSupplierRealPanel.Name" xml:space="preserve">
+    <value>thirdSupplierRealPanel</value>
   </data>
-  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>298, 88</value>
-  </data>
-  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
+  <data name="&gt;&gt;thirdSupplierRealPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;thirdSupplierRealPanel.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;thirdSupplierRealPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 292</value>
+  </data>
+  <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 88</value>
+  </data>
+  <data name="panel7.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;panel7.Name" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;panel7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel7.Parent" xml:space="preserve">
     <value>offersPanel</value>
   </data>
-  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label32.Name" xml:space="preserve">
+    <value>label32</value>
+  </data>
+  <data name="&gt;&gt;label32.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label32.Parent" xml:space="preserve">
+    <value>thirdSupplierRealPanel</value>
+  </data>
+  <data name="&gt;&gt;label32.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label34.Name" xml:space="preserve">
+    <value>label34</value>
+  </data>
+  <data name="&gt;&gt;label34.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label34.Parent" xml:space="preserve">
+    <value>thirdSupplierRealPanel</value>
+  </data>
+  <data name="&gt;&gt;label34.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;thirdSupplierRealLabel.Name" xml:space="preserve">
+    <value>thirdSupplierRealLabel</value>
+  </data>
+  <data name="&gt;&gt;thirdSupplierRealLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;thirdSupplierRealLabel.Parent" xml:space="preserve">
+    <value>thirdSupplierRealPanel</value>
+  </data>
+  <data name="&gt;&gt;thirdSupplierRealLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="thirdSupplierRealPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 8</value>
+  </data>
+  <data name="thirdSupplierRealPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>290, 73</value>
+  </data>
+  <data name="thirdSupplierRealPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;thirdSupplierRealPanel.Name" xml:space="preserve">
+    <value>thirdSupplierRealPanel</value>
+  </data>
+  <data name="&gt;&gt;thirdSupplierRealPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;thirdSupplierRealPanel.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;thirdSupplierRealPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="label32.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1671,47 +1929,95 @@ D</value>
   <data name="&gt;&gt;thirdSupplierRealLabel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="thirdSupplierRealPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 8</value>
+  <data name="&gt;&gt;secondSupplierRealPanel.Name" xml:space="preserve">
+    <value>secondSupplierRealPanel</value>
   </data>
-  <data name="thirdSupplierRealPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 73</value>
-  </data>
-  <data name="thirdSupplierRealPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;thirdSupplierRealPanel.Name" xml:space="preserve">
-    <value>thirdSupplierRealPanel</value>
-  </data>
-  <data name="&gt;&gt;thirdSupplierRealPanel.Type" xml:space="preserve">
+  <data name="&gt;&gt;secondSupplierRealPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;thirdSupplierRealPanel.Parent" xml:space="preserve">
-    <value>panel7</value>
+  <data name="&gt;&gt;secondSupplierRealPanel.Parent" xml:space="preserve">
+    <value>panel3</value>
   </data>
-  <data name="&gt;&gt;thirdSupplierRealPanel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;secondSupplierRealPanel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 409</value>
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>341, 103</value>
   </data>
-  <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>298, 88</value>
   </data>
-  <data name="panel7.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
-  <data name="&gt;&gt;panel7.Name" xml:space="preserve">
-    <value>panel7</value>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
   </data>
-  <data name="&gt;&gt;panel7.Type" xml:space="preserve">
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel7.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
     <value>offersPanel</value>
   </data>
-  <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label17.Name" xml:space="preserve">
+    <value>label17</value>
+  </data>
+  <data name="&gt;&gt;label17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label17.Parent" xml:space="preserve">
+    <value>secondSupplierRealPanel</value>
+  </data>
+  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label19.Name" xml:space="preserve">
+    <value>label19</value>
+  </data>
+  <data name="&gt;&gt;label19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label19.Parent" xml:space="preserve">
+    <value>secondSupplierRealPanel</value>
+  </data>
+  <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;secondSupplierRealLabel.Name" xml:space="preserve">
+    <value>secondSupplierRealLabel</value>
+  </data>
+  <data name="&gt;&gt;secondSupplierRealLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;secondSupplierRealLabel.Parent" xml:space="preserve">
+    <value>secondSupplierRealPanel</value>
+  </data>
+  <data name="&gt;&gt;secondSupplierRealLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="secondSupplierRealPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="secondSupplierRealPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>290, 77</value>
+  </data>
+  <data name="secondSupplierRealPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;secondSupplierRealPanel.Name" xml:space="preserve">
+    <value>secondSupplierRealPanel</value>
+  </data>
+  <data name="&gt;&gt;secondSupplierRealPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;secondSupplierRealPanel.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;secondSupplierRealPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="label17.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1815,47 +2121,86 @@ D</value>
   <data name="&gt;&gt;secondSupplierRealLabel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="secondSupplierRealPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="&gt;&gt;fourthSupplierOfferLabel.Name" xml:space="preserve">
+    <value>fourthSupplierOfferLabel</value>
   </data>
-  <data name="secondSupplierRealPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 77</value>
+  <data name="&gt;&gt;fourthSupplierOfferLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="secondSupplierRealPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+  <data name="&gt;&gt;fourthSupplierOfferLabel.Parent" xml:space="preserve">
+    <value>panel6</value>
   </data>
-  <data name="&gt;&gt;secondSupplierRealPanel.Name" xml:space="preserve">
-    <value>secondSupplierRealPanel</value>
-  </data>
-  <data name="&gt;&gt;secondSupplierRealPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;secondSupplierRealPanel.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;secondSupplierRealPanel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;fourthSupplierOfferLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 220</value>
+  <data name="&gt;&gt;label28.Name" xml:space="preserve">
+    <value>label28</value>
   </data>
-  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="&gt;&gt;label28.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label28.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label28.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label29.Name" xml:space="preserve">
+    <value>label29</value>
+  </data>
+  <data name="&gt;&gt;label29.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label29.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label29.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label30.Name" xml:space="preserve">
+    <value>label30</value>
+  </data>
+  <data name="&gt;&gt;label30.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label30.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label30.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label31.Name" xml:space="preserve">
+    <value>label31</value>
+  </data>
+  <data name="&gt;&gt;label31.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label31.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label31.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>341, 207</value>
+  </data>
+  <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
     <value>298, 88</value>
   </data>
-  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="panel6.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
-  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
-    <value>panel3</value>
+  <data name="&gt;&gt;panel6.Name" xml:space="preserve">
+    <value>panel6</value>
   </data>
-  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+  <data name="&gt;&gt;panel6.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
     <value>offersPanel</value>
   </data>
-  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="fourthSupplierOfferLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2025,26 +2370,95 @@ D</value>
   <data name="&gt;&gt;label31.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 324</value>
+  <data name="&gt;&gt;fourthSupplierRealPanel.Name" xml:space="preserve">
+    <value>fourthSupplierRealPanel</value>
   </data>
-  <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>298, 88</value>
-  </data>
-  <data name="panel6.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;panel6.Name" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="&gt;&gt;panel6.Type" xml:space="preserve">
+  <data name="&gt;&gt;fourthSupplierRealPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
+  <data name="&gt;&gt;fourthSupplierRealPanel.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;fourthSupplierRealPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>341, 292</value>
+  </data>
+  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 88</value>
+  </data>
+  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
     <value>offersPanel</value>
   </data>
-  <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label20.Name" xml:space="preserve">
+    <value>label20</value>
+  </data>
+  <data name="&gt;&gt;label20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label20.Parent" xml:space="preserve">
+    <value>fourthSupplierRealPanel</value>
+  </data>
+  <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label26.Name" xml:space="preserve">
+    <value>label26</value>
+  </data>
+  <data name="&gt;&gt;label26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label26.Parent" xml:space="preserve">
+    <value>fourthSupplierRealPanel</value>
+  </data>
+  <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;fourthSupplierRealLabel.Name" xml:space="preserve">
+    <value>fourthSupplierRealLabel</value>
+  </data>
+  <data name="&gt;&gt;fourthSupplierRealLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fourthSupplierRealLabel.Parent" xml:space="preserve">
+    <value>fourthSupplierRealPanel</value>
+  </data>
+  <data name="&gt;&gt;fourthSupplierRealLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="fourthSupplierRealPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 11</value>
+  </data>
+  <data name="fourthSupplierRealPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>290, 70</value>
+  </data>
+  <data name="fourthSupplierRealPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;fourthSupplierRealPanel.Name" xml:space="preserve">
+    <value>fourthSupplierRealPanel</value>
+  </data>
+  <data name="&gt;&gt;fourthSupplierRealPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fourthSupplierRealPanel.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;fourthSupplierRealPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="label20.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2148,266 +2562,119 @@ D</value>
   <data name="&gt;&gt;fourthSupplierRealLabel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="fourthSupplierRealPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 11</value>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
   </data>
-  <data name="fourthSupplierRealPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 70</value>
-  </data>
-  <data name="fourthSupplierRealPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;fourthSupplierRealPanel.Name" xml:space="preserve">
-    <value>fourthSupplierRealPanel</value>
-  </data>
-  <data name="&gt;&gt;fourthSupplierRealPanel.Type" xml:space="preserve">
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;fourthSupplierRealPanel.Parent" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="&gt;&gt;fourthSupplierRealPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 409</value>
-  </data>
-  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>298, 88</value>
-  </data>
-  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
     <value>offersPanel</value>
   </data>
-  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
-  <data name="manufacturingIncreaseValueLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="offersPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 6</value>
   </data>
-  <data name="manufacturingIncreaseValueLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
+  <data name="offersPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>657, 410</value>
   </data>
-  <data name="manufacturingIncreaseValueLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="offersPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
-  <data name="manufacturingIncreaseValueLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 62</value>
-  </data>
-  <data name="manufacturingIncreaseValueLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="manufacturingIncreaseValueLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 17</value>
-  </data>
-  <data name="manufacturingIncreaseValueLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="manufacturingIncreaseValueLabel.Text" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="manufacturingIncreaseValueLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;manufacturingIncreaseValueLabel.Name" xml:space="preserve">
-    <value>manufacturingIncreaseValueLabel</value>
-  </data>
-  <data name="&gt;&gt;manufacturingIncreaseValueLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;manufacturingIncreaseValueLabel.Parent" xml:space="preserve">
-    <value>manufacturingIncreasePanel</value>
-  </data>
-  <data name="&gt;&gt;manufacturingIncreaseValueLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="manufacturingIncreaseTextLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="manufacturingIncreaseTextLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
-  <data name="manufacturingIncreaseTextLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="manufacturingIncreaseTextLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 9</value>
-  </data>
-  <data name="manufacturingIncreaseTextLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 51</value>
-  </data>
-  <data name="manufacturingIncreaseTextLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="manufacturingIncreaseTextLabel.Text" xml:space="preserve">
-    <value>Прогнозата за нарастването на
-производството на омниум бонум
-през настоящия кръг е:</value>
-  </data>
-  <data name="&gt;&gt;manufacturingIncreaseTextLabel.Name" xml:space="preserve">
-    <value>manufacturingIncreaseTextLabel</value>
-  </data>
-  <data name="&gt;&gt;manufacturingIncreaseTextLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;manufacturingIncreaseTextLabel.Parent" xml:space="preserve">
-    <value>manufacturingIncreasePanel</value>
-  </data>
-  <data name="&gt;&gt;manufacturingIncreaseTextLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="manufacturingIncreasePanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>338, 18</value>
-  </data>
-  <data name="manufacturingIncreasePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>298, 88</value>
-  </data>
-  <data name="manufacturingIncreasePanel.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;manufacturingIncreasePanel.Name" xml:space="preserve">
-    <value>manufacturingIncreasePanel</value>
-  </data>
-  <data name="&gt;&gt;manufacturingIncreasePanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;manufacturingIncreasePanel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;offersPanel.Name" xml:space="preserve">
     <value>offersPanel</value>
   </data>
-  <data name="&gt;&gt;manufacturingIncreasePanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="manufacturingLevelUnitsLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="manufacturingLevelUnitsLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
-  <data name="manufacturingLevelUnitsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="manufacturingLevelUnitsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 62</value>
-  </data>
-  <data name="manufacturingLevelUnitsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 17</value>
-  </data>
-  <data name="manufacturingLevelUnitsLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="manufacturingLevelUnitsLabel.Text" xml:space="preserve">
-    <value>единици</value>
-  </data>
-  <data name="&gt;&gt;manufacturingLevelUnitsLabel.Name" xml:space="preserve">
-    <value>manufacturingLevelUnitsLabel</value>
-  </data>
-  <data name="&gt;&gt;manufacturingLevelUnitsLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;manufacturingLevelUnitsLabel.Parent" xml:space="preserve">
-    <value>manufacturingLevelsPanel</value>
-  </data>
-  <data name="&gt;&gt;manufacturingLevelUnitsLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="manufacturingLevelsValueLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="manufacturingLevelsValueLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
-  </data>
-  <data name="manufacturingLevelsValueLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="manufacturingLevelsValueLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 62</value>
-  </data>
-  <data name="manufacturingLevelsValueLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="manufacturingLevelsValueLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 17</value>
-  </data>
-  <data name="manufacturingLevelsValueLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="manufacturingLevelsValueLabel.Text" xml:space="preserve">
-    <value>123</value>
-  </data>
-  <data name="&gt;&gt;manufacturingLevelsValueLabel.Name" xml:space="preserve">
-    <value>manufacturingLevelsValueLabel</value>
-  </data>
-  <data name="&gt;&gt;manufacturingLevelsValueLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;manufacturingLevelsValueLabel.Parent" xml:space="preserve">
-    <value>manufacturingLevelsPanel</value>
-  </data>
-  <data name="&gt;&gt;manufacturingLevelsValueLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="manufacturingLevelsTextLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="manufacturingLevelsTextLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
-  <data name="manufacturingLevelsTextLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="manufacturingLevelsTextLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 9</value>
-  </data>
-  <data name="manufacturingLevelsTextLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 34</value>
-  </data>
-  <data name="manufacturingLevelsTextLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="manufacturingLevelsTextLabel.Text" xml:space="preserve">
-    <value>Общото производство на омниум
-бонум през изминалия кръг е:</value>
-  </data>
-  <data name="&gt;&gt;manufacturingLevelsTextLabel.Name" xml:space="preserve">
-    <value>manufacturingLevelsTextLabel</value>
-  </data>
-  <data name="&gt;&gt;manufacturingLevelsTextLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;manufacturingLevelsTextLabel.Parent" xml:space="preserve">
-    <value>manufacturingLevelsPanel</value>
-  </data>
-  <data name="&gt;&gt;manufacturingLevelsTextLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="manufacturingLevelsPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 18</value>
-  </data>
-  <data name="manufacturingLevelsPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>298, 88</value>
-  </data>
-  <data name="manufacturingLevelsPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;manufacturingLevelsPanel.Name" xml:space="preserve">
-    <value>manufacturingLevelsPanel</value>
-  </data>
-  <data name="&gt;&gt;manufacturingLevelsPanel.Type" xml:space="preserve">
+  <data name="&gt;&gt;offersPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;manufacturingLevelsPanel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;offersPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;offersPanel.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;firstSupplierOfferLabel.Name" xml:space="preserve">
+    <value>firstSupplierOfferLabel</value>
+  </data>
+  <data name="&gt;&gt;firstSupplierOfferLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;firstSupplierOfferLabel.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;firstSupplierOfferLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label11.Name" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 18</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 88</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
     <value>offersPanel</value>
   </data>
-  <data name="&gt;&gt;manufacturingLevelsPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="firstSupplierOfferLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2577,53 +2844,11 @@ D</value>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 135</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>298, 88</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>offersPanel</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="offersPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 6</value>
-  </data>
-  <data name="offersPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>657, 522</value>
-  </data>
-  <data name="offersPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;offersPanel.Name" xml:space="preserve">
-    <value>offersPanel</value>
-  </data>
-  <data name="&gt;&gt;offersPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;offersPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;offersPanel.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
   <data name="feedbackLayout.Location" type="System.Drawing.Point, System.Drawing">
     <value>669, 72</value>
   </data>
   <data name="feedbackLayout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 431</value>
+    <value>282, 344</value>
   </data>
   <data name="feedbackLayout.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -2650,7 +2875,7 @@ D</value>
     <value>Tahoma, 10pt, style=Bold</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>669, 24</value>
+    <value>669, 23</value>
   </data>
   <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>46, 10, 0, 0</value>
@@ -2690,13 +2915,13 @@ D</value>
     <value>5, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>974, 702</value>
+    <value>974, 602</value>
   </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>990, 740</value>
+    <value>990, 640</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>990, 740</value>
+    <value>990, 640</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
